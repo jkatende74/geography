@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCSE Internal Landforming Processes Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-section h1 { /* Chapter Title */
+            font-size: 1.875em; /* 30px */
+            font-weight: 700;
+            margin-bottom: 1rem; /* 16px */
+            color: #111827; /* gray-900 */
+            border-bottom: 2px solid #D1D5DB; /* gray-300 */
+            padding-bottom: 0.5rem; /* 8px */
+        }
+        .content-section h2 { /* Main Section Title (e.g., 1. EARTH MOVEMENTS) */
+            font-size: 1.5em; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #1F2937; /* gray-800 */
+        }
+        .content-section h3 { /* Subsection Title (e.g., Types of Earth Movements) */
+            font-size: 1.25em; /* 20px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #374151; /* gray-700 */
+        }
+         .content-section h4 { /* Further Subsection Title (e.g., Key Postulates for Continental Drift) */
+            font-size: 1.125em; /* 18px */
+            font-weight: 600;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 0.5rem; /* 8px */
+            color: #4B5563; /* gray-600 */
+        }
+        .content-section p, .content-section li {
+            margin-bottom: 0.75rem; /* 12px */
+            line-height: 1.6;
+            color: #4B5563; /* gray-600 */
+        }
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+         .content-section ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .content-section strong {
+            color: #111827; /* gray-900 */
+            font-weight: 600;
+        }
+        .content-section table {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .content-section th, .content-section td {
+            border: 1px solid #D1D5DB; /* gray-300 */
+            padding: 0.75rem; /* 12px */
+            text-align: left;
+            font-size: 0.9em;
+        }
+        .content-section th {
+            background-color: #F3F4F6; /* gray-100 */
+            font-weight: 600;
+            color: #1F2937; /* gray-800 */
+        }
+        .diagram-placeholder {
+            background-color: #E5E7EB; /* gray-200 */
+            border: 2px dashed #9CA3AF; /* gray-400 */
+            padding: 1.5rem; /* 24px */
+            text-align: center;
+            color: #4B5563; /* gray-600 */
+            font-style: italic;
+            border-radius: 0.375rem; /* 6px */
+            margin: 1rem auto; /* 16px */
+            display: block;
+            width: 80%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Mobile menu button */
+        .mobile-menu-button {
+            display: none; 
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 40; 
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-menu-button {
+                display: block; 
+            }
+            .content-section h1 { font-size: 1.5em; }
+            .content-section h2 { font-size: 1.25em; }
+            .content-section h3 { font-size: 1.125em; }
+            .diagram-placeholder { width: 95%; padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen overflow-hidden">
+        <aside id="sidebar" class="sidebar w-72 bg-gray-800 text-white p-5 space-y-3 overflow-y-auto md:block">
+            <h1 class="text-xl font-semibold mb-5 text-center">Internal Landforming Processes</h1>
+            <nav id="navigation" class="space-y-1">
+                </nav>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto main-content">
+            <button id="mobileMenuButton" class="mobile-menu-button md:hidden fixed top-3 left-3 z-50 p-2 bg-gray-800 text-white rounded-md shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            
+            <div id="contentAreaContainer" class="bg-white p-5 md:p-8 rounded-lg shadow-xl">
+                <div id="contentArea" class="content-section">
+                    <h1 id="mainChapterTitle" class="text-3xl font-bold mb-6 text-gray-700">Welcome!</h1>
+                    <p>Select a topic from the sidebar or use the navigation buttons below to explore the fascinating world of Internal Landforming Processes.</p>
+                </div>
+                 <div id="navButtons" class="mt-10 flex justify-between border-t pt-6">
+                    <button id="prevButton" class="px-5 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150">Previous</button>
+                    <button id="nextButton" class="px-5 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Function to create diagram placeholders
+        function getDiagramPlaceholder(description) {
+            return `<div class="diagram-placeholder">Diagram Placeholder: ${description}</div>`;
+        }
+
+        const guideData = [
+            // CHAPTER ONE: INTERNAL LANDFORMING PROCESSES
+            {
+                id: 'chapter_title',
+                title: 'Chapter One: Overview',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h1>CHAPTER ONE: INTERNAL LANDFORMING PROCESSES</h1>
+                    <h2>Specific Objectives</h2>
+                    <p>By the end of this comprehensive study, the learner should be able to:</p>
+                    <ul>
+                        <li>(a) Define earth movements with clarity, understanding their origin from within the Earth.</li>
+                        <li>(b) Explain comprehensively the causes of both horizontal (orogenic) and vertical (epeirogenic) earth movements, linking them to internal forces.</li>
+                        <li>(c) Explain in detail the theories of Continental Drift, including Wegener's postulates and the array of evidence supporting it, and Plate Tectonics, covering its key concepts, plate boundaries, and driving mechanisms.</li>
+                        <li>(d) Define folding, faulting, vulcanicity, and earthquakes, grasping the fundamental nature of each process.</li>
+                        <li>(e) Explain the intricate processes involved in folding (including geosyncline development), faulting (stress and rupture), vulcanicity (magma generation, movement, and eruption), and earthquakes (energy release and wave propagation).</li>
+                        <li>(f) Name and describe in detail the various features resulting from folding (e.g., different fold types, fold mountains), faulting (e.g., fault types, horsts, grabens, rift valleys), and vulcanicity (e.g., types of volcanoes, intrusive and extrusive features).</li>
+                        <li>(g) Account for the world distribution patterns of earthquakes, volcanoes, fold mountain systems, and major fault zones, relating them to plate tectonic theory.</li>
+                        <li>(h) Explain the multifaceted significance (both positive and negative) of the resultant features of these internal processes to human activities and the environment.</li>
+                        <li>(i) Describe the causes (natural and human-induced) and the diverse effects of earthquakes, including their measurement.</li>
+                    </ul>
+                    <p>This chapter delves into the dynamic forces that shape our planet from within, providing a foundational understanding of the Earth's major geological features and their ongoing evolution.</p>
+                `
+            },
+            // 1. EARTH MOVEMENTS
+            {
+                id: 'earth_movements_intro',
+                title: '1. Earth Movements',
+                htmlContent: `
+                    <h2>1. EARTH MOVEMENTS</h2>
+                    <p>Earth movements, also known as crustal movements, refer to the <strong>large-scale displacement or motion of the Earth's crustal rocks</strong>. These movements are a direct consequence of powerful <strong>tectonic forces</strong> that originate and operate deep within the Earth's interior, primarily in the mantle and core. These internal forces subject the crustal rocks to immense stress. Depending on the nature of these forces, the stress can manifest in three primary ways:</p>
+                    <ul>
+                        <li><strong>Tensional forces:</strong> These forces act to pull crustal rocks apart, causing them to stretch and thin. If the tensional stress exceeds the rock's strength, it can lead to fracturing and the formation of features like normal faults and rift valleys.</li>
+                        <li><strong>Compressional forces:</strong> These forces act to squeeze or push crustal rocks together, causing them to shorten and thicken. This can result in the bending of rock layers (folding) to form anticlines and synclines, or if the rocks are brittle, they may fracture, leading to reverse faults and thrust faults. Large-scale compression is responsible for building major mountain ranges.</li>
+                        <li><strong>Shearing forces:</strong> These forces cause adjacent blocks of crustal rock to slide past each other horizontally, in opposite directions, along a fault plane. This type of stress leads to the formation of strike-slip faults.</li>
+                    </ul>
+                    <p>The response of rocks to these stresses depends on their properties (e.g., brittleness, ductility), the temperature and pressure conditions, and the rate at which the stress is applied.</p>
+                    ${getDiagramPlaceholder('Clear illustrations of Tensional, Compressional, and Shearing Forces acting on rock blocks, showing resulting deformation (stretching, shortening, sliding)')}
+                `
+            },
+            {
+                id: 'earth_movements_types',
+                title: '1.1 Types of Earth Movements',
+                htmlContent: `
+                    <h3>Types of Earth Movements</h3>
+                    <p>Based on their primary direction relative to the Earth's surface, earth movements are broadly categorized into two main types:</p>
+                    <ol>
+                        <li><strong>Horizontal Earth Movements (Orogenic or Lateral Movements):</strong>
+                            <p>These movements involve the displacement of crustal rocks predominantly in a horizontal direction, acting tangentially to the Earth's curved surface or parallel to its plane. They are often associated with intense deformation over relatively localized (though sometimes extensive) belts. The term "orogenic" (from Greek "oros" for mountain and "genesis" for birth) highlights their primary role in mountain building, particularly the formation of fold mountains. Horizontal movements are driven by powerful compressional or tensional forces.</p>
+                            <p><strong>Key characteristics and results:</strong></p>
+                            <ul>
+                                <li>Responsible for intense folding and faulting of crustal rocks.</li>
+                                <li>Lead to the formation of major mountain ranges (e.g., Himalayas, Alps), complex fault systems, continental rift valleys (through tensional forces), and sedimentary basins.</li>
+                                <li>Often concentrated along the margins of tectonic plates.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Vertical Earth Movements (Epeirogenic Movements):</strong>
+                            <p>These movements involve the uplift (upwarping) or subsidence (downwarping) of large sections of the Earth's crust along its radius, i.e., perpendicular to the Earth's surface. The term "epeirogenic" (from Greek "epeiros" for continent and "genesis" for birth) signifies their role in the formation and shaping of broad continental masses and ocean basins. These movements are generally slow, widespread, and cause less intense deformation compared to orogenic movements.</p>
+                            <p><strong>Key characteristics and results:</strong></p>
+                            <ul>
+                                <li>Lead to the broad uplift of continents or large plateaus, or the subsidence of extensive basins.</li>
+                                <li>Cause changes in sea level relative to land, resulting in the emergence (falling sea level or rising land) or submergence (rising sea level or sinking land) of coastlines.</li>
+                                <li>Can contribute to the formation of gentle regional dips in rock strata, large-scale faulting, and rifting over vast areas.</li>
+                                <li>Play a crucial role in isostatic adjustments.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p>While distinct, orogenic and epeirogenic movements can occur concurrently or influence each other. For example, the broad uplift of a region (epeirogenic) can alter stress patterns, potentially leading to localized faulting (an orogenic-style feature).</p>
+                    ${getDiagramPlaceholder('Comparative illustration showing large-scale, gentle deformation of Epeirogenic movements vs. more intense, localized deformation of Orogenic movements')}
+                `
+            },
+            {
+                id: 'earth_movements_causes',
+                title: '1.2 Causes of Earth Movements',
+                htmlContent: `
+                    <h3>Causes of Earth Movements</h3>
+                    <p>The primary causes of earth movements are rooted in the dynamic processes occurring within the Earth's interior. These include:</p>
+                    <ol>
+                        <li><strong>Magma movement within the Earth’s crust and mantle:</strong>
+                            <p>The movement of molten rock (magma) is a significant cause of crustal displacement. When magma rises from the mantle and intrudes into the crust, it can exert upward pressure, causing uplift or doming of the overlying rocks. Conversely, if a large volume of magma is erupted onto the surface (as lava) or moves away from an area beneath the crust, the overlying rocks may lose support and subside or collapse into the partially emptied magma chamber.</p>
+                        </li>
+                        <li><strong>Gravitational force:</strong>
+                            <p>Gravity, the force that pulls all matter towards the Earth's center, plays a role in earth movements, particularly in areas of instability. For instance, on steep slopes or in areas where rocks are heavily fractured, gravity can contribute to landslides or the slow creep of rock masses. It also drives the overall tendency for denser materials to sink and less dense materials to rise, influencing processes like mantle convection and isostasy.</p>
+                        </li>
+                        <li><strong>Convectional currents in the mantle:</strong>
+                            <p>This is considered the primary driving mechanism for the movement of tectonic plates and, consequently, for most large-scale earth movements. Heat from the Earth's core and radioactive decay within the mantle creates temperature differences. Hotter, less dense mantle material rises, spreads laterally beneath the lithosphere, cools, becomes denser, and then sinks back towards the core. These slow-moving convection cells exert a powerful frictional drag on the overlying rigid lithospheric plates, causing them to move across the Earth's surface. This movement leads to interactions at plate boundaries, resulting in phenomena like sea-floor spreading, subduction, and continental collisions, which are the direct causes of orogenic movements.</p>
+                            ${getDiagramPlaceholder('Detailed illustration of Mantle Convection Cells showing rising and sinking limbs and their effect on lithospheric plates')}
+                        </li>
+                        <li><strong>Isostatic adjustment (Isostasy):</strong>
+                            <p>Isostasy refers to the state of gravitational equilibrium between the Earth's lithosphere (crust and upper mantle) and the underlying, more fluid asthenosphere. The lithosphere essentially "floats" on the asthenosphere at a level determined by its thickness and density. If this equilibrium is disturbed by changes in mass on the surface, vertical movements occur to restore the balance. Examples include:</p>
+                            <ul>
+                                <li><strong>Erosion and Deposition:</strong> Extensive erosion of a mountain range reduces its mass, causing the crust in that area to slowly uplift (isostatic rebound). Conversely, the deposition of large amounts of sediment (e.g., in a river delta or an ocean basin) increases the load on the crust, causing it to subside.</li>
+                                <li><strong>Ice Sheets:</strong> The growth of massive ice sheets during glacial periods depresses the crust beneath them. When the ice melts, the crust slowly rebounds upwards (post-glacial rebound). Scandinavia and parts of North America are still experiencing this today.</li>
+                            </ul>
+                            <p>These isostatic adjustments are a form of epeirogenic movement, causing broad, gentle uplifts or subsidences over large areas.</p>
+                            ${getDiagramPlaceholder('Series of diagrams illustrating Isostatic Adjustment: (a) Crust in equilibrium, (b) Crust depressed by ice sheet/sediment load, (c) Crust rebounding after ice melt/erosion')}
+                        </li>
+                    </ol>
+                `
+            },
+            // 2. THEORIES EXPLAINING EARTH MOVEMENTS
+            {
+                id: 'theories_intro',
+                title: '2. Theories Explaining Earth Movements',
+                htmlContent: `<h2>2. THEORIES EXPLAINING EARTH MOVEMENTS</h2>
+                <p>Two major scientific theories provide comprehensive frameworks for understanding the large-scale movements of the Earth's crust and the resulting distribution of continents and major landforms: the Theory of Continental Drift and the Theory of Plate Tectonics. While Continental Drift laid crucial groundwork, Plate Tectonics is the current unifying theory.</p>`
+            },
+            {
+                id: 'continental_drift',
+                title: '2.1 Theory of Continental Drift',
+                htmlContent: `
+                    <h3>(a) The Theory of Continental Drift</h3>
+                    <p>Proposed by the German meteorologist and geophysicist Alfred Wegener in the early 20th century (primarily between 1912 and 1915), this theory revolutionized geological thinking by suggesting that continents are not fixed in position but have moved ("drifted") across the Earth's surface over geological time.</p>
+                    <h4>Key Postulates of Wegener's Theory:</h4>
+                    <ul>
+                        <li><strong>Pangaea:</strong> Wegener proposed that about 200-300 million years ago (during the late Paleozoic and early Mesozoic eras), all the Earth's continents were joined together to form a single, immense supercontinent, which he named <strong>Pangaea</strong> (meaning "all lands" or "all Earth").</li>
+                        <li><strong>Panthalassa:</strong> This supercontinent was surrounded by a single, vast global ocean called <strong>Panthalassa</strong> (meaning "all seas").</li>
+                        <li><strong>Breakup and Drifting:</strong> Pangaea later began to break apart. It first split into two major landmasses:
+                            <ul>
+                                <li><strong>Laurasia</strong> to the north (comprising present-day North America, Greenland, and Eurasia excluding India).</li>
+                                <li><strong>Gondwanaland</strong> (or Gondwana) to the south (comprising present-day South America, Africa, Madagascar, India, Australia, and Antarctica).</li>
+                            </ul>
+                            These two supercontinents were separated by a large, wedge-shaped sea called the <strong>Tethys Sea</strong>.
+                        </li>
+                        <li><strong>Further Fragmentation:</strong> Subsequently, Laurasia and Gondwanaland continued to fragment, and the resulting continental blocks gradually drifted to their current positions. Wegener suggested that continents plowed through the oceanic crust, driven by forces related to the Earth's rotation (centrifugal force and tidal forces), though these proposed mechanisms were later found to be insufficient.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Sequential diagrams: (1) Pangaea and Panthalassa, (2) Laurasia and Gondwanaland with Tethys Sea, (3) Further breakup towards modern continental positions')}
+                    <h4>Evidence Supporting the Theory of Continental Drift:</h4>
+                    <p>Wegener compiled a wide range of evidence from different scientific fields to support his theory:</p>
+                    <ol>
+                        <li><strong>Jigsaw Fit of Continents (Geomorphological Evidence):</strong> The most apparent evidence was the remarkable way the coastlines of certain continents appear to fit together. The most striking example is the eastern coast of South America and the western coast of Africa, which fit like pieces of a jigsaw puzzle. Wegener argued this was too precise to be coincidental. ${getDiagramPlaceholder('Detailed Jigsaw fit of South America and Africa, highlighting continental shelves')}</li>
+                        <li><strong>Geological Structural and Rock Type Similarities (Geological Evidence):</strong> Wegener noted that mountain ranges and rock formations of similar age and type appeared to align across continents now separated by oceans. For example, the Appalachian Mountains in eastern North America show structural and rock-type similarities to the Caledonian mountains in Greenland, Ireland, Britain, and Scandinavia. Similarly, ancient rock formations (cratons) in Brazil match those in West Africa.</li>
+                        <li><strong>Distribution of Ancient Glacial Deposits (Paleoclimatological Evidence):</strong> Evidence of extensive glaciation during the late Paleozoic era (Permo-Carboniferous period, around 300 million years ago) is found in widespread areas of South America, Africa, India, Australia, and Antarctica. Features like glacial tillites (consolidated glacial debris) and striations (scratches on bedrock made by moving glaciers) in these regions, some of which are now tropical, suggest these continents were once joined and located near the South Pole, covered by a massive ice sheet.</li>
+                        <li><strong>Sea Floor Spreading (Later Evidence):</strong> Although not available to Wegener, later research in the mid-20th century provided strong support. Studies of the ocean floor revealed mid-ocean ridges where new oceanic crust is formed and spreads outwards. The age of the oceanic crust increases with distance from these ridges, and magnetic striping patterns parallel to the ridges record reversals in Earth's magnetic field. This provided a mechanism for continental movement. ${getDiagramPlaceholder('Sea Floor Spreading: Mid-ocean ridge, rising magma, new crust formation, and outward movement of older crust with magnetic striping')}</li>
+                        <li><strong>Paleontological (Fossil) Evidence:</strong> Identical or very similar fossils of ancient terrestrial (land-dwelling) plants and animals were found on continents now separated by vast oceans. Examples include:
+                            <ul>
+                                <li><em>Glossopteris flora:</em> Fossils of this distinctive seed fern are found across South America, Africa, India, Australia, and Antarctica, suggesting these landmasses were once connected and shared a similar climate.</li>
+                                <li><em>Mesosaurus:</em> A small, freshwater reptile whose fossils are found only in Permian-aged rocks in parts of Brazil (South America) and southern Africa. It is unlikely this creature could have swum across the vast Atlantic Ocean.</li>
+                                <li><em>Lystrosaurus:</em> A land-dwelling reptile whose fossils are found in Africa, India, and Antarctica.</li>
+                            </ul>
+                            The distribution of these organisms is best explained if the continents were once contiguous.
+                        </li>
+                        <li><strong>Palaeomagnetic Evidence (Later Evidence):</strong> When iron-rich volcanic rocks cool and solidify, magnetic minerals within them align with the Earth's magnetic field at that time, recording its direction and inclination (paleomagnetism). Studies of rocks of different ages from different continents show that the apparent position of the magnetic poles has wandered over time (apparent polar wander paths). These paths are different for each continent if they are assumed to be fixed, but they converge if the continents are moved back to their proposed Pangaean positions. This indicates that the continents themselves have moved relative to the magnetic poles.</li>
+                        <li><strong>Climatological Evidence (Beyond Glaciation):</strong> Deposits such as coal, which forms from the accumulation of plant matter in warm, swampy tropical conditions, are found in present-day temperate and even polar latitudes (e.g., Antarctica, Spitzbergen). This suggests these landmasses were once located in different, warmer climatic zones. Similarly, ancient desert sandstones and evaporite deposits (formed in arid conditions) are found in regions that are now humid.</li>
+                        <li><strong>The Mid-Atlantic Ridge:</strong> The discovery of this extensive underwater mountain range running down the center of the Atlantic Ocean, characterized by volcanic activity and earthquakes, provided further support for the idea that the Atlantic Ocean was formed by the rifting apart of continents.</li>
+                    </ol>
+                    <p>Despite the compelling evidence, Wegener's theory faced considerable skepticism, primarily because he could not propose a scientifically plausible mechanism to explain *how* the massive continents could move through the supposedly rigid oceanic crust. His proposed forces (centrifugal and tidal) were deemed far too weak. It wasn't until the development of the theory of Plate Tectonics, incorporating concepts like sea-floor spreading and mantle convection, that a viable mechanism was established, validating and expanding upon Wegener's pioneering ideas.</p>
+                `
+            },
+            {
+                id: 'plate_tectonics',
+                title: '2.2 Theory of Plate Tectonics',
+                htmlContent: `
+                    <h3>(b) The Theory of Plate Tectonics</h3>
+                    <p>Developed primarily in the 1960s, the Theory of Plate Tectonics is the modern, unifying theory that explains the large-scale movements of the Earth's lithosphere. It incorporates the core ideas of continental drift and provides the underlying mechanisms for these movements and their geological consequences.</p>
+                    <h4>Key Concepts of Plate Tectonics:</h4>
+                    <ul>
+                        <li><strong>Lithosphere and Asthenosphere:</strong> The Earth's rigid outer layer, the <strong>lithosphere</strong>, is composed of the crust (both continental and oceanic) and the uppermost part of the mantle. It is relatively cool and brittle. The lithosphere is broken into a mosaic of several large and numerous smaller segments called <strong>tectonic plates</strong>.</li>
+                        <li><strong>Plate Movement:</strong> These plates "float" or rest upon a hotter, weaker, more ductile (semi-molten) layer in the upper mantle known as the <strong>asthenosphere</strong>. The plates are in constant, slow motion relative to each other, moving at rates typically ranging from a few millimeters to several centimeters per year.</li>
+                        <li><strong>Driving Mechanism:</strong> The primary driving force for plate movement is believed to be <strong>convection currents</strong> within the asthenosphere and deeper mantle. Hotter, less dense material rises, spreads laterally, cools, and then sinks, creating a drag on the base of the lithospheric plates. Other contributing forces may include "ridge push" (gravitational sliding away from elevated mid-ocean ridges) and "slab pull" (the gravitational pull of dense, subducting oceanic lithosphere).</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Cross-section of Earth showing Lithosphere (plates) and Asthenosphere, with Convection Currents driving plate motion')}
+                    <h4>Major Tectonic Plates:</h4>
+                    <p>Geologists have identified about seven major tectonic plates and numerous smaller ones. The major plates are:</p>
+                    <ul>
+                        <li><strong>Pacific Plate:</strong> The largest plate, predominantly oceanic.</li>
+                        <li><strong>North American Plate:</strong> Carries North America and extends east to the Mid-Atlantic Ridge and west to parts of Siberia.</li>
+                        <li><strong>South American Plate:</strong> Carries South America and extends east to the Mid-Atlantic Ridge.</li>
+                        <li><strong>Eurasian Plate:</strong> Carries Europe and most of Asia (excluding India and parts of Southeast Asia).</li>
+                        <li><strong>African Plate:</strong> Carries Africa.</li>
+                        <li><strong>Indo-Australian Plate:</strong> Carries India, Australia, New Zealand, and parts of the Indian Ocean (sometimes considered two separate plates: Indian and Australian).</li>
+                        <li><strong>Antarctic Plate:</strong> Carries Antarctica and surrounding oceanic crust.</li>
+                    </ul>
+                     ${getDiagramPlaceholder('World Map showing the boundaries of the Major Tectonic Plates')}
+                    <h4>Plate Boundaries and Associated Features:</h4>
+                    <p>Most significant geological activity (earthquakes, volcanoes, mountain building) occurs at the boundaries where tectonic plates interact. There are three main types of plate boundaries:</p>
+                    <ol>
+                        <li><strong>Extension / Tensional / Constructive (Divergent) Boundaries:</strong>
+                            <ul>
+                                <li><strong>Movement:</strong> Plates move away (diverge) from each other.</li>
+                                <li><strong>Process:</strong> As plates pull apart, tensional forces dominate. Magma from the asthenosphere rises to fill the gap, cools, and solidifies, creating new lithospheric crust (primarily oceanic crust). This process is often referred to as sea-floor spreading when it occurs beneath oceans.</li>
+                                <li><strong>Resultant Features:</strong>
+                                    <ul>
+                                        <li><strong>Mid-Ocean Ridges:</strong> Extensive underwater mountain ranges formed by the accumulation of volcanic rock (e.g., the Mid-Atlantic Ridge, East Pacific Rise). Characterized by shallow earthquakes and volcanic activity.</li>
+                                        <li><strong>Continental Rift Valleys:</strong> If divergence occurs beneath a continent, the continent can stretch and break apart, forming a rift valley (e.g., the East African Rift Valley, Rhine Rift Valley). These are often associated with normal faulting, volcanic activity, and shallow earthquakes.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            ${getDiagramPlaceholder('Detailed Divergent Boundary: (a) Oceanic (Mid-Ocean Ridge, magma upwelling, new crust), (b) Continental (Rift Valley, faulting, volcanism)')}
+                        </li>
+                        <li><strong>Compressional / Destructive (Convergent) Boundaries:</strong>
+                            <ul>
+                                <li><strong>Movement:</strong> Plates move towards (converge with) each other.</li>
+                                <li><strong>Process & Features (depend on the types of converging plates):</strong>
+                                    <ul>
+                                        <li><strong>Oceanic-Continental Convergence:</strong> The denser oceanic plate subducts (sinks) beneath the less dense continental plate into the asthenosphere. As the oceanic plate descends, it heats up and melts, generating magma. This magma rises to the surface, forming a chain of volcanoes on the continental plate, known as a <strong>volcanic arc</strong> (e.g., the Andes Mountains). The collision also causes the continental crust to buckle and fold, forming <strong>fold mountains</strong>. A deep <strong>ocean trench</strong> typically forms offshore, marking the line of subduction. Associated with powerful earthquakes (shallow to deep focus).</li>
+                                        <li><strong>Oceanic-Oceanic Convergence:</strong> When two oceanic plates converge, the older, colder, and therefore denser plate subducts beneath the younger, warmer plate. This process also generates magma, which rises to form a curved chain of volcanic islands known as an <strong>island arc</strong> (e.g., the Mariana Islands, Japanese archipelago). A deep <strong>ocean trench</strong> forms parallel to the island arc. Associated with powerful earthquakes.</li>
+                                        <li><strong>Continental-Continental Convergence:</strong> Since continental crust is relatively light and buoyant, neither plate can easily subduct. Instead, the continental landmasses collide, and the crust is intensely compressed, buckled, folded, and faulted, leading to the formation of massive <strong>fold mountain ranges</strong> (e.g., the Himalayas, formed by the collision of the Indian and Eurasian plates; the Alps). Associated with powerful earthquakes, but typically less volcanism than other convergent boundaries.</li>
+                                    </ul>
+                                </li>
+                                <li>At destructive boundaries, lithospheric crust is consumed or recycled back into the mantle.</li>
+                            </ul>
+                             ${getDiagramPlaceholder('Detailed Convergent Boundaries: (a) Oceanic-Continental (Subduction, trench, volcanic arc, fold mountains), (b) Oceanic-Oceanic (Subduction, trench, island arc), (c) Continental-Continental (Collision, massive fold mountains)')}
+                        </li>
+                        <li><strong>Transform Faults / Conservative Margins (Strike-Slip Boundaries):</strong>
+                            <ul>
+                                <li><strong>Movement:</strong> Plates slide horizontally past one another, along a transform fault.</li>
+                                <li><strong>Process:</strong> Shear forces dominate. Lithospheric crust is neither created (as at divergent boundaries) nor destroyed (as at convergent boundaries) – hence the term "conservative."</li>
+                                <li><strong>Resultant Features:</strong>
+                                    <ul>
+                                        <li><strong>Transform Faults:</strong> Large-scale strike-slip faults that offset segments of mid-ocean ridges or connect other types of plate boundaries (e.g., the San Andreas Fault in California, which connects segments of the East Pacific Rise and the Gorda Ridge; the Alpine Fault in New Zealand).</li>
+                                        <li>Characterized by significant earthquake activity, often shallow focus but can be very powerful. Volcanoes are generally not associated with transform boundaries.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            ${getDiagramPlaceholder('Detailed Transform Boundary showing plates sliding past each other and offsetting features like a mid-ocean ridge')}
+                        </li>
+                    </ol>
+                    <h4>Significance of Plate Tectonics:</h4>
+                    <p>The Theory of Plate Tectonics is a cornerstone of modern Earth science because it provides a unifying framework for understanding a vast range of geological phenomena, including:</p>
+                    <ul>
+                        <li>The mechanisms behind continental drift and the changing positions of continents and ocean basins over geological time.</li>
+                        <li>The formation and distribution of the Earth's major physical features: mountain ranges, rift valleys, ocean trenches, volcanic arcs, and mid-ocean ridges.</li>
+                        <li>The global distribution patterns of earthquakes and volcanic activity, which are predominantly concentrated along plate boundaries.</li>
+                        <li>The fundamental processes of internal landform creation: folding, faulting, and vulcanicity are direct consequences of the stresses and material movements associated with plate interactions.</li>
+                        <li>The rock cycle, including the creation of new crust and the recycling of old crust.</li>
+                    </ul>
+                `
+            },
+            // 3. FOLDING
+            {
+                id: 'folding_intro',
+                title: '3. Folding',
+                htmlContent: `
+                    <h2>3. FOLDING</h2>
+                    <p>Folding is a fundamental internal landforming process that occurs when crustal rocks, particularly layered sedimentary rocks, are subjected to intense compressional forces. Instead of fracturing, these rocks respond by bending or buckling, creating wave-like undulations. This process is a form of ductile deformation, typically occurring under conditions of high pressure, elevated temperature, or when stress is applied slowly over long geological timescales, allowing the rocks to behave plastically.</p>
+                    <h3>Parts of a Fold</h3>
+                    <p>Understanding the geometry of folds requires familiarity with several key terms:</p>
+                    <ul>
+                        <li><strong>Anticline:</strong> An arch-like upfold where the rock layers (strata) dip away from a central crest or axis. In an eroded anticline, the oldest rock layers are typically exposed in the core or center of the structure.</li>
+                        <li><strong>Syncline:</strong> A trough-like downfold where the rock layers dip towards a central trough or axis. In a syncline, the youngest rock layers are usually found in the core or center.</li>
+                        <li><strong>Limb (Flank):</strong> The sloping side of a fold, representing the rock layers on either side of the axis of an anticline or syncline. An anticline and an adjacent syncline share a common limb.</li>
+                        <li><strong>Axis (or Hinge Line / Axial Line):</strong> An imaginary line drawn along the points of maximum curvature of a fold. For an anticline, it's the line along the ridge or crest; for a syncline, it's the line along the base of the trough. The fold axis can be horizontal, inclined, or even vertical.</li>
+                        <li><strong>Axial Plane:</strong> An imaginary plane that divides a fold as symmetrically as possible. It passes through the axis of successive folded layers. The orientation of the axial plane (vertical, inclined, or horizontal) is crucial in classifying fold types.</li>
+                        <li><strong>Crest:</strong> The highest point on an anticlinal fold.</li>
+                        <li><strong>Trough:</strong> The lowest point in a synclinal fold.</li>
+                        <li><strong>Plunge:</strong> If the fold axis is not horizontal but is inclined, the angle of inclination is called the plunge of the fold.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Clear, Labelled Diagram: Parts of a Fold, showing Anticline, Syncline, Limbs, Axis, Axial Plane, Crest, and Trough')}
+                `
+            },
+            {
+                id: 'folding_types',
+                title: '3.1 Types of Folds',
+                htmlContent: `
+                    <h3>Types of Folds</h3>
+                    <p>Folds are classified based on the orientation of their limbs relative to each other and the attitude of their axial plane. This classification reflects the nature and intensity of the compressional forces involved:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fold Type</th>
+                                <th>Description</th>
+                                <th>Causal Force Implication</th>
+                                <th>Diagram Sketch (Conceptual)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Symmetrical Fold (Simple Fold)</strong></td>
+                                <td>The limbs dip at similar angles in opposite directions from the axis. The axial plane is essentially vertical.</td>
+                                <td>Formed by relatively equal and moderate compressional forces acting from both sides.</td>
+                                <td>${getDiagramPlaceholder('Symmetrical Fold with vertical axial plane and equal limb dips')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Asymmetrical Fold</strong></td>
+                                <td>The limbs dip at different angles; one limb is steeper than the other. The axial plane is inclined (tilted).</td>
+                                <td>Formed by unequal compressional forces, or by forces acting more strongly from one direction.</td>
+                                <td>${getDiagramPlaceholder('Asymmetrical Fold with inclined axial plane and unequal limb dips')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Overfold</strong></td>
+                                <td>One limb has been pushed over the other (overturned) so that both limbs dip in the same general direction, but usually at different angles. The axial plane is significantly inclined. The overturned limb has younger rocks overlying older rocks.</td>
+                                <td>Formed by stronger, often unequal, compressional forces, causing one side of the fold to be pushed more vigorously.</td>
+                                <td>${getDiagramPlaceholder('Overfold showing both limbs dipping in the same direction and inclined axial plane')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Isoclinal Fold</strong></td>
+                                <td>The limbs are parallel or nearly parallel to each other and dip at approximately the same angle and in the same direction. The axial planes are also parallel. "Iso" means same, "clinal" means angle.</td>
+                                <td>Formed by intense, prolonged, and often uniform compression, squeezing the folds tightly together.</td>
+                                <td>${getDiagramPlaceholder('Isoclinal Folds with parallel limbs and axial planes')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recumbent Fold</strong></td>
+                                <td>The axial plane is essentially horizontal or near-horizontal; the fold is effectively "lying on its side." The limbs are also nearly horizontal.</td>
+                                <td>Formed by extreme compressional pressure, often associated with large-scale horizontal movements of rock masses.</td>
+                                <td>${getDiagramPlaceholder('Recumbent Fold with horizontal axial plane')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Overthrust Fold (Nappe)</strong></td>
+                                <td>A recumbent fold where the compressional stress has been so great that a fracture (a type of fault called a thrust fault) occurs, typically along the lower limb or axial region. The upper part of the fold (the nappe) is then pushed or thrust horizontally over the lower part, often for many kilometers. Older rocks can be thrust over younger rocks.</td>
+                                <td>Represents the most extreme form of compressional deformation, where folding transitions into faulting.</td>
+                                <td>${getDiagramPlaceholder('Overthrust Fold (Nappe) showing a recumbent fold with a thrust fault and displacement')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anticlinorium</strong></td>
+                                <td>A large, complex regional upfold or arch-like structure that is itself composed of many smaller, subsidiary anticlines and synclines.</td>
+                                <td>Formed by large-scale regional compression affecting a thick sequence of rocks.</td>
+                                <td>${getDiagramPlaceholder('Anticlinorium structure (large arch made of smaller folds)')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Synclinorium</strong></td>
+                                <td>A large, complex regional downfold or trough-like structure that is itself composed of many smaller, subsidiary anticlines and synclines.</td>
+                                <td>Formed by large-scale regional compression, often adjacent to an anticlinorium.</td>
+                                <td>${getDiagramPlaceholder('Synclinorium structure (large trough made of smaller folds)')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dome</strong></td>
+                                <td>An upwarped structure where rock layers dip outwards in all directions from a central point (like an inverted bowl). Often formed by localized uplift from below (e.g., by an igneous intrusion).</td>
+                                <td>Localized vertical uplift or compression from multiple directions.</td>
+                                <td>${getDiagramPlaceholder('Dome structure with beds dipping away from center')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Basin</strong></td>
+                                <td>A downwarped structure where rock layers dip inwards from all directions towards a central point (like a bowl). Often formed by subsidence.</td>
+                                <td>Localized subsidence or downwarping.</td>
+                                <td>${getDiagramPlaceholder('Basin structure with beds dipping towards center')}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            {
+                id: 'folding_features',
+                title: '3.2 Features Resulting from Folding',
+                htmlContent: `
+                    <h3>Features Resulting from Folding</h3>
+                    <p>The process of folding gives rise to a variety of distinct landforms, ranging from small-scale undulations to massive mountain ranges:</p>
+                    <ol>
+                        <li><strong>Fold Mountains:</strong> These are the most prominent and large-scale features. They are characterized by long, often parallel, ridges (formed by resistant anticlinal crests or limbs) and valleys (often occupying synclinal troughs or eroded anticlinal cores).
+                            <ul>
+                                <li><strong>Formation Process (Geosynclinal Theory):</strong> A widely accepted model for the formation of major fold mountain ranges involves the concept of a <strong>geosyncline</strong>:
+                                    <ol type="a">
+                                        <li>An extensive, elongated depression (geosyncline) forms, often at continental margins or between continental blocks, typically submerged beneath a shallow sea.</li>
+                                        <li>Over millions of years, rivers and other erosional agents transport vast quantities of sediments (sands, silts, clays, gravels, and organic remains) from surrounding higher landmasses and deposit them in layers within the geosyncline.</li>
+                                        <li>The sheer weight of the accumulating sediments causes the floor of the geosyncline to gradually sink or subside further into the underlying mantle, allowing for even greater thicknesses of sediment to accumulate (often many kilometers thick).</li>
+                                        <li>Eventually, powerful compressional forces, usually resulting from converging tectonic plates, squeeze the accumulated layers of sediment. Because these sedimentary rocks are often still relatively pliable or exist in a semi-elastic state (especially if deeply buried and warmed), they respond to the compression by bending and buckling, rather than breaking. The layers are contorted into a series of upfolds (anticlines) and downfolds (synclines), ultimately forming complex fold mountain systems.</li>
+                                    </ol>
+                                    ${getDiagramPlaceholder('Sequential Diagram: Formation of Fold Mountains from a Geosyncline (Sedimentation, Subsidence, Compression, Folding)')}
+                                </li>
+                                <li>Examples: Himalayas (Asia), Alps (Europe), Andes (South America), Rockies (North America), Atlas Mountains (Africa).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Escarpments:</strong> While often associated with faulting, folding can also produce escarpments. An escarpment is a steep, often cliff-like, slope. In folded terrain, the steeply dipping limb of an anticline or an asymmetrical fold can form a prominent escarpment, especially if composed of resistant rock layers. Differential erosion can also accentuate these features.</li>
+                        <li><strong>Valleys (Synclinal Valleys and Anticlinal Valleys):</strong>
+                            <ul>
+                                <li><strong>Synclinal Valleys:</strong> These are valleys that occupy the downfolded troughs of synclines. Rivers may flow along these valleys, further shaping them through erosion.</li>
+                                <li><strong>Anticlinal Valleys:</strong> Sometimes, the crest of an anticline, being under tension, may be more easily eroded than the compressed rocks in the synclines. If the anticlinal crest is breached by erosion, a valley can develop along the axis of the anticline, often flanked by higher ridges formed by the more resistant limbs.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Depressions and Basins:</strong> Large-scale downwarping or broad synclinal structures (synclinoria) can form extensive depressions or basins in the Earth's crust. These may become sites for lakes or inland drainage systems, and can accumulate further sediments.</li>
+                        <li><strong>Rolling Plains and Undulating Terrain:</strong> Where folding is less intense, it can create a landscape of gentle anticlines and synclines, resulting in rolling plains or undulating topography rather than high mountains.</li>
+                        <li><strong>Intermontane Plateaus:</strong> These are relatively flat, elevated areas found between or within fold mountain ranges. They can be formed by less intense folding of crustal blocks uplifted during the mountain-building process, or by the accumulation of lava flows or sediments in basins within the mountain system. Examples include the Tibetan Plateau (between the Himalayas and Kunlun Mountains) and the Altiplano (in the Andes).</li>
+                        <li><strong>Intermontane Basins:</strong> These are depressions located between mountain ranges or within complex fold systems. They often become sites of significant sediment accumulation, eroded from the surrounding highlands.</li>
+                    </ol>
+                `
+            },
+            {
+                id: 'folding_distribution_significance',
+                title: '3.3 Distribution & Significance of Folding',
+                htmlContent: `
+                    <h3>World Distribution of Fold Mountain Systems (Orogenies)</h3>
+                    <p>The process of fold mountain building is known as <strong>orogenesis</strong>, and specific periods of mountain building are called <strong>orogenies</strong>. Major fold mountain systems are grouped by their geological age:</p>
+                    <ul>
+                        <li><strong>Young Fold Mountains (Alpine Orogeny - Tertiary Period, Cenozoic Era):</strong> These are the youngest (formed roughly 25-65 million years ago, though some activity continues) and generally the highest and most rugged fold mountains, as they have undergone less erosion. They are often associated with current or recent tectonic plate convergence.
+                            <ul><li>Examples: Himalayas (Asia), Alps (Europe), Andes (South America), Rockies (North America), Atlas Mountains (North Africa), Zagros Mountains (Iran).</li></ul>
+                        </li>
+                        <li><strong>Old Fold Mountains (e.g., Caledonian & Hercynian/Variscan Orogenies - Paleozoic Era):</strong>
+                            <ul>
+                                <li><strong>Caledonian Orogeny:</strong> Formed around 490-390 million years ago. Examples include mountains in Scotland, Ireland, Scandinavia (Norwegian mountains), and parts of the Appalachians in North America.</li>
+                                <li><strong>Hercynian (or Variscan) Orogeny:</strong> Formed around 380-280 million years ago. Examples include the Ural Mountains (Russia), the Massif Central (France), the Vosges and Black Forest (France/Germany), the Pennines (UK), and parts of the Appalachians.</li>
+                                <li>These mountains are significantly more eroded and generally lower and more rounded than young fold mountains.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ancient Fold Mountains (e.g., Charnian Orogeny - Pre-Cambrian Era):</strong> These are the oldest, formed hundreds of millions to billions of years ago. They have been subjected to immense periods of erosion and metamorphism, so only their heavily worn-down roots or remnants (often as shields or cratons) exist today. Examples include parts of the Canadian Shield, the Baltic Shield, and some highlands in Africa and Australia.</li>
+                    </ul>
+                     ${getDiagramPlaceholder('World Map showing the distribution of Young, Old, and Ancient Fold Mountain Systems')}
+                    <h3>Significance of Folding to Human Activities and Influence on Climate</h3>
+                    <p>Folded landscapes, particularly fold mountains, have profound impacts:</p>
+                    <h4>Positive Significance:</h4>
+                    <ul>
+                        <li><strong>Scenic Beauty and Tourism:</strong> The dramatic landscapes of fold mountains (e.g., snow-capped peaks, deep valleys, alpine meadows) attract tourists, supporting local economies through activities like mountaineering, hiking, skiing, and sightseeing. (e.g., Swiss Alps, Himalayas, Canadian Rockies).</li>
+                        <li><strong>Water Resources (Catchment Areas):</strong> Fold mountains are crucial water catchment areas. They intercept moisture-laden winds, leading to higher precipitation (rain and snow), which feeds rivers and glaciers. These rivers are vital sources of freshwater for domestic use, agriculture (irrigation), industry, and the generation of Hydro-Electric Power (HEP). (e.g., rivers originating from the Himalayas, Alps, Aberdares in Kenya).</li>
+                        <li><strong>Forestry Resources:</strong> The slopes of fold mountains, especially windward slopes with higher rainfall, often support extensive forests, providing timber, fuel, and other forest products, as well as important ecological habitats.</li>
+                        <li><strong>Mineral Resources:</strong> The processes of folding, and associated igneous activity and metamorphism, can lead to the concentration and exposure of valuable mineral deposits. Anticlines can act as traps for oil and natural gas. Metallic ores (e.g., copper, lead, zinc, silver, gold) are often found in veins and lodes within folded and faulted mountain belts.</li>
+                        <li><strong>Agriculture (in specific areas):</strong> While steep slopes are challenging, valleys within fold mountain regions can have fertile alluvial soils suitable for farming. Terracing can be used on gentler slopes. Some mountain slopes are ideal for specific crops like tea or coffee.</li>
+                    </ul>
+                    <h4>Negative Significance:</h4>
+                    <ul>
+                        <li><strong>Barriers to Transport and Communication:</strong> The high relief, rugged terrain, and steep slopes of fold mountains act as significant barriers to the development of transport routes (roads, railways) and communication lines, making construction difficult and expensive, and often isolating communities.</li>
+                        <li><strong>Limitations on Agriculture and Settlement:</strong> Steep slopes, thin soils (prone to erosion), harsh climatic conditions at high altitudes (low temperatures, short growing seasons), and risk of landslides limit the potential for agriculture and widespread human settlement.</li>
+                        <li><strong>Natural Hazards:</strong> Mountainous regions are prone to natural hazards such as landslides, rockfalls, avalanches (in snow-covered areas), and flash floods. Young fold mountain belts are also often seismically active.</li>
+                        <li><strong>Rain Shadow Effect:</strong> Leeward slopes of high mountains often lie in a rain shadow, receiving significantly less rainfall, which can lead to arid or semi-arid conditions and limit agricultural potential.</li>
+                    </ul>
+                    <h4>Influence on Climate:</h4>
+                    <ul>
+                        <li><strong>Orographic Rainfall:</strong> Mountains act as barriers to prevailing winds, forcing moist air to rise, cool adiabatically, condense, and form clouds, leading to increased precipitation (rain or snow) on the windward slopes.</li>
+                        <li><strong>Rain Shadow:</strong> As the air descends on the leeward side, it warms and its capacity to hold moisture increases, resulting in drier conditions and the formation of a rain shadow area.</li>
+                        <li><strong>Temperature Modification:</strong> Temperature generally decreases with increasing altitude (environmental lapse rate), making mountain tops significantly colder than adjacent lowlands. This creates distinct altitudinal zones of climate and vegetation.</li>
+                        <li><strong>Influence on Wind Patterns:</strong> Mountains can channel winds through valleys, create local wind systems (e.g., anabatic and katabatic winds), and act as barriers to large-scale air mass movements.</li>
+                        <li><strong>Aspect:</strong> The direction a slope faces (aspect) influences the amount of solar radiation it receives. In the Northern Hemisphere, south-facing slopes are generally warmer and drier than north-facing slopes.</li>
+                    </ul>
+                `
+            },
+             // 4. FAULTING
+            {
+                id: 'faulting_intro',
+                title: '4. Faulting',
+                htmlContent: `
+                    <h2>4. FAULTING</h2>
+                    <p>Faulting is a crucial internal landforming process that involves the <strong>fracturing or breaking of crustal rocks</strong> when they are subjected to stresses that exceed their brittle strength. This rupture is accompanied by a discernible <strong>displacement or movement of the rock blocks</strong> on either side of the break, known as a fault. Faulting is a form of brittle deformation, contrasting with the ductile deformation seen in folding. It commonly occurs in rocks that are rigid, cold, or when stress is applied rapidly.</p>
+                    <h3>Parts of a Fault</h3>
+                    <p>To describe and understand faults, several key terms are used to define their geometry and the relative movement of the rock blocks:</p>
+                    <ul>
+                        <li><strong>Fault Plane:</strong> This is the actual surface of fracture or rupture along which the movement or displacement of rock blocks has occurred. It can be a smooth, polished surface (slickenside) or a zone of crushed rock (fault breccia or gouge).</li>
+                        <li><strong>Fault Line (or Fault Trace):</strong> This is the line of intersection of the fault plane with the Earth's surface. It is what is often mapped by geologists.</li>
+                        <li><strong>Upthrow Block (Upthrown Side):</strong> The block of rock that has moved upwards relative to the adjacent block along the fault.</li>
+                        <li><strong>Downthrow Block (Downthrown Side):</strong> The block of rock that has moved downwards relative to the adjacent block along the fault.</li>
+                        <li><strong>Hanging Wall:</strong> In an inclined fault (not vertical), this is the block of rock that lies *above* the fault plane. (Imagine if you could hang from it).</li>
+                        <li><strong>Footwall:</strong> In an inclined fault, this is the block of rock that lies *below* the fault plane. (Imagine if you could stand on it).</li>
+                        <li><strong>Throw:</strong> The amount of vertical displacement between the upthrow and downthrow blocks, measured perpendicular to the bedding or a reference horizon.</li>
+                        <li><strong>Heave:</strong> The amount of horizontal displacement in dip-slip faults (normal and reverse faults), measured in the direction of dip of the fault plane.</li>
+                        <li><strong>Dip:</strong> The angle of inclination of the fault plane measured from the horizontal plane, perpendicular to the strike.</li>
+                        <li><strong>Strike:</strong> The compass direction of a horizontal line on the fault plane.</li>
+                        <li><strong>Hade:</strong> The angle of inclination of the fault plane measured from the vertical plane (complementary to the dip, i.e., Hade = 90° - Dip).</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Detailed, Labelled Diagram: Parts of an Inclined Fault (Normal Fault example), clearly showing Fault Plane, Fault Line, Upthrow, Downthrow, Hanging Wall, Footwall, Throw, Heave, Dip, and Hade')}
+                `
+            },
+            {
+                id: 'faulting_types',
+                title: '4.1 Types of Faults',
+                htmlContent: `
+                    <h3>Types of Faults</h3>
+                    <p>Faults are classified based on the direction of relative movement of the blocks along the fault plane, which in turn reflects the type of stress (tensional, compressional, or shear) that caused the rupture:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fault Type</th>
+                                <th>Causal Force(s)</th>
+                                <th>Description of Block Movement & Key Characteristics</th>
+                                <th>Diagram Sketch (Conceptual)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Normal Fault (Dip-Slip Fault)</strong></td>
+                                <td>Tensional forces (pulling apart)</td>
+                                <td>The hanging wall moves down relative to the footwall. This results in crustal extension or lengthening. Fault scarps are commonly formed. The fault plane is usually steeply inclined (45-90°).</td>
+                                <td>${getDiagramPlaceholder('Normal Fault: Hanging wall down, footwall up, showing crustal extension')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reverse Fault (Dip-Slip Fault)</strong></td>
+                                <td>Compressional forces (pushing together)</td>
+                                <td>The hanging wall moves up relative to the footwall. This results in crustal shortening or compression. The fault plane is usually steeply inclined. Older rocks may be pushed over younger rocks.</td>
+                                <td>${getDiagramPlaceholder('Reverse Fault: Hanging wall up, footwall down, showing crustal shortening')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tear/Shear/Slip Fault (Strike-Slip or Wrench Fault)</strong></td>
+                                <td>Shear forces (horizontal sliding)</td>
+                                <td>The blocks slide past each other horizontally, parallel to the strike of the fault plane. There is little to no vertical movement. Movement can be:
+                                    <ul>
+                                        <li><strong>Right-lateral (dextral):</strong> If an observer facing the fault sees the opposite block move to their right.</li>
+                                        <li><strong>Left-lateral (sinistral):</strong> If an observer facing the fault sees the opposite block move to their left.</li>
+                                    </ul>
+                                    Example: Great Glen Fault of Scotland, San Andreas Fault (predominantly strike-slip).
+                                </td>
+                                <td>${getDiagramPlaceholder('Strike-Slip Fault: Blocks sliding horizontally past each other (show arrows for right-lateral or left-lateral)')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thrust Fault</strong></td>
+                                <td>Strong Compressional forces</td>
+                                <td>A special type of reverse fault where the fault plane has a low angle of dip (typically less than 45°, often much less). The hanging wall block is pushed (thrust) up and over the footwall block, often for considerable distances (kilometers to tens of kilometers). Results in significant crustal shortening and can place older rocks on top of younger rocks over large areas. Common in fold mountain belts.</td>
+                                <td>${getDiagramPlaceholder('Thrust Fault: Low-angle reverse fault with significant horizontal displacement of hanging wall over footwall')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Anticlinal Fault</strong></td>
+                                <td>Localized tension at the crest of a severely compressed anticline</td>
+                                <td>These are tensional fractures or normal faults that form along the crest (apex) of an anticline. During intense folding, the outer layers at the crest of an anticline are stretched, leading to the development of these gaping cracks or faults.</td>
+                                <td>${getDiagramPlaceholder('Anticlinal Faults: Normal faults developed at the crest of an anticline')}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Oblique-Slip Fault</strong></td>
+                                <td>Combination of tensional/compressional and shear forces</td>
+                                <td>Movement occurs both horizontally (strike-slip) and vertically (dip-slip) along the fault plane.</td>
+                                <td>${getDiagramPlaceholder('Oblique-Slip Fault showing combined horizontal and vertical movement')}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            {
+                id: 'faulting_features',
+                title: '4.2 Features Resulting from Faulting',
+                htmlContent: `
+                    <h3>Features Resulting from Faulting</h3>
+                    <p>Faulting processes create a variety of distinct and often dramatic landforms:</p>
+                    <ol>
+                        <li><strong>Fault Scarp (Escarpment):</strong>
+                            <p>A steep slope or cliff that is formed directly by movement along a fault. It represents the exposed surface of the fault plane or the steep face of the upthrown block. The height of the scarp depends on the amount of vertical displacement (throw) and subsequent erosion. Fresh fault scarps can be very steep and distinct, while older ones may be worn down by erosion. Many prominent escarpments in Kenya are fault scarps related to the formation of the Rift Valley.</p>
+                            <ul><li>Examples: Mau Escarpment, Nyandarua (Aberdare) Escarpment, Elgeyo Escarpment, Nyando Escarpment, Kikuyu Escarpment, Laikipia Escarpment (Kenya).</li></ul>
+                            ${getDiagramPlaceholder('Formation of a Fault Scarp')}
+                        </li>
+                        <li><strong>Block Mountain (Horst):</strong>
+                            <p>An uplifted block of land bordered by faults on at least two (often more) sides. A horst is formed when a central block of crust is uplifted relative to the surrounding blocks, or when the surrounding blocks subside, leaving the central block standing higher. The faults bounding a horst are typically normal faults if formed by tension leading to subsidence of adjacent blocks, or reverse/thrust faults if formed by compression leading to uplift of the central block.</p>
+                            <ul><li>Examples: Ruwenzori Mountains (Uganda/DRC), Usambara and Pare Mountains (Tanzania), Vosges Mountains (France), Black Forest (Germany), ranges in the Basin and Range Province (USA).</li></ul>
+                            ${getDiagramPlaceholder('Formation of a Block Mountain (Horst) by (a) uplift of central block, and (b) subsidence of side blocks')}
+                        </li>
+                        <li><strong>Tilt Block / Tilted Horst:</strong>
+                            <p>A fault block that has been tilted during faulting, resulting in one side being higher than the other. This creates an asymmetrical upland with a steep fault scarp on one side (the uplifted edge) and a gentler slope (back-slope) on the other. The Aberdare Range in Kenya is often described as a tilted horst.</p>
+                            <ul><li>Examples: West Kenya tilt block, Aberdare Range (Kenya), Sierra Nevada (USA - a very large tilted block mountain).</li></ul>
+                             ${getDiagramPlaceholder('Formation of a Tilt Block showing scarp and backslope')}
+                        </li>
+                        <li><strong>Rift Valley (Graben):</strong>
+                            <p>An elongated, relatively narrow trough or depression that has dropped down between two or more parallel faults (or series of step faults). It is essentially a sunken block (graben) bounded by steep fault scarps. Rift valleys are typically formed by tensional forces pulling the crust apart.</p>
+                            <ul><li>Examples: The Great East African Rift Valley (the most famous example), the Rhine Rift Valley (Europe), the Baikal Rift Valley (Siberia), Death Valley (USA).</li></ul>
+                            ${getDiagramPlaceholder('Formation of a Rift Valley (Graben) between parallel normal faults')}
+                        </li>
+                        <li><strong>Fault-Guided Valleys:</strong>
+                            <p>Sometimes, a river may follow the line of a fault, eroding a valley along the weakened fault zone. This results in a valley whose course is largely controlled by the underlying fault structure.</p>
+                        </li>
+                        <li><strong>Offset Drainage Patterns:</strong>
+                            <p>Strike-slip faulting can cause rivers or streams flowing across the fault to be displaced or offset laterally. Over time, this creates a distinct kink or offset in the river's course.</p>
+                        </li>
+                        <li><strong>Basins and Depressions:</strong>
+                            <p>Down-faulted blocks or areas of crustal sagging associated with faulting can create basins or depressions, which may accumulate sediments or form lakes if water is available.</p>
+                        </li>
+                    </ol>
+                `
+            },
+            {
+                id: 'faulting_grv',
+                title: '4.3 The Great Rift Valley (East African Rift System - EARS)',
+                htmlContent: `
+                    <h3>The Great Rift Valley (East African Rift System - EARS)</h3>
+                    <p>The East African Rift System is one of the most extensive and geologically active continental rift systems on Earth, stretching for thousands of kilometers from the Afar Triple Junction in the north (Ethiopia, Eritrea, Djibouti) southwards through East Africa (Kenya, Uganda, Tanzania, Malawi, Mozambique).</p>
+                    <h4>Theories of Formation:</h4>
+                    <p>While the general process involves crustal extension, specific theories detail the mechanics:</p>
+                    <ol>
+                        <li><strong>Tensional Forces Theory (Most Accepted for EARS):</strong> This theory proposes that the African continent is being subjected to powerful tensional forces that are pulling the crust apart. This tension caused the development of extensive systems of parallel normal faults. The block of land between these faults (the central block or graben) then subsided or sank downwards relative to the flanking blocks (horsts or rift shoulders), forming the elongated depression of the rift valley. This process is ongoing and is believed to be driven by upwelling mantle plumes beneath East Africa, leading to crustal doming, stretching, and eventual rifting. ${getDiagramPlaceholder('Detailed Rift Valley Formation by Tensional Forces, showing doming, initial faulting, and graben subsidence')}</li>
+                        <li><strong>Compressional Forces Theory:</strong> This less favored theory for the EARS suggests that compressional forces acting on the crust caused the outer blocks of land to be thrust upwards and outwards along adjacent reverse faults. The central block, remaining relatively stable or subsiding slightly, then appears as a depression or rift valley between the uplifted outer blocks. Subsequent erosion or collapse of protruding parts might form the escarpments.</li>
+                        <li><strong>Anticlinal Arching (Upwarping) Theory:</strong> This theory posits that forces from within the Earth caused a broad, gentle upwarping or arching of the crustal rocks over a large area. As the arch bent upwards, the rocks at the crest were stretched and subjected to tension, leading to the development of tensional faults. The central "keystone" block then collapsed or subsided along these faults, forming the rift valley. This upwarping is often linked to mantle plume activity.</li>
+                    </ol>
+                    <h4>Main Sections in East Africa:</h4>
+                    <p>The EARS is broadly divided into two main branches south of the Ethiopian Rift:</p>
+                    <ul>
+                        <li><strong>The Eastern Rift Valley (Gregory Rift):</strong> This branch runs through Ethiopia, Kenya, and into Tanzania. It is characterized by more intense volcanic activity and a series of relatively shallow, often alkaline, lakes.</li>
+                        <li><strong>The Western Rift Valley (Albertine Rift):</strong> This branch arcs from Uganda southwards along the borders of DRC, Rwanda, Burundi, and Tanzania. It is characterized by deeper, larger freshwater lakes (e.g., Lake Tanganyika, Lake Albert, Lake Edward, Lake Kivu) and generally less volcanism than the Eastern Rift, though it does have significant volcanic areas like the Virunga Mountains.</li>
+                    </ul>
+                    <h4>Features Associated with the Gregory Rift Valley (Kenya):</h4>
+                    <p>The Kenyan section of the Gregory Rift Valley showcases a remarkable assemblage of features:</p>
+                    <ul>
+                        <li><strong>Numerous Volcanoes:</strong> Both active and dormant, including shield volcanoes (e.g., Mt. Suswa, Mt. Longonot, Menengai caldera), composite cones, and smaller cinder cones. These result from magma ascending through the thinned and fractured crust.</li>
+                        <li><strong>Fault Scarps (Escarpments):</strong> Prominent steep cliffs marking the edges of the rift valley and internal fault blocks. Examples: Elgeyo Escarpment, Laikipia Escarpment, Mau Escarpment, Nguruman Escarpment.</li>
+                        <li><strong>Rift Valley Lakes:</strong> A chain of lakes occupies depressions on the rift floor. Many are shallow and alkaline due to high evaporation and limited outflow, concentrating salts. Examples: Lake Turkana (partially), Lake Logipi, Lake Baringo, Lake Bogoria, Lake Nakuru, Lake Elementaita, Lake Naivasha, Lake Magadi.</li>
+                        <li><strong>Tilt Blocks and Horsts:</strong> Uplifted and tilted blocks forming ranges and highlands within or bordering the rift (e.g., Aberdare Range as a tilted horst on the eastern shoulder).</li>
+                        <li><strong>Extensive Lava Flows:</strong> Vast sheets of volcanic rock cover large parts of the rift floor and surrounding areas, evidence of past fissure eruptions and eruptions from central volcanoes.</li>
+                        <li><strong>Geothermal Activity:</strong> Hot springs, geysers, and fumaroles are common, indicating high geothermal gradients and magma close to the surface (e.g., Olkaria geothermal field, areas around Lake Bogoria and Lake Magadi).</li>
+                        <li><strong>Uneven Graben Floor:</strong> The floor of the rift is not flat but is itself broken by numerous smaller faults, volcanic cones, and lava flows, creating a complex internal topography.</li>
+                        <li><strong>Step Faulting:</strong> The descent from the rift shoulders to the floor is often marked by a series of parallel faults, creating a step-like landscape.</li>
+                    </ul>
+                    <p>The EARS is considered an active continental rift, potentially representing the early stages of continental breakup where the Somali Plate is pulling away from the Nubian (African) Plate. If rifting continues, East Africa could eventually split, forming a new ocean basin.</p>
+                `
+            },
+            {
+                id: 'faulting_significance',
+                title: '4.4 Significance of Faulting',
+                htmlContent: `
+                    <h3>Significance of Faulting (Physical Environment, Drainage, and Human Activities)</h3>
+                    <p>Faulting has profound and diverse effects on both the physical environment and human activities:</p>
+                    <h4>Effects on the Physical Environment and Drainage:</h4>
+                    <ul>
+                        <li><strong>Formation of Major Landforms:</strong> Faulting is directly responsible for creating significant relief features such as rift valleys, block mountains (horsts), fault scarps, and tilted blocks, which fundamentally shape the landscape.</li>
+                        <li><strong>Formation of Lakes:</strong> Depressions formed by faulting (grabens, down-warped areas, or basins dammed by fault scarps) can fill with water to form lakes. Many of the world's deep and elongated lakes are tectonic in origin, found within rift valleys (e.g., Lake Tanganyika, Lake Malawi, Lake Baikal). These lakes are often important freshwater reservoirs and biodiversity hotspots.</li>
+                        <li><strong>Alteration of River Courses and Drainage Patterns:</strong> Faulting can dramatically alter existing drainage systems. Rivers may be:
+                            <ul>
+                                <li><strong>Diverted:</strong> Forced to change their course if their path is blocked by an uplifted fault block.</li>
+                                <li><strong>Reversed:</strong> The direction of flow can be reversed if tilting occurs.</li>
+                                <li><strong>Beheaded:</strong> The upper course of a river can be captured by another river due to fault-induced changes in topography.</li>
+                                <li><strong>Fault-Guided Drainage:</strong> Rivers may preferentially flow along the line of a fault, as the fault zone often consists of weaker, more easily eroded rock. This creates a drainage pattern that is strongly aligned with the fault structures.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Formation of Waterfalls and Rapids:</strong> When a fault scarp forms across a river's course, it can create a sudden drop in the river bed, leading to the formation of waterfalls or rapids. These can be significant for river profiles and energy.</li>
+                        <li><strong>Creation of Hot Springs and Geysers:</strong> Fault lines can act as deep conduits for groundwater to circulate into hotter regions of the crust. This geothermally heated water may then rise to the surface along the fault plane, emerging as hot springs, geysers (intermittent eruptions of hot water and steam), or fumaroles (steam vents).</li>
+                        <li><strong>Influence on Local Climate:</strong> Block mountains and high fault scarps can act as barriers to moisture-laden winds, leading to orographic rainfall on their windward slopes and creating rain shadow conditions (drier climates) on their leeward slopes.</li>
+                        <li><strong>Exposure of Rock Strata and Minerals:</strong> Faulting can bring deeply buried rock layers and mineral deposits closer to the surface, making them accessible to erosion and potentially to human exploitation.</li>
+                    </ul>
+                    <h4>Significance for Human Activities:</h4>
+                    <h5>Positive Significance:</h5>
+                    <ul>
+                        <li><strong>Tourism and Recreation:</strong> Scenic features created by faulting, such as spectacular rift valleys (e.g., Grand Canyon, though primarily erosional, is within a faulted uplifted plateau), imposing fault scarps, block mountains, and associated features like hot springs and geysers, are major tourist attractions, generating revenue and employment.</li>
+                        <li><strong>Water Resources:</strong> Lakes formed in fault-created depressions are vital sources of freshwater for domestic consumption, irrigation, and industrial use. Springs emerging along fault lines can also be important local water sources.</li>
+                        <li><strong>Fishing and Aquaculture:</strong> Tectonic lakes can support significant fisheries, providing food and livelihoods.</li>
+                        <li><strong>Mineral Exploitation:</strong> Fault zones are often sites of mineralization, where valuable metallic ores (e.g., copper, gold, silver, lead, zinc) can be concentrated. Faulting can also expose these deposits. Some non-metallic minerals, like trona (sodium carbonate) at Lake Magadi in Kenya (a rift valley lake), are economically important.</li>
+                        <li><strong>Geothermal Energy:</strong> Areas with active faulting and associated geothermal activity (hot springs, geysers) can be harnessed for geothermal energy production, a renewable power source (e.g., Olkaria in the Kenyan Rift Valley).</li>
+                        <li><strong>Hydro-Electric Power (HEP) Generation:</strong> Waterfalls and rapids formed by faulting across river courses offer potential sites for the development of hydroelectric power schemes.</li>
+                        <li><strong>Agriculture:</strong> While rift valley floors can sometimes be arid, volcanic soils associated with rifting can be very fertile. Alluvial fans at the base of fault scarps can also provide sites for agriculture.</li>
+                    </ul>
+                    <h5>Negative Significance:</h5>
+                    <ul>
+                        <li><strong>Earthquake Hazards:</strong> Movement along active faults is the primary cause of earthquakes, which can be highly destructive to human life, property, and infrastructure. Regions with extensive faulting are often prone to seismic activity.</li>
+                        <li><strong>Hindrance to Transport and Communication:</strong> Steep fault scarps, rugged rift valley terrain, and block mountains can pose significant challenges to the construction and maintenance of roads, railways, pipelines, and other communication networks, increasing costs and isolating areas.</li>
+                        <li><strong>Landslides and Mass Wasting:</strong> Steep fault scarps and unstable slopes in faulted regions can be prone to landslides, rockfalls, and debris flows, especially when triggered by earthquakes or heavy rainfall, posing a hazard to settlements and infrastructure below.</li>
+                        <li><strong>Volcanic Hazards (in associated regions):</strong> In many rift zones (e.g., EARS), faulting is closely associated with volcanism, which brings its own set of hazards (lava flows, ash fall, gas emissions).</li>
+                        <li><strong>Water Scarcity in Rain Shadows:</strong> The leeward sides of block mountains or high rift shoulders can experience significantly reduced rainfall, leading to aridity and challenges for agriculture and water supply.</li>
+                        <li><strong>Foundation Instability:</strong> Building large structures (dams, skyscrapers) in actively faulted areas requires special engineering considerations and can be risky.</li>
+                    </ul>
+                    <p>The significance of faulting is thus a complex interplay of opportunities and challenges, requiring careful land-use planning, engineering solutions, and hazard preparedness in affected regions.</p>
+                `
+            },
+            // 5. VULCANICITY
+            {
+                id: 'vulcanicity_intro',
+                title: '5. Vulcanicity',
+                htmlContent: `
+                    <h2>5. VULCANICITY (VOLCANICITY)</h2>
+                    <p>Vulcanicity (also spelled volcanicity) encompasses all the diverse processes and phenomena associated with the <strong>origin, movement, and eventual solidification of molten rock (magma)</strong> from within the Earth. This includes the intrusion of magma into the Earth's crust (forming intrusive or plutonic features) and the extrusion (eruption) of magma (as lava), along with gases and solid pyroclastic materials, onto the Earth's surface (forming extrusive or volcanic features).</p>
+                    <h3>Types of Vulcanicity</h3>
+                    <p>Based on where the molten rock solidifies, vulcanicity is broadly divided into two main types:</p>
+                    <ol>
+                        <li><strong>Extrusive Vulcanicity (Volcanism):</strong>
+                            <p>This occurs when magma successfully breaks through the Earth's surface and erupts. The erupted material can include lava flows, pyroclastic fragments (ash, cinders, bombs), and volcanic gases. The landforms created by extrusive vulcanicity are surface features, such as volcanoes of various types, lava plateaus, craters, and calderas.</p>
+                        </li>
+                        <li><strong>Intrusive Vulcanicity (Plutonism):</strong>
+                            <p>This happens when magma does not reach the Earth's surface but instead cools and solidifies (crystallizes) at depth within the Earth's crust. The resulting rock bodies are called intrusions or plutons. These features are only visible at the surface after the overlying rocks have been removed by prolonged processes of erosion and denudation.</p>
+                        </li>
+                    </ol>
+                    <h3>Magma and Lava Types and Characteristics</h3>
+                    <p>The behavior of molten rock and the nature of volcanic eruptions are largely determined by the chemical composition and physical properties of the magma/lava, especially its silica ($SiO_2$) content and viscosity.</p>
+                    <ul>
+                        <li><strong>Magma:</strong> Molten rock found *beneath* the Earth's surface. It is a complex mixture of molten silicates, dissolved gases (like water vapor, carbon dioxide, sulfur dioxide), and sometimes suspended crystals.</li>
+                        <li><strong>Lava:</strong> Molten rock that has been extruded *onto* the Earth's surface. Upon eruption, much of the dissolved gas content escapes, which can significantly alter its properties.</li>
+                    </ul>
+                    <p>Lava types are primarily classified based on their silica content, which directly influences their viscosity (resistance to flow):</p>
+                    <ul>
+                        <li><strong>Basic Lava (Basaltic or Mafic Lava):</strong>
+                            <ul>
+                                <li><strong>Silica Content:</strong> Low (around 45-55%). Rich in iron and magnesium.</li>
+                                <li><strong>Viscosity:</strong> Low (very fluid, runny, like hot syrup). Gases escape easily.</li>
+                                <li><strong>Temperature:</strong> High eruption temperatures (typically 1000-1200°C).</li>
+                                <li><strong>Flow Characteristics:</strong> Flows easily and rapidly for long distances before solidifying.</li>
+                                <li><strong>Eruption Style:</strong> Associated with relatively gentle, effusive (non-explosive) eruptions.</li>
+                                <li><strong>Resultant Landforms:</strong> Forms broad, gently sloping shield volcanoes, extensive lava plains, and lava plateaus (flood basalts).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Acidic Lava (Rhyolitic or Felsic Lava):</strong>
+                            <ul>
+                                <li><strong>Silica Content:</strong> High (over 65-70%). Rich in silica, aluminum, sodium, and potassium.</li>
+                                <li><strong>Viscosity:</strong> High (very thick, sticky, pasty). Traps gases, leading to pressure buildup.</li>
+                                <li><strong>Temperature:</strong> Lower eruption temperatures (typically 650-800°C).</li>
+                                <li><strong>Flow Characteristics:</strong> Flows slowly and does not travel far from the vent; solidifies quickly.</li>
+                                <li><strong>Eruption Style:</strong> Associated with highly explosive eruptions, producing abundant pyroclastic material (ash, pumice, blocks).</li>
+                                <li><strong>Resultant Landforms:</strong> Forms steep-sided cones (e.g., acid lava cones, domes/cumulo-domes), volcanic spines, and thick, blocky lava flows. Can also produce extensive ash deposits.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Intermediate Lava (Andesitic Lava):</strong>
+                            <ul>
+                                <li><strong>Silica Content:</strong> Medium (around 55-65%). Composition between basic and acidic.</li>
+                                <li><strong>Viscosity:</strong> Intermediate.</li>
+                                <li><strong>Temperature:</strong> Intermediate eruption temperatures.</li>
+                                <li><strong>Flow Characteristics:</strong> Flows more slowly than basic lava but further than acidic lava.</li>
+                                <li><strong>Eruption Style:</strong> Eruptions can vary from moderately explosive to effusive, often producing both lava flows and pyroclastic material.</li>
+                                <li><strong>Resultant Landforms:</strong> Typically forms large, conical composite cones (stratovolcanoes) built of alternating layers of lava and pyroclastics.</li>
+                                <li>(Other intermediate lavas mentioned in some texts include <strong>Trachyte</strong> and <strong>Phonolite</strong>, which tend to be quite viscous and can form domes and thick flows).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The viscosity of magma is arguably the most critical factor determining the style of a volcanic eruption and the morphology of the resulting volcanic landforms. Low-viscosity basic lavas allow gases to escape easily, leading to quieter, effusive eruptions that build broad, gentle structures. High-viscosity acidic lavas trap gases, causing pressure to build up, which can result in violent, explosive eruptions that create steep-sided cones and disperse large amounts of ash and pyroclastics.</p>
+                `
+            },
+            {
+                id: 'vulcanicity_extrusive',
+                title: '5.1 Extrusive Landforms and Features',
+                htmlContent: `
+                    <h3>Extrusive Landforms and Features</h3>
+                    <p>These are features formed when volcanic materials (lava, pyroclastics, gases) are erupted onto the Earth's surface. They are the direct products of volcanic eruptions.</p>
+                    ${getDiagramPlaceholder('Clearly Labelled Diagram: Cross-section of a Typical Composite Volcano showing Vent, Crater, Cone, Layers of Ash & Lava, Magma Chamber, Sill, Dyke, Parasitic Cone')}
+                    <h4>1. Volcanoes (based on shape, composition, and eruption style):</h4>
+                    <p>A volcano is typically a conical or dome-shaped hill or mountain built up by the accumulation of erupted materials around a central opening or vent.</p>
+                    <ul>
+                        <li><strong>Shield Volcano (Basic Lava Dome):</strong>
+                            <ul>
+                                <li>Formed by eruptions of highly fluid, low-viscosity basic (basaltic) lava.</li>
+                                <li>Characterized by very wide, gently sloping sides (often only a few degrees), resembling a warrior's shield laid on the ground.</li>
+                                <li>Eruptions are typically effusive (non-explosive), with lava flowing easily for long distances.</li>
+                                <li>Examples: Mt. Marsabit, Nyambeni Hills (Kenya); Mauna Loa and Kilauea (Hawaii - classic examples); Erta Ale (Ethiopia).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Cross-section of a Shield Volcano, emphasizing its broad, gentle slopes and layered lava flows')}
+                        </li>
+                        <li><strong>Acid Lava Cone (Rhyolitic Cone / Felsic Cone):</strong>
+                            <ul>
+                                <li>Formed by eruptions of highly viscous acidic (rhyolitic) lava.</li>
+                                <li>Characterized by steep-sided, often convex slopes because the thick lava does not flow far from the vent and piles up.</li>
+                                <li>Eruptions can be explosive due to trapped gases.</li>
+                                <li>Examples: Parts of Mt. Kenya and Mt. Kilimanjaro have features formed by acidic lavas, though they are predominantly composite. True large acid lava cones are less common than composite or shield volcanoes.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Cross-section of an Acid Lava Cone, highlighting its steep slopes')}
+                        </li>
+                        <li><strong>Composite Cone (Stratovolcano):</strong>
+                            <ul>
+                                <li>These are large, conical, often symmetrical volcanoes built up by alternating layers (strata) of lava flows (typically intermediate/andesitic) and pyroclastic materials (ash, cinders, bombs) from multiple eruptions over long periods.</li>
+                                <li>They have steeper slopes near the summit and gentler slopes near the base.</li>
+                                <li>Eruptions can vary from effusive lava flows to highly explosive pyroclastic eruptions.</li>
+                                <li>Many of the world's most famous and picturesque volcanoes are composite cones.</li>
+                                <li>Examples: Mt. Kilimanjaro, Mt. Meru (Tanzania); Mt. Longonot, Mt. Kenya (Kenya); Mt. Fuji (Japan); Mt. Vesuvius (Italy); Mt. St. Helens (USA).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Detailed Cross-section of a Composite Cone (Stratovolcano), showing alternating layers of lava and pyroclastics, central vent, and possible dykes/sills')}
+                        </li>
+                        <li><strong>Ash and Cinder Cone (Scoria Cone):</strong>
+                            <ul>
+                                <li>Relatively small, steep-sided conical hills formed primarily from the accumulation of loose pyroclastic fragments (ash, cinders, scoria, lapilli) ejected from a single vent.</li>
+                                <li>They often have a bowl-shaped crater at the summit.</li>
+                                <li>Slopes are typically at the angle of repose for loose material (around 30-40 degrees).</li>
+                                <li>Often formed during a single, short-lived eruptive episode and can occur as parasitic cones on larger volcanoes or in volcanic fields.</li>
+                                <li>Examples: Mt. Teleki, Likaiyu near Lake Turkana (Kenya); Chyulu Hills (Kenya - a range of numerous cinder cones); Parícutin (Mexico).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Cross-section of an Ash and Cinder Cone, emphasizing loose fragmental material and crater')}
+                        </li>
+                        <li><strong>Plug Dome (Cumulo-dome / Volcanic Dome / Lava Dome / Spine):</strong>
+                            <ul>
+                                <li>Steep-sided, mound-shaped or dome-like protrusion resulting from the slow extrusion of highly viscous (usually acidic or intermediate) lava that is too thick to flow far.</li>
+                                <li>It piles up around and over the vent. Domes can grow by internal expansion (endogenous growth) or by the slow extrusion of thick lava lobes (exogenous growth).</li>
+                                <li>A <strong>volcanic spine</strong> is a particularly steep, pillar-like extrusion of very viscous lava.</li>
+                                <li>Domes can be prone to collapse, generating dangerous pyroclastic flows.</li>
+                                <li>Examples: Hyrax Hill, Fischer's Tower at Hell's Gate (Kenya); Lassen Peak (USA); Mont Pelée (Martinique - formed a famous spine).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Formation of a Plug Dome/Lava Dome and a Volcanic Spine')}
+                        </li>
+                        <li><strong>Volcanic Plug (Volcanic Neck):</strong>
+                            <ul>
+                                <li>A steep, isolated pillar or rock mass that represents the resistant, solidified lava that filled the vent (conduit) of an extinct volcano.</li>
+                                <li>It is exposed after the softer surrounding cone material (ash, cinders, less resistant lava flows) has been eroded away by weathering and erosion.</li>
+                                <li>Examples: The core peaks of Mt. Kenya (Batian & Nelion); Tororo Rock (Uganda); Shiprock (USA); Devil's Tower (USA - though its origin is debated, often cited as a plug).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Sequential Diagram: Formation of a Volcanic Plug/Neck (Volcano, erosion, exposed plug)')}
+                        </li>
+                        <li><strong>Complex Cone (Compound Volcano / Parasitic Cone):</strong>
+                            <ul>
+                                <li>A large main volcanic cone that has developed smaller, subsidiary cones (parasitic or adventive cones) on its flanks or at its base.</li>
+                                <li>These form when the main vent becomes blocked, or when magma finds new pathways to the surface through weaknesses in the volcano's structure.</li>
+                                <li>Example: Mt. Longonot in Kenya has numerous parasitic cones on its flanks and within its caldera. Mt. Etna (Italy) is another classic example.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>2. Craters:</h4>
+                    <p>A crater is a circular, often bowl-shaped or funnel-shaped, depression typically found at the summit (top) of a volcano, marking the upper end of the volcanic vent through which lava, ash, and gases erupt. Craters can vary greatly in size, from a few tens of meters to over a kilometer in diameter. Some craters may fill with water after eruptions cease, forming <strong>crater lakes</strong>.</p>
+                    <ul><li>Examples: Crater lake on Mt. Marsabit (Lake Paradise), Lake Simbi Nyaima (Kenya - a maar crater), crater of Ol Donyo Lengai (Tanzania).</li></ul>
+                    <h4>3. Calderas:</h4>
+                    <p>A caldera is a very large, basin-shaped volcanic depression, typically several kilometers or more in diameter, with steep, inward-facing cliffs or walls. Calderas are much larger than ordinary craters and form through different, more catastrophic processes:</p>
+                    <ul>
+                        <li><strong>Explosive Eruption (Explosion Caldera):</strong> A very violent, explosive eruption may catastrophically blow off the entire summit of a volcano, or significantly enlarge an existing crater, creating a massive depression. This can happen if highly viscous, gas-rich magma leads to an immense buildup of pressure.</li>
+                        <li><strong>Collapse/Subsidence (Collapse Caldera):</strong> This is the more common mechanism. After a large-volume eruption rapidly empties a significant portion of the underlying magma chamber, the overlying volcanic structure loses its support and collapses inwards into the partially emptied chamber. This collapse can occur along ring fractures.</li>
+                    </ul>
+                    <p>Calderas can also later host lakes (caldera lakes) or experience renewed, smaller-scale volcanic activity within them (resurgent domes).</p>
+                    <ul><li>Examples: Ngorongoro Crater (Tanzania - a famous caldera); Menengai, Longonot, Suswa, Pakka, Silai (Kenya); Crater Lake (Oregon, USA - a classic collapse caldera).</li></ul>
+                    ${getDiagramPlaceholder('Sequential Diagrams: Formation of a Caldera by (a) Explosive Eruption and (b) Collapse/Subsidence')}
+                    <h4>4. Hot Springs, Geysers, and Fumaroles (Steam Jets):</h4>
+                    <p>These are manifestations of geothermal activity, common in volcanic regions where magma or hot igneous rocks are relatively close to the Earth's surface, providing a heat source.</p>
+                    <ul>
+                        <li><strong>Hot Spring:</strong> A spring where groundwater, having percolated downwards and been heated by underlying hot rocks or magma, rises to the surface. The water temperature is significantly higher than the local mean annual air temperature. Hot springs often contain dissolved minerals.
+                            <ul><li>Examples: Lake Bogoria hot springs, Olkaria area, Eburu, Lake Magadi area (Kenya).</li></ul>
+                        </li>
+                        <li><strong>Geyser:</strong> A type of hot spring that intermittently and often violently ejects a column of hot water and steam into the air. This occurs when superheated groundwater in complex underground plumbing systems flashes into steam due to a pressure drop, forcing the overlying water out.
+                             <ul><li>Examples: Old Faithful (Yellowstone, USA). While Kenya has many hot springs, true geysers are less common or prominent.</li></ul>
+                        </li>
+                        <li><strong>Fumarole (Steam Jet / Solfatara):</strong> A vent or opening in the ground, typically in volcanic areas, from which steam and other volcanic gases (like sulfur dioxide, carbon dioxide, hydrogen sulfide) escape into the atmosphere. If sulfurous gases are dominant, it may be called a solfatara.
+                            <ul><li>Examples: Steam jets on the flanks of Mt. Longonot, Eburu, Olkaria (Kenya); crater of Mt. Kilimanjaro.</li></ul>
+                        </li>
+                    </ul>
+                    <h4>5. Fissure Eruptions and Associated Features:</h4>
+                    <p>In fissure eruptions, lava and other volcanic materials are extruded not from a single central vent, but along long, linear cracks, fractures, or fissures in the Earth's crust. These eruptions can release vast quantities of (usually basic) lava.</p>
+                    <ul>
+                        <li><strong>Lava Plateaus (Flood Basalts / Traps):</strong> Formed when highly fluid, low-viscosity basic (basaltic) lava erupts from multiple fissures and spreads out over vast areas, building up thick, extensive, and relatively flat layers or plateaus. Successive flows can bury pre-existing topography, creating a monotonous landscape. These are some of the largest volcanic features on Earth.
+                            <ul><li>Examples: Yatta Plateau (Kenya - though its origin is debated, often linked to a very long lava flow confined to a valley, not a typical flood basalt from fissures), Laikipia Plateau, Uasin Gishu Plateau (Kenya); Deccan Traps (India); Columbia River Plateau (USA); Siberian Traps (Russia).</li></ul>
+                        </li>
+                        <li><strong>Tuff Plateaus:</strong> These are wide, relatively flat areas similar in form to lava plateaus but are composed primarily of <strong>tuff</strong> – consolidated volcanic ash, pumice, and other pyroclastic fragments that were ejected during highly explosive eruptions, often from fissures or multiple closely spaced vents.</li>
+                        <li><strong>Tephra (Pyroclastic Materials):</strong> This is a general term for all solid, fragmental materials ejected into the air during a volcanic eruption, regardless of size, shape, or composition. These fragments cool and harden as they fly through the air and eventually fall back to the ground, sometimes accumulating in thick layers. Types of tephra include:
+                            <ul>
+                                <li><strong>Volcanic Ash:</strong> The finest particles, less than 2 mm in diameter (some classifications use 4 mm). Can travel vast distances in the atmosphere.</li>
+                                <li><strong>Lapilli (Cinders):</strong> Small, gravel-sized fragments, typically 2 mm to 64 mm in diameter.</li>
+                                <li><strong>Blocks:</strong> Large, angular fragments of solid rock, greater than 64 mm in diameter. These are often pieces of the volcano's conduit, cone, or surrounding country rock that were torn off during the eruption.</li>
+                                <li><strong>Bombs:</strong> Large, streamlined, or twisted fragments of molten or semi-molten lava (greater than 64 mm) that solidify as they fly through the air. Their shape is due to aerodynamic forces during flight.</li>
+                                <li><strong>Pumice:</strong> A very light-colored, highly vesicular (frothy, spongy, cellular) volcanic rock, typically acidic in composition. It is formed when gas-rich, viscous lava erupts explosively; the rapid expansion of gases creates the vesicles. Pumice is so light it can often float on water.</li>
+                                <li><strong>Scoria:</strong> Similar to pumice but usually darker (basaltic or andesitic), denser, and with larger, more irregular vesicles.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'vulcanicity_intrusive',
+                title: '5.2 Intrusive Landforms and Features (Plutonic Features)',
+                htmlContent: `
+                    <h3>Intrusive Landforms and Features (Plutonic Features)</h3>
+                    <p>These features are formed when magma cools and solidifies (crystallizes) *within* the Earth's crust, without reaching the surface. They are only visible at the Earth's surface after the overlying rocks have been removed by prolonged processes of weathering, erosion, and denudation. The shape, size, and relationship of these intrusions to the surrounding "country rock" (the pre-existing rock into which the magma intrudes) are key to their classification.</p>
+                    ${getDiagramPlaceholder('Comprehensive Diagram: Various Intrusive Features showing their relationship to country rock strata – Batholith, Laccolith, Lopolith, Phacolith, Sill (Concordant), Dyke (Discordant), Bismalith, Volcanic Neck (as an eroded conduit)')}
+                    <ol>
+                        <li><strong>Batholith:</strong>
+                            <ul>
+                                <li>A very large, irregular or dome-shaped mass of intrusive igneous rock, typically granitic in composition, that covers an exposed surface area of more than 100 square kilometers.</li>
+                                <li>They are deeply seated, meaning they formed at great depths in the crust, and their bases are rarely exposed (often described as "bottomless").</li>
+                                <li>They represent the solidified remnants of huge magma chambers. Batholiths often form the cores of major mountain ranges.</li>
+                                <li>They are discordant intrusions, meaning they cut across the structure of the surrounding country rock.</li>
+                                <li>Examples: Parts of Dartmoor and Cornwall (UK); Sierra Nevada Batholith (USA); Coast Range Batholith (Canada/USA); Mumias and Maragoli batholiths (Western Kenya).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Laccolith:</strong>
+                            <ul>
+                                <li>A mushroom-shaped or lens-shaped (plano-convex) intrusion where relatively viscous magma has pushed up the overlying strata into a dome, while the base of the intrusion remains relatively flat and concordant with the underlying layers.</li>
+                                <li>They are typically smaller than batholiths and form at shallower depths.</li>
+                                <li>The magma spreads laterally between sedimentary layers before doming the overlying rocks.</li>
+                                <li>Examples: Henry Mountains (Utah, USA); Judith Mountains (Montana, USA).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Dyke (Dike):</strong>
+                            <ul>
+                                <li>A wall-like, tabular (sheet-like) intrusion of igneous rock that cuts across the bedding planes, foliation, or general structure of the surrounding country rock. Thus, dykes are <strong>discordant</strong> intrusions.</li>
+                                <li>They form when magma fills pre-existing vertical or steeply inclined fractures, or forces its way through the rock.</li>
+                                <li>Dykes can vary in thickness from centimeters to many meters and can extend for kilometers. They often occur in swarms.</li>
+                                <li>Resistant dykes can stand out as prominent ridges after erosion of softer surrounding rock.</li>
+                                <li>Examples: Great Dyke of Zimbabwe (a very large, complex intrusion with dyke-like characteristics); numerous dykes in NW Scotland, Canadian Shield; dykes associated with volcanic centers in Kenya.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sill:</strong>
+                            <ul>
+                                <li>A sheet-like, tabular intrusion of igneous rock that is <strong>concordant</strong>, meaning it has been emplaced parallel to the bedding planes or foliation of the surrounding country rock.</li>
+                                <li>They form when relatively fluid magma injects itself between layers of sedimentary rock or along planes of weakness.</li>
+                                <li>Sills can be mistaken for lava flows, but sills will show evidence of baking (metamorphism) on both the overlying and underlying country rock, whereas lava flows only bake the rock beneath them.</li>
+                                <li>Resistant sills can form escarpments or cap hills/mesas.</li>
+                                <li>Examples: Great Whin Sill (Northern England); Palisades Sill (New Jersey, USA); Karoo sills (South Africa).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Lopolith:</strong>
+                            <ul>
+                                <li>A large, saucer-shaped or shallow basin-shaped concordant intrusion, typically composed of layered basic igneous rocks.</li>
+                                <li>The central part of the intrusion has sagged downwards, possibly due to the weight of the magma or the structure of the underlying strata.</li>
+                                <li>They are generally much larger than laccoliths.</li>
+                                <li>Examples: Bushveld Igneous Complex (South Africa - one of the largest and most economically important lopoliths, rich in platinum group metals); Duluth Complex (USA); Sudbury Basin (Canada - though its origin is debated, partly impact structure).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Phacolith:</strong>
+                            <ul>
+                                <li>A relatively small, lens-shaped (convex both upwards and downwards) concordant intrusion that occupies the crest (top) of an anticline or the trough (bottom) of a syncline.</li>
+                                <li>They form when magma intrudes into spaces created during the process of rock folding.</li>
+                                <li>Examples: Corndon Hill (Shropshire, UK).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bismalith:</strong>
+                            <ul>
+                                <li>A complex, roughly cylindrical or plug-like intrusion that has forcefully domed the overlying strata, often accompanied by faulting around its margins. It is somewhat similar to a laccolith but with more pronounced vertical extent and disruption of overlying rocks.</li>
+                                <li>These are less common and often debated in terms of their precise formation.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><em>(The reference to Figure 1.20, page 45 of the source notes, showing extrusive features (N - Mts. Elgon, Meru) and intrusive features (A-G corresponding to Batholith, Laccolith, Lopolith, Phacolith, Sill, Dyke, and Bismalith) is important for visual correlation if students have access to that specific text.)</em></p>
+                `
+            },
+            {
+                id: 'vulcanicity_distribution_significance',
+                title: '5.3 Distribution & Significance of Vulcanicity',
+                htmlContent: `
+                    <h3>World Distribution of Volcanic Features</h3>
+                    <p>Volcanic activity, and therefore the features it creates, is not randomly distributed across the Earth. It is primarily concentrated in specific zones that are closely related to tectonic plate boundaries and intraplate hotspots:</p>
+                    <ol>
+                        <li><strong>Convergent Plate Boundaries (Destructive Margins):</strong> These are the most volcanically active zones on continents and for island arcs.
+                            <ul>
+                                <li><strong>Subduction Zones:</strong> Where one tectonic plate (usually oceanic) sinks (subducts) beneath another into the mantle. The subducting plate melts due to increasing temperature and pressure, and the release of water, generating magma. This magma, being less dense than the surrounding mantle, rises to the surface, forming chains of volcanoes.
+                                    <ul>
+                                        <li>This accounts for the <strong>Pacific Ring of Fire</strong>, an arc of intense volcanic and seismic activity surrounding the Pacific Ocean. It includes volcanoes in the Andes (South America), Central America, the Cascade Range (North America), the Aleutian Islands, Kamchatka, Japan, the Philippines, Indonesia, and New Zealand.</li>
+                                        <li>Another significant belt is the <strong>Mediterranean-Himalayan belt</strong>, where the African and Indian plates converge with the Eurasian plate. Volcanism is prominent in the Mediterranean part (e.g., Italy, Greece).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Divergent Plate Boundaries (Constructive Margins):</strong>
+                            <ul>
+                                <li><strong>Mid-Ocean Ridges:</strong> As tectonic plates pull apart (diverge) along mid-ocean ridges, decompression melting of the upwelling asthenosphere generates basaltic magma. This magma erupts to create new oceanic crust. This is the most voluminous type of volcanism on Earth, though most of it occurs beneath the oceans (e.g., Mid-Atlantic Ridge, East Pacific Rise). Iceland is a location where a mid-ocean ridge is exposed above sea level.</li>
+                                <li><strong>Continental Rift Valleys:</strong> Where continents are rifting apart (e.g., the East African Rift Valley), the crust is thinned and fractured, allowing magma to ascend to the surface. This results in various forms of volcanism, including large shield volcanoes, stratovolcanoes, cinder cones, and extensive lava flows.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Hotspots (Intraplate Vulcanicity):</strong>
+                            <ul>
+                                <li>These are areas of persistent volcanic activity that are not located at plate boundaries. They are thought to be caused by <strong>mantle plumes</strong> – stationary, exceptionally hot upwellings of rock from deep within the mantle (perhaps from the core-mantle boundary).</li>
+                                <li>As a tectonic plate moves over a stationary hotspot, a chain of volcanoes can form. The active volcanoes are directly above the plume, while older, extinct volcanoes are progressively further away in the direction of plate movement.</li>
+                                <li>Examples: The Hawaiian Islands-Emperor Seamount chain (Pacific Plate moving over the Hawaiian hotspot); Yellowstone (North American Plate moving over a hotspot); Réunion Island (Indian Ocean).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                     ${getDiagramPlaceholder('World Map showing major Volcanic Belts: Pacific Ring of Fire, Mid-Ocean Ridges, Rift Valleys, and selected Hotspots')}
+                    <h3>Significance of Vulcanicity to Human Activities and the Environment</h3>
+                    <p>Vulcanicity has profound and often contrasting effects, being both a creative and destructive force:</p>
+                    <h4>Constructive (Positive) Significance:</h4>
+                    <ul>
+                        <li><strong>Creation of Fertile Volcanic Soils:</strong> Weathered volcanic rocks (lavas, ash, tuff) break down to form exceptionally fertile soils, rich in essential plant nutrients. These soils support highly productive agriculture and have historically sustained dense populations in many volcanic regions (e.g., the slopes of Mt. Vesuvius in Italy, Java in Indonesia, the Kenyan highlands around Mt. Kenya and the Aberdares).</li>
+                        <li><strong>Formation of New Landmasses and Scenic Features:</strong> Volcanic activity creates new land, such as volcanic islands emerging from the sea (e.g., Hawaii, Iceland, Surtsey). It also sculpts diverse and often spectacular landscapes, including majestic mountains, craters, calderas, lava flows, and geothermal features, which are major tourist attractions.</li>
+                        <li><strong>Source of Geothermal Energy:</strong> Heat from underlying magma chambers or hot igneous rocks can be harnessed to produce geothermal energy, a renewable and relatively clean source of power. This involves drilling wells to tap steam or hot water, which then drives turbines. Olkaria in Kenya is a prime example of a successful geothermal power project. Hot springs are also used for heating and recreational/therapeutic bathing.</li>
+                        <li><strong>Formation of Valuable Mineral Deposits:</strong> Many economically important metallic mineral deposits (e.g., copper, gold, silver, lead, zinc, tin, molybdenum) are formed by hydrothermal processes associated with volcanic and intrusive igneous activity. Diamonds are found in kimberlite pipes, which are ancient volcanic conduits. Non-metallic resources like sulfur, pumice, perlite, and diatomite are also of volcanic origin.</li>
+                        <li><strong>Source of Building and Construction Materials:</strong> Volcanic rocks such as basalt, trachyte, and phonolite are widely quarried and used as durable building stones, road aggregate (ballast), and for making concrete. Pumice is used as a lightweight aggregate and as an abrasive. Volcanic ash can be used in cement production.</li>
+                        <li><strong>Water Catchment and Storage:</strong> Volcanic mountains, due to their high altitude, often act as important water catchment areas, receiving higher rainfall and snowfall. Porous volcanic rocks can also be good aquifers, storing groundwater. Crater lakes and caldera lakes can be significant freshwater reservoirs.</li>
+                        <li><strong>Scientific Research and Education:</strong> Volcanic areas provide unique natural laboratories for studying Earth's internal processes, magma generation, eruption dynamics, and the formation of igneous rocks and mineral deposits. They are invaluable for geological education and research.</li>
+                        <li><strong>Cultural and Spiritual Significance:</strong> Many volcanoes hold deep cultural and spiritual significance for local communities, featuring in myths, legends, and religious practices.</li>
+                        <li><strong>Carbon Dioxide Production for Industrial Use:</strong> Some volcanic gases, particularly carbon dioxide, can be captured and utilized in various industrial applications, such as in the production of carbonated beverages or dry ice (though this is a niche application).</li>
+                    </ul>
+                    <h4>Destructive (Negative) Significance:</h4>
+                    <ul>
+                        <li><strong>Loss of Life and Property:</strong> Volcanic eruptions, especially explosive ones, are among the most dangerous natural hazards. They can cause widespread destruction and loss of human and animal life through:
+                            <ul>
+                                <li><strong>Lava Flows:</strong> While often slow-moving, they can bury and incinerate everything in their path.</li>
+                                <li><strong>Pyroclastic Flows (Nueés Ardentes):</strong> Fast-moving, superheated avalanches of volcanic ash, gas, and rock fragments that are extremely destructive and deadly.</li>
+                                <li><strong>Ash Fall:</strong> Heavy ash fall can collapse roofs, contaminate water supplies, damage crops, disrupt air travel, and cause respiratory problems.</li>
+                                <li><strong>Mudflows (Lahars):</strong> Mixtures of volcanic debris and water (from melted snow/ice or heavy rain) that can flow rapidly down volcanic slopes, burying valleys and settlements.</li>
+                                <li><strong>Poisonous Volcanic Gases:</strong> Gases like sulfur dioxide, carbon dioxide, hydrogen sulfide, and fluorine can be toxic to humans, animals, and plants.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Environmental Pollution:</strong> Eruptions release large quantities of ash, dust, and gases into the atmosphere. Sulfur dioxide can react with water vapor to form sulfuric acid, leading to acid rain. Large eruptions can inject aerosols into the stratosphere, potentially causing short-term global cooling.</li>
+                        <li><strong>Damage to Infrastructure:</strong> Volcanic events can destroy buildings, roads, bridges, railways, power lines, pipelines, and communication systems, leading to significant economic losses and disruption.</li>
+                        <li><strong>Creation of Arid Areas (Rain Shadow):</strong> The leeward slopes of high volcanic mountains may experience a rain shadow effect, receiving less rainfall and becoming arid or semi-arid, which can hinder agriculture.</li>
+                        <li><strong>Hindrance to Settlement and Communication:</strong> The steep slopes, rugged terrain, and risk of eruptions in active volcanic regions can discourage permanent settlement and make the construction of transport and communication networks difficult and costly.</li>
+                        <li><strong>Disruption of Agriculture and Livelihoods:</strong> Ash fall can smother crops and pastures, and lava flows can render land unusable for long periods, severely impacting agricultural communities.</li>
+                        <li><strong>Health Hazards:</strong> Volcanic ash can cause respiratory problems, eye irritation, and skin irritation. Contaminated water supplies can lead to disease.</li>
+                    </ul>
+                    <p>Effective monitoring of active volcanoes, hazard assessment, land-use planning in volcanic regions, and public education are crucial for mitigating the risks associated with vulcanicity.</p>
+                `
+            },
+            // 6. EARTHQUAKES
+            {
+                id: 'earthquakes_intro',
+                title: '6. Earthquakes',
+                htmlContent: `
+                    <h2>6. EARTHQUAKES</h2>
+                    <p>An earthquake is a <strong>sudden, rapid shaking or trembling of the Earth's crust</strong> (and sometimes the upper mantle) caused by the abrupt release of accumulated stress and strain energy, usually due to movements along faults. This energy is transmitted outwards from the source in the form of vibrations called <strong>seismic waves</strong>, which travel through the Earth and along its surface, causing the ground to shake.</p>
+                    <p>Two key terms are fundamental to describing the location of an earthquake:</p>
+                    <ul>
+                        <li><strong>Focus (or Hypocenter):</strong> This is the precise point *within* the Earth's crust or upper mantle where the earthquake rupture originates and the energy is first released. The depth of the focus can vary from near the surface to several hundred kilometers. Earthquakes are often classified by their focal depth:
+                            <ul>
+                                <li>Shallow focus: 0-70 km deep</li>
+                                <li>Intermediate focus: 70-300 km deep</li>
+                                <li>Deep focus: >300 km deep (typically associated with subduction zones)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Epicenter:</strong> This is the point on the Earth's *surface* directly above the focus. Earthquake damage and the intensity of shaking are generally greatest at and near the epicenter, decreasing with distance.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Clear Diagram showing Earthquake Focus (Hypocenter) within the Earth and Epicenter on the surface, with seismic waves radiating outwards')}
+                `
+            },
+            {
+                id: 'earthquakes_causes_measurement',
+                title: '6.1 Causes & Measurement of Earthquakes',
+                htmlContent: `
+                    <h3>Causes of Earthquakes</h3>
+                    <p>Earthquakes can be triggered by a variety of natural and, less commonly, human-induced factors:</p>
+                    <h4>Natural Causes:</h4>
+                    <ol>
+                        <li><strong>Tectonic Movements (Faulting):</strong> This is the primary cause of the vast majority of earthquakes, especially the largest and most destructive ones. Tectonic plates are constantly moving, and stresses build up along their boundaries (faults). When the accumulated stress exceeds the strength of the rocks, the rocks rupture and slip along the fault, releasing the stored elastic strain energy as seismic waves. This occurs at all types of plate boundaries:
+                            <ul>
+                                <li><strong>Convergent boundaries:</strong> Intense compression leads to thrust and reverse faulting (e.g., subduction zones, continental collision zones). These can produce very powerful, deep-focus earthquakes.</li>
+                                <li><strong>Divergent boundaries:</strong> Tensional forces lead to normal faulting (e.g., mid-ocean ridges, continental rifts). Earthquakes here are usually shallow-focus and of moderate magnitude.</li>
+                                <li><strong>Transform boundaries:</strong> Shear forces lead to strike-slip faulting (e.g., San Andreas Fault). Earthquakes can be shallow and powerful.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Vulcanicity (Volcanic Earthquakes):</strong> The movement of magma beneath or within a volcano can cause stress changes in the surrounding rocks, leading to small to moderate earthquakes. These often occur in swarms and can signal an impending eruption. Large, explosive volcanic eruptions can also generate significant seismic waves.</li>
+                        <li><strong>Isostatic Adjustments:</strong> The slow uplift or subsidence of large crustal blocks to maintain gravitational balance (isostasy) can sometimes cause minor stress readjustments in the crust, triggering minor earthquakes.</li>
+                        <li><strong>Gravitative Pressure / Collapse of Crustal Rocks:</strong> The sudden collapse of the roof of large underground caverns (e.g., in limestone areas due to solution) or into voids left by extensive mining operations or magma withdrawal can cause localized, usually minor, tremors (collapse earthquakes).</li>
+                    </ol>
+                    <h4>Human-induced Causes (Induced Seismicity):</h4>
+                    <p>While generally much smaller in magnitude than tectonic earthquakes, certain human activities can also induce seismicity:</p>
+                    <ol>
+                        <li><strong>Construction of Large Reservoirs:</strong> The immense weight of water in large artificial reservoirs can increase the stress on underlying faults and also increase fluid pressure in pores and fractures, potentially lubricating faults and triggering earthquakes (reservoir-induced seismicity).</li>
+                        <li><strong>Underground Explosions:</strong> Large explosions, such as those from mining operations (e.g., quarry blasts, mine collapses) or underground nuclear tests, can send powerful shock waves through the crust, essentially creating artificial earthquakes.</li>
+                        <li><strong>Movement of Heavy Underground Trains:</strong> Vibrations from heavy underground trains or subways can cause very localized and minor tremors, but these are not typically classified as earthquakes in the geological sense and do not pose a significant hazard.</li>
+                        <li><strong>Fluid Injection or Withdrawal (e.g., Fracking, Wastewater Disposal, Oil/Gas Extraction):</strong> Injecting fluids deep into the ground (e.g., for hydraulic fracturing or wastewater disposal) or withdrawing large volumes of fluids (e.g., during oil and gas extraction) can alter pore pressures in rocks and trigger earthquakes on pre-existing, often unmapped, faults.</li>
+                    </ol>
+                    <h3>Measurement of Earthquakes</h3>
+                    <p>Earthquakes are detected, recorded, and measured using instruments called <strong>seismographs</strong> (or seismometers). A seismograph has a sensor that detects ground motion and a recording system. The record produced by a seismograph is called a <strong>seismogram</strong>, which shows the arrival times and amplitudes of different seismic waves.</p>
+                    <p>Earthquakes are characterized by the types of seismic waves they generate, and their size is quantified using scales of intensity and magnitude:</p>
+                    <h4>Seismic Waves:</h4>
+                    <p>When an earthquake occurs, energy is released in the form of seismic waves that travel through the Earth and along its surface. The main types are:</p>
+                    <ul>
+                        <li><strong>Primary (P) Waves (Compressional or Longitudinal Waves):</strong>
+                            <ul>
+                                <li>They are the <strong>fastest</strong> seismic waves and therefore the first to be recorded by a seismograph (P for "primary" or "prima," meaning first).</li>
+                                <li>They are <strong>compressional</strong> waves, meaning they cause particles in the rock to vibrate back and forth in the <em>same direction</em> as the wave is traveling (like a sound wave pushing and pulling the air).</li>
+                                <li>P-waves can travel through solids, liquids, and gases. Their speed depends on the density and elasticity of the medium.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('P-Wave Propagation showing compression and rarefaction')}
+                        </li>
+                        <li><strong>Secondary (S) Waves (Shear or Transverse Waves):</strong>
+                            <ul>
+                                <li>They are <strong>slower</strong> than P-waves and arrive at the seismograph later (S for "secondary" or "secunda," meaning second).</li>
+                                <li>They are <strong>shear</strong> or transverse waves, causing particles in the rock to vibrate at <em>right angles (perpendicular)</em> to the direction of wave travel (like shaking a rope up and down).</li>
+                                <li>S-waves can <strong>only travel through solids</strong>; they cannot propagate through liquids or gases because fluids do not resist shear stress. This property is crucial for understanding the Earth's internal structure (e.g., the liquid outer core).</li>
+                            </ul>
+                            ${getDiagramPlaceholder('S-Wave Propagation showing transverse particle motion')}
+                        </li>
+                        <li><strong>Long (L) Waves (Surface Waves):</strong>
+                            <ul>
+                                <li>These waves travel primarily along the Earth's <strong>surface</strong>, rather than through its interior. They are generated when P and S waves reach the surface and interact with it.</li>
+                                <li>They are the <strong>slowest</strong> of the main seismic wave types but often have the <strong>largest amplitude</strong> (height of the wiggles on the seismogram) and are responsible for most of the structural damage caused by earthquakes.</li>
+                                <li>There are two main types of surface waves:
+                                    <ul>
+                                        <li><strong>Love waves:</strong> Cause horizontal shearing motion of the ground, perpendicular to the direction of wave propagation. They are particularly damaging to foundations.</li>
+                                        <li><strong>Rayleigh waves:</strong> Cause a rolling, elliptical motion of the ground surface, similar to ocean waves, with both vertical and horizontal components.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Intensity:</h4>
+                    <p>Intensity is a <strong>qualitative measure</strong> of the effects of an earthquake at a particular location. It is based on observed phenomena such as how the earthquake is felt by people, its impact on buildings and other man-made structures, and any changes to the natural environment (e.g., cracks in the ground, landslides).</p>
+                    <ul><li><strong>Mercalli Scale (Modified Mercalli Intensity - MMI Scale):</strong> This is the most commonly used intensity scale. It consists of 12 Roman numerals (I to XII), each representing a progressively higher degree of shaking and observed damage, from imperceptible (I) to catastrophic destruction (XII). An earthquake will have different intensity values at different locations, generally decreasing with distance from the epicenter. The intensity at a site also depends on local geological conditions (e.g., type of soil or rock can amplify shaking) and the quality of building construction. (Detailed descriptions for each level of the Mercalli Scale are often provided in textbooks).</li></ul>
+                    <h4>Magnitude:</h4>
+                    <p>Magnitude is a <strong>quantitative measure</strong> of the amount of energy released at the earthquake's source (focus). It is determined from measurements made on seismograms, specifically the amplitude of the seismic waves, adjusted for the distance from the earthquake.</p>
+                    <ul><li><strong>Richter Scale:</strong> Developed by Charles F. Richter in 1935, this was the original local magnitude ($M_L$) scale. It is <strong>logarithmic</strong>, meaning that each whole number increase on the scale represents a tenfold increase in the measured amplitude of the seismic waves on a seismogram, and approximately a <strong>32-fold increase in the energy released</strong>. For example, a magnitude 7 earthquake releases about 32 times more energy than a magnitude 6 earthquake, and about 1000 times (32x32) more energy than a magnitude 5 earthquake. The Richter scale is theoretically open-ended but practically ranges from less than 0 to about 8.9 (the largest recorded earthquakes). While the term "Richter Scale" is still widely used, seismologists now use more sophisticated magnitude scales like Moment Magnitude ($M_W$) for large earthquakes, as they provide a more accurate measure of the total energy released, especially for very large events.</li></ul>
+                    <p>It is crucial to distinguish between intensity and magnitude: An earthquake has only <strong>one magnitude</strong> value, but it can have <strong>many intensity</strong> values depending on the location.</p>
+                `
+            },
+            {
+                id: 'earthquakes_distribution_effects',
+                title: '6.2 Distribution & Effects of Earthquakes',
+                htmlContent: `
+                    <h3>Distribution of Major Earthquake Zones of the World</h3>
+                    <p>Earthquake activity is not uniformly distributed across the globe. Instead, the vast majority of earthquakes (around 95%) occur in well-defined seismic belts that are primarily associated with <strong>tectonic plate boundaries</strong>. The major earthquake zones include:</p>
+                    <ol>
+                        <li><strong>The Circum-Pacific Belt (often called the "Ring of Fire"):</strong> This is the world's most active and extensive earthquake zone, accounting for about 80% of all earthquakes, including most of the largest and most destructive ones. It encircles the Pacific Ocean and includes the western coasts of North and South America, the Aleutian Islands, Kamchatka Peninsula, Japan, the Philippines, Indonesia, Papua New Guinea, and New Zealand. This zone is characterized by numerous convergent plate boundaries (subduction zones, where oceanic plates sink beneath continental or other oceanic plates) and major transform faults.</li>
+                        <li><strong>The Mediterranean-Himalayan Belt (or Alpine-Himalayan Belt):</strong> This belt extends from the Mediterranean region (e.g., Italy, Greece, Turkey) eastwards through the Middle East (e.g., Iran, Afghanistan), the Himalayan mountain range, and into Southeast Asia. It is associated with the collision of the African, Arabian, and Indian plates with the Eurasian plate, and accounts for about 15% of global earthquakes. This zone is primarily characterized by continental collision and related compressional tectonics.</li>
+                        <li><strong>The Mid-Oceanic Ridge Systems:</strong> These are extensive underwater mountain ranges found in all major oceans (e.g., Mid-Atlantic Ridge, East Pacific Rise, Indian Ocean Ridge). They are divergent plate boundaries where new oceanic crust is formed. Earthquakes here are frequent but generally of shallow focus and moderate magnitude, associated with the tensional forces of plate separation and magma movement.</li>
+                        <li><strong>The Great Rift Valley Region of Eastern Africa:</strong> This zone of continental rifting is also seismically active, characterized by normal faulting and associated earthquakes, typically shallow to intermediate in focus.</li>
+                        <li><strong>Intraplate Earthquakes:</strong> A smaller percentage of earthquakes occur within tectonic plates (intraplate earthquakes), away from plate boundaries. These are often associated with ancient fault zones or areas of crustal weakness that are reactivated by regional stresses. Examples include the New Madrid earthquakes in the central USA in the early 19th century.</li>
+                        <li><strong>Areas of Active Volcanic Activity:</strong> Earthquakes (volcanic earthquakes) can occur in association with active volcanoes, even those not located directly on major plate boundaries, due to magma movement and pressure changes.</li>
+                    </ol>
+                     ${getDiagramPlaceholder('World Map showing Major Earthquake Belts: Circum-Pacific, Mediterranean-Himalayan, Mid-Ocean Ridges, and East African Rift Valley')}
+                    <h3>Effects of Earthquakes</h3>
+                    <p>Earthquakes can have a wide range of devastating and far-reaching effects on both the natural environment and human societies. These effects can be primary (caused directly by the ground shaking or rupture) or secondary (triggered by the primary effects).</p>
+                    <h4>Primary Effects:</h4>
+                    <ul>
+                        <li><strong>Ground Shaking:</strong> This is the most immediate and widespread effect, causing vibrations that can damage or destroy buildings, bridges, roads, and other structures. The intensity of shaking depends on the earthquake's magnitude, distance from the epicenter, focal depth, and local geological conditions.</li>
+                        <li><strong>Ground Rupture (Surface Faulting):</strong> The fault that caused the earthquake may break or offset the ground surface, creating scarps, fissures, or horizontal displacement. This can sever roads, railways, pipelines, and damage building foundations.</li>
+                    </ul>
+                    <h4>Secondary Effects:</h4>
+                    <ul>
+                        <li><strong>Loss of Life and Injury:</strong> The collapse of buildings and other structures due to ground shaking is the primary cause of casualties during earthquakes. Falling debris, tsunamis, landslides, and fires also contribute to injuries and fatalities.</li>
+                        <li><strong>Destruction of Property and Infrastructure:</strong> Buildings, bridges, roads, dams, pipelines, power lines, and communication systems can be severely damaged or completely destroyed, leading to enormous economic losses and societal disruption.</li>
+                        <li><strong>Landslides, Rockfalls, and Avalanches:</strong> Ground shaking can destabilize slopes in hilly or mountainous areas, triggering landslides, rockfalls, and snow avalanches. These can bury settlements, block roads and rivers, and cause further casualties.</li>
+                        <li><strong>Tsunamis (Seismic Sea Waves):</strong> Large undersea earthquakes (or those near coasts that cause significant vertical displacement of the seabed) can generate a series of massive ocean waves called tsunamis. These waves can travel vast distances across oceans at high speeds and cause catastrophic flooding and destruction when they reach coastal areas.</li>
+                        <li><strong>Fires:</strong> Earthquakes can rupture gas lines and damage electrical systems, leading to widespread fires. Broken water mains can hamper firefighting efforts, allowing fires to spread uncontrollably.</li>
+                        <li><strong>Liquefaction:</strong> In areas with water-saturated, loose sandy or silty soils, intense ground shaking can cause the soil to temporarily lose its strength and behave like a liquid. This can lead to buildings sinking, tilting, or collapsing, and underground pipes and tanks floating to the surface.</li>
+                        <li><strong>Changes in Land Level (Uplift or Subsidence):</strong> Large earthquakes can cause permanent vertical displacement of the land surface over extensive areas. Coastal areas may be uplifted, exposing former seabed, or may subside, leading to permanent inundation by the sea.</li>
+                        <li><strong>Disruption of Essential Services:</strong> Earthquakes can severely disrupt essential services such as water supply, sewage disposal, electricity, gas, telecommunications, and transportation networks, hindering rescue and relief efforts and daily life.</li>
+                        <li><strong>Flooding (Non-Tsunami):</strong> Besides tsunamis and coastal subsidence, earthquakes can cause flooding by damaging dams or levees, or by altering river courses and groundwater levels.</li>
+                        <li><strong>Aftershocks:</strong> Smaller earthquakes, known as aftershocks, can occur for days, weeks, months, or even years after a major earthquake (the mainshock). They originate near the focus of the mainshock and can cause further damage to already weakened structures, hamper rescue and recovery operations, and add to psychological stress.</li>
+                        <li><strong>Psychological Trauma:</strong> Experiencing a major earthquake, witnessing destruction, losing loved ones, and facing the uncertainties of the aftermath can cause significant and long-lasting psychological distress, anxiety, and trauma to survivors and communities.</li>
+                        <li><strong>Economic Impacts:</strong> Beyond direct property damage, earthquakes can have severe long-term economic impacts, including loss of businesses, disruption of agriculture and industry, decline in tourism, and the high cost of reconstruction and recovery.</li>
+                    </ul>
+                    <p>Many of the most devastating consequences of earthquakes are, in fact, these secondary hazards. Understanding the full spectrum of potential effects is crucial for comprehensive disaster risk assessment, preparedness planning, and building resilient communities in earthquake-prone regions.</p>
+                    <p><strong>Note:</strong> Learners should be encouraged to draw simple, labelled diagrams for folds, faults, parts of a volcano, and intrusive features as indicated. Kenyan examples should be emphasized where provided in the original notes. The level of detail for each subsection aims to mirror that of the "geography f2 notes (1) (1).pdf" and other provided resources, ensuring comprehensive coverage aligned with the KCSE syllabus.</p>
+                `
+            }
+        ];
+
+        const navigation = document.getElementById('navigation');
+        const contentArea = document.getElementById('contentArea');
+        const mainChapterTitle = document.getElementById('mainChapterTitle');
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        
+        let currentSectionIndex = 0;
+
+        function showSection(index) {
+            if (index < 0 || index >= guideData.length) {
+                console.error("Section index out of bounds:", index);
+                return;
+            }
+            currentSectionIndex = index;
+            const sectionData = guideData[currentSectionIndex];
+            
+            if (sectionData) {
+                if (sectionData.isChapterTitle) {
+                    mainChapterTitle.innerHTML = ''; // Clear default welcome
+                    contentArea.innerHTML = sectionData.htmlContent;
+                } else {
+                    mainChapterTitle.textContent = "CHAPTER ONE: INTERNAL LANDFORMING PROCESSES"; // Set main title for content sections
+                    contentArea.innerHTML = sectionData.htmlContent;
+                }
+                updateNavButtons();
+                highlightActiveNavItem();
+
+                // Scroll to top of content area
+                document.querySelector('.main-content').scrollTop = 0; 
+
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            }
+        }
+        
+        function highlightActiveNavItem() {
+            document.querySelectorAll('#navigation a').forEach((link, idx) => {
+                link.classList.remove('bg-gray-700', 'text-white', 'font-semibold');
+                link.classList.add('text-gray-300', 'hover:bg-gray-700', 'hover:text-white');
+                if (idx === currentSectionIndex) {
+                    link.classList.add('bg-gray-700', 'text-white', 'font-semibold');
+                    link.classList.remove('text-gray-300');
+                }
+            });
+        }
+
+        function updateNavButtons() {
+            prevButton.disabled = currentSectionIndex === 0;
+            nextButton.disabled = currentSectionIndex === guideData.length - 1;
+        }
+        
+        function init() {
+            guideData.forEach((item, index) => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = item.title;
+                link.setAttribute('data-index', index);
+                link.className = `block py-2 px-3 rounded transition duration-200 text-sm ${item.isChapterTitle ? 'font-bold text-yellow-400 mt-2' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`;
+                // Indentation logic for sidebar navigation items
+                if (!item.isChapterTitle) {
+                    if (item.title.match(/^\d+\.\d+\s/) || item.title.match(/^\d+\.\d+\.\d+\s/)) { // e.g., 1.1 or 1.1.1
+                        link.classList.add('pl-6'); // Further indent
+                    } else if (item.title.match(/^\d+\.\s/)) { // e.g., 1. 
+                        link.classList.add('pl-3'); // Standard indent for main topics
+                    }
+                }
+
+
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    showSection(index);
+                };
+                navigation.appendChild(link);
+            });
+            
+            if (guideData.length > 0) {
+                showSection(0); 
+            } else {
+                contentArea.innerHTML = '<p>No content available.</p>';
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+
+            mobileMenuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentSectionIndex > 0) {
+                    showSection(currentSectionIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentSectionIndex < guideData.length - 1) {
+                    showSection(currentSectionIndex + 1);
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    const isClickInsideSidebar = sidebar.contains(event.target);
+                    const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+                    if (!isClickInsideSidebar && !isClickOnMenuButton) {
+                        sidebar.classList.remove('open');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
