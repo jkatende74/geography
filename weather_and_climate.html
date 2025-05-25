@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCSE Weather and Climate Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-section h1 { /* Report Title */
+            font-size: 1.75em; /* 28px */
+            font-weight: 700;
+            margin-bottom: 1.25rem; /* 20px */
+            color: #1F2937; /* gray-800 */
+            border-bottom: 2px solid #3B82F6; /* blue-500 */
+            padding-bottom: 0.75rem; /* 12px */
+        }
+        .content-section h2 { /* Main Section Title (e.g., 1.0 Foundations) */
+            font-size: 1.5em; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #111827; /* gray-900 */
+        }
+        .content-section h3 { /* Subsection Title (e.g., 1.1 Defining Weather) */
+            font-size: 1.25em; /* 20px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #374151; /* gray-700 */
+        }
+         .content-section h4 { /* Further Subsection Title */
+            font-size: 1.125em; /* 18px */
+            font-weight: 600;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 0.5rem; /* 8px */
+            color: #4B5563; /* gray-600 */
+        }
+        .content-section p, .content-section li {
+            margin-bottom: 0.75rem; /* 12px */
+            line-height: 1.7;
+            color: #4B5563; /* gray-600 */
+        }
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+         .content-section ol {
+            list-style-type: decimal;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .content-section strong {
+            color: #111827; /* gray-900 */
+            font-weight: 600;
+        }
+        .content-section table {
+            width: 100%;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 1.25rem; /* 20px */
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 0.9em;
+        }
+        .content-section th, .content-section td {
+            border: 1px solid #D1D5DB; /* gray-300 */
+            padding: 0.75rem; /* 12px */
+            text-align: left;
+        }
+        .content-section th {
+            background-color: #F3F4F6; /* gray-100 */
+            font-weight: 600;
+            color: #1F2937; /* gray-800 */
+        }
+        .diagram-placeholder {
+            background-color: #E5E7EB; /* gray-200 */
+            border: 2px dashed #9CA3AF; /* gray-400 */
+            padding: 1.5rem; /* 24px */
+            text-align: center;
+            color: #4B5563; /* gray-600 */
+            font-style: italic;
+            border-radius: 0.375rem; /* 6px */
+            margin: 1.25rem auto; /* 20px */
+            display: block;
+            width: 80%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .formula {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        /* Mobile menu button */
+        .mobile-menu-button {
+            display: none; 
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 40; 
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-menu-button {
+                display: block; 
+            }
+            .content-section h1 { font-size: 1.5em; }
+            .content-section h2 { font-size: 1.25em; }
+            .content-section h3 { font-size: 1.125em; }
+            .diagram-placeholder { width: 95%; padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="flex h-screen overflow-hidden">
+        <aside id="sidebar" class="sidebar w-72 bg-gray-800 text-white p-5 space-y-3 overflow-y-auto md:block shadow-lg">
+            <h1 class="text-xl font-bold mb-5 text-center border-b border-gray-700 pb-3">Weather & Climate</h1>
+            <nav id="navigation" class="space-y-1">
+                </nav>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto main-content">
+            <button id="mobileMenuButton" class="mobile-menu-button md:hidden fixed top-3 left-3 z-50 p-2 bg-gray-800 text-white rounded-md shadow-md hover:bg-gray-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            
+            <div id="contentAreaContainer" class="bg-white p-5 md:p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                <div id="contentArea" class="content-section">
+                    <h1 id="mainGuideTitle" class="text-2xl font-bold mb-6 text-blue-600">Welcome!</h1>
+                    <p class="text-lg">Select a topic from the sidebar or use the navigation buttons below to begin your comprehensive study of Weather and Climate for KCSE Geography.</p>
+                </div>
+                 <div id="navButtons" class="mt-10 flex justify-between border-t border-gray-300 pt-6">
+                    <button id="prevButton" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Previous</button>
+                    <button id="nextButton" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Function to create diagram placeholders
+        function getDiagramPlaceholder(description) {
+            return `<div class="diagram-placeholder">Diagram Placeholder: ${description}</div>`;
+        }
+
+        const guideData = [
+            // Section 1.0
+            {
+                id: 'foundations_weather_climate',
+                title: '1.0 Foundations',
+                isChapterTitle: true, // To style it differently if needed
+                htmlContent: `
+                    <h1>An Expert Report on Weather and Climate: A KCSE Geography Perspective</h1>
+                    <h2>1.0 Foundations of Weather and Climate</h2>
+                    <p>A clear understanding of fundamental atmospheric concepts is essential for the study of geography, particularly the distinction between weather and climate, and the elements that define them. These foundational concepts underpin our ability to analyze atmospheric phenomena and their impacts on the physical environment and human activities, a key objective within the KCSE Geography syllabus.</p>
+                `
+            },
+            {
+                id: 'defining_weather_climate',
+                title: '1.1 Defining Weather & Climate',
+                htmlContent: `
+                    <h3>1.1 Defining Weather and Climate</h3>
+                    <p>The terms "weather" and "climate," while related, describe atmospheric conditions over distinctly different timescales.</p>
+                    <p><strong>Weather</strong> is defined as the state of the atmosphere at a particular place and over a short period, typically considered as 24 hours. It encompasses the immediate, day-to-day atmospheric conditions such as temperature, rainfall, or wind at any given moment or over a brief interval.</p>
+                    <p><strong>Climate</strong>, conversely, refers to the average weather conditions of a specific location, observed and recorded over an extended period, usually 30-35 years. It represents the long-term pattern of atmospheric behavior, including variability and extremes, rather than instantaneous conditions. The KCSE Geography syllabus explicitly requires learners to be able to define these terms.</p>
+                    <p>The establishment of a 30-35 year period for defining climate is a widely accepted meteorological standard. This duration is considered sufficient to smooth out short-term anomalies and year-to-year variations, such as an unusually cold winter or a particularly wet season, thereby capturing the underlying, more stable climatic regime of a region. A shorter period might be unduly influenced by temporary fluctuations or multi-year climatic oscillations like the El Niño-Southern Oscillation (ENSO), leading to a skewed representation of the climate. Conversely, a much longer period, while statistically robust, might obscure more recent, potentially significant, shifts in climatic patterns. The 30-35 year timeframe thus provides a balance, offering a stable statistical baseline that remains relevant to contemporary conditions and allows for the calculation of meaningful averages and measures of variability.</p>
+                    ${getDiagramPlaceholder('Timeline illustrating Weather (daily) vs. Climate (30-35 years average)')}
+                `
+            },
+            {
+                id: 'distinguishing_weather_climate',
+                title: '1.2 Distinguishing Weather & Climate',
+                htmlContent: `
+                    <h3>1.2 Distinguishing Between Weather and Climate</h3>
+                    <p>The primary distinction between weather and climate lies in the timescale over which atmospheric conditions are observed and recorded. Weather is a snapshot of the atmosphere, dynamic and constantly changing, reflecting conditions over hours or days. Climate, on the other hand, is a composite picture, a statistical summary of weather conditions compiled over decades.</p>
+                    <p>This differentiation is crucial in geographical studies. For instance, a single exceptionally hot day (weather event) does not in itself signify a change in the long-term climate of a region. Similarly, an isolated heavy downpour is a weather phenomenon, whereas the pattern of seasonal rainfall distribution over many years defines a region's precipitation climate. The syllabus underscores the importance of learners being able to make this distinction clearly.</p>
+                    <p>Climate can be conceptualized as the "expected" atmospheric conditions for a particular place at a specific time of year, based on historical data. Weather is the "actual" condition experienced at that moment. For example, based on its climate, one might expect Nairobi to be warm in December. The actual temperature on a specific December day is the weather. This illustrates the inherent relationship: climate is essentially the aggregation and statistical interpretation of weather data over a significant duration. Understanding climate is vital for long-term planning in sectors like agriculture, water resource management, and infrastructure development. Weather information, in contrast, is critical for immediate, short-term decision-making concerning daily activities, transportation, and safety.</p>
+                `
+            },
+            {
+                id: 'elements_weather',
+                title: '1.3 Elements of Weather',
+                htmlContent: `
+                    <h3>1.3 The Elements of Weather: An Overview</h3>
+                    <p>Weather is a multifaceted phenomenon described by several measurable components known as the elements of weather. The KCSE Geography syllabus requires learners to be able to identify these elements. The principal elements of weather include:</p>
+                    <ul>
+                        <li><strong>Temperature:</strong> The degree of hotness or coldness of the air.</li>
+                        <li><strong>Air (Atmospheric) Pressure:</strong> The force exerted by the weight of the atmosphere on the Earth's surface.</li>
+                        <li><strong>Wind:</strong> The movement of air, characterized by its speed and direction.</li>
+                        <li><strong>Humidity:</strong> The amount of water vapour present in the air.</li>
+                        <li><strong>Precipitation:</strong> Any form of water particles (liquid or solid) that fall from the atmosphere and reach the ground, such as rain, snow, hail, or sleet.</li>
+                        <li><strong>Visibility:</strong> The greatest distance at which an object can be clearly seen.</li>
+                        <li><strong>Clouds:</strong> Visible masses of water droplets or ice crystals suspended in the atmosphere, characterized by their type and cover (amount of sky obscured).</li>
+                        <li><strong>Sunshine Duration:</strong> The period during which direct solar radiation is received at a given location.</li>
+                    </ul>
+                    <p>These elements do not exist in isolation; they are intricately interconnected and interact within a complex atmospheric system. Solar radiation (sunshine) is the fundamental driver, directly influencing temperature. Differences in temperature across the Earth's surface create variations in air pressure. These pressure gradients, in turn, cause air to move, generating wind. Temperature also governs rates of evaporation, thereby affecting humidity levels. The interplay of temperature and humidity is critical for condensation processes, leading to cloud formation and eventually precipitation. Clouds themselves influence other elements, such as temperature (by reflecting incoming solar radiation or trapping outgoing terrestrial radiation) and visibility. This interconnectedness means that a change in one weather element can initiate a series of changes in others, contributing to the dynamic and often unpredictable nature of weather. A foundational understanding of these relationships is essential for comprehending weather patterns and the principles of weather forecasting.</p>
+                    ${getDiagramPlaceholder('Chart showing interconnectedness of Weather Elements')}
+                `
+            },
+            // Section 2.0
+            {
+                id: 'measuring_recording_weather',
+                title: '2.0 Measuring & Recording',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>2.0 Measuring and Recording Weather</h2>
+                    <p>The systematic measurement and recording of weather elements are fundamental to meteorological science and geographical studies. This process allows for the collection of data necessary for understanding current weather conditions, forecasting future weather, and determining long-term climatic patterns. The KCSE Geography syllabus emphasizes the practical aspects of weather observation, including the appropriate siting of a weather station and the use of various instruments.</p>
+                `
+            },
+            {
+                id: 'school_weather_station',
+                title: '2.1 School Weather Station',
+                htmlContent: `
+                    <h3>2.1 The School Weather Station: Siting and Importance</h3>
+                    <p>A school weather station serves as a practical learning environment for students to engage with meteorological concepts and instrumentation. The KCSE Geography syllabus requires learners to explain the conditions necessary for siting a weather station. Proper siting is paramount to ensure that the data collected are accurate and representative of the wider atmospheric conditions of the locality, rather than being skewed by immediate, localized influences.</p>
+                    <p>Key conditions for siting a weather station include:</p>
+                    <ul>
+                        <li><strong>Open Area:</strong> The station should be located in an open space, well away from obstructions such as tall buildings, trees, or dense vegetation. This ensures the free flow of air and unimpeded exposure to sunshine and precipitation.</li>
+                        <li><strong>Level Ground:</strong> The ground should be fairly level or gently sloping to facilitate the correct positioning and stability of instruments and to prevent issues like waterlogging or unrepresentative wind patterns caused by complex terrain.</li>
+                        <li><strong>Drainage:</strong> The site should be free from flooding to protect the instruments and ensure continuous operation.</li>
+                        <li><strong>Security:</strong> The location should be secure to prevent vandalism or unauthorized interference with the instruments.</li>
+                    </ul>
+                    <p>The rationale behind these siting requirements is to minimize the impact of "micro-climatic" influences from the immediate surroundings. Obstructions can create wind shadows, cast shadows affecting temperature and sunshine readings, radiate heat, or alter precipitation patterns (e.g., the rain shadow effect of a building). Uneven ground can affect instrument stability and lead to localized cold air pooling or waterlogging. By selecting an open, level, and secure site, the weather station aims to capture the "meso-climatic" or "local climatic" conditions accurately. This standardization is crucial for ensuring that data collected are reliable and comparable with data from other weather stations.</p>
+                    ${getDiagramPlaceholder('Ideal Siting of a School Weather Station')}
+                `
+            },
+            {
+                id: 'stevenson_screen',
+                title: '2.2 Stevenson Screen',
+                htmlContent: `
+                    <h3>2.2 The Stevenson Screen: Purpose and Characteristics</h3>
+                    <p>The Stevenson Screen is a standard enclosure used at weather stations to house certain sensitive meteorological instruments, particularly thermometers (maximum, minimum, and wet-and-dry bulb hygrometer). Its study is a specific requirement of the KCSE syllabus.</p>
+                    <p><strong>Purpose:</strong> The primary purpose of the Stevenson Screen is to protect the instruments it contains from direct solar radiation, precipitation, and direct heat from the ground or surrounding objects, while simultaneously allowing for the free circulation of air around them. This ensures that the instruments measure the properties of the ambient air, rather than being influenced by extraneous heating or cooling effects.</p>
+                    <p><strong>Characteristics:</strong> The design of the Stevenson Screen incorporates several features to achieve its purpose:</p>
+                    <ul>
+                        <li><strong>Material:</strong> It is typically constructed of wood, which is a poor conductor of heat.</li>
+                        <li><strong>Colour:</strong> It is painted white, both inside and out, to reflect a high proportion of incoming solar radiation, thus minimizing heat absorption by the screen itself.</li>
+                        <li><strong>Louvred Sides:</strong> The walls of the screen are double-louvred, with angled slats. These allow air to circulate freely through the screen, ensuring that the air inside is representative of the ambient air, while preventing direct sunlight, rain, and snow from reaching the instruments.</li>
+                        <li><strong>Ventilated Roof:</strong> The roof is often double-layered and sloped, with ventilation holes, to provide insulation from direct solar heating and allow heated air to escape.</li>
+                        <li><strong>Raised Stand:</strong> The screen is mounted on a stand, typically raising its base to about 1.1 to 1.2 meters above the ground. This placement avoids the extreme temperature fluctuations that occur at ground level due to direct absorption of solar radiation or rapid radiative cooling at night. It also ensures measurements are taken at a standardized height.</li>
+                        <li><strong>Door:</strong> The door is usually hinged on one side and designed to open towards the pole (i.e., northwards in the Northern Hemisphere and southwards in the Southern Hemisphere). In Kenya, which is on the equator, the door is generally oriented to open facing north to minimize the chance of direct sunlight falling on the instruments when readings are being taken, particularly around midday.</li>
+                    </ul>
+                    <p>The meticulous design of the Stevenson Screen highlights the scientific precision required in meteorological measurements. By standardizing the environment in which temperature and humidity are measured, it ensures that data collected from different locations are comparable and reliable.</p>
+                    ${getDiagramPlaceholder('Detailed illustration of a Stevenson Screen with its key characteristics labelled')}
+                `
+            },
+            {
+                id: 'measuring_instruments',
+                title: '2.3 Measuring Instruments',
+                htmlContent: `
+                    <h3>2.3 Instruments for Measuring Weather Elements</h3>
+                    <p>The KCSE Geography syllabus requires learners to be able to use instruments to measure various weather elements. Each element of weather is measured using a specific instrument designed to quantify that particular atmospheric property.</p>
+                    <h4>Table 1: Elements of Weather, Measuring Instruments, and Units</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Element</th>
+                                <th>KCSE-Level Instrument(s)</th>
+                                <th>Principle of Operation (Brief)</th>
+                                <th>Common Unit(s) of Measurement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Temperature</strong></td>
+                                <td>Maximum Thermometer, Minimum Thermometer, Six's Thermometer</td>
+                                <td>Expansion/contraction of a liquid (mercury or alcohol) with temperature changes. Max/Min thermometers have mechanisms to record extreme values.</td>
+                                <td>Degrees Celsius (°C)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rainfall</strong></td>
+                                <td>Rain Gauge</td>
+                                <td>Collects precipitation over a set area in a calibrated container.</td>
+                                <td>Millimetres (mm)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Atmospheric Pressure</strong></td>
+                                <td>Aneroid Barometer, Mercury Barometer</td>
+                                <td>Aneroid: Sealed metal chamber expands/contracts with pressure changes. Mercury: Height of a mercury column balanced against atmospheric pressure.</td>
+                                <td>Millibars (mb), Hectopascals (hPa), millimetres/inches of mercury</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Humidity</strong></td>
+                                <td>Hygrometer (Wet-and-Dry Bulb Thermometer / Psychrometer)</td>
+                                <td>Difference in temperature between a dry bulb and a wet bulb (cooled by evaporation) is related to air's moisture content using psychrometric tables.</td>
+                                <td>Percentage (%) (Relative Humidity)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wind Direction</strong></td>
+                                <td>Wind Vane</td>
+                                <td>A free-rotating pointer aligns itself with the direction from which the wind is blowing.</td>
+                                <td>Cardinal points (N, S, E, W) or Degrees (°)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wind Speed</strong></td>
+                                <td>Anemometer</td>
+                                <td>Rotating cups or propellers whose speed of rotation is proportional to wind speed.</td>
+                                <td>Kilometres per hour (km/h), Metres per second (m/s), Knots</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sunshine Duration</strong></td>
+                                <td>Sunshine Recorder (e.g., Campbell-Stokes)</td>
+                                <td>Glass sphere focuses sunlight onto a special card, scorching a trace. The length of the scorch mark indicates duration.</td>
+                                <td>Hours</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Evaporation</strong></td>
+                                <td>Evaporimeter (e.g., Piche Evaporimeter, Class A Pan)</td>
+                                <td>Measures the rate at which water evaporates from a free water surface or a saturated porous surface into the atmosphere.</td>
+                                <td>Millimetres (mm)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    ${getDiagramPlaceholder('Collage of common Weather Instruments: Max/Min Thermometer, Rain Gauge, Aneroid Barometer, Hygrometer, Wind Vane, Anemometer, Sunshine Recorder, Piche Evaporimeter')}
+
+                    <h4>Detailed Descriptions of Key Instruments:</h4>
+                    <ul>
+                        <li><strong>Temperature Measurement:</strong>
+                            <ul>
+                                <li><strong>Maximum Thermometer:</strong> This is a mercury-in-glass thermometer with a constriction in the capillary tube near the bulb. As temperature rises, the expanding mercury is forced past the constriction. When the temperature falls, the mercury column breaks at the constriction, leaving the end of the column indicating the highest temperature reached. It is reset by swinging it to force the mercury back past the constriction.</li>
+                                <li><strong>Minimum Thermometer:</strong> This is an alcohol-in-glass thermometer containing a small, dark-coloured glass index within the alcohol column. As temperature falls, the contracting alcohol drags the index down due to surface tension. When temperature rises, the alcohol expands and flows past the index, leaving the end of the index furthest from the bulb indicating the lowest temperature reached. It is reset by tilting the thermometer bulb-end upwards.</li>
+                                <li><strong>Six's Thermometer:</strong> This U-shaped thermometer can record both maximum and minimum temperatures. It contains mercury in the bend of the U-tube, with alcohol in the arms above the mercury. As temperature changes, the alcohol expands or contracts, pushing the mercury. Small steel indices in each arm are pushed by the mercury to indicate the maximum and minimum temperatures and are held in place by small springs until reset with a magnet.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Rainfall Measurement (Rain Gauge):</strong> A standard rain gauge typically consists of a funnel with a sharp rim (to ensure a precise collecting area) that directs rainwater into a collecting bottle or cylinder, housed within an outer protective casing. The outer casing is often sunk into the ground to prevent tipping and reduce evaporation from the collected water. The amount of rain is measured by pouring the collected water into a calibrated measuring cylinder, usually graduated in millimetres. Readings are typically taken daily at a fixed time.</li>
+                        <li><strong>Atmospheric Pressure Measurement:</strong>
+                            <ul>
+                                <li><strong>Aneroid Barometer:</strong> This instrument uses a small, flexible, sealed metal capsule (or series of capsules) from which some air has been removed (aneroid means "without liquid"). Changes in atmospheric pressure cause the capsule to expand or contract. This movement is amplified by a system of levers and springs, which moves a pointer across a calibrated dial.</li>
+                                <li><strong>Mercury Barometer:</strong> This consists of a glass tube, sealed at one end and filled with mercury, inverted into a reservoir of mercury. The weight of the atmosphere pressing on the mercury in the reservoir supports a column of mercury in the tube. The height of this column (typically around 760 mm at sea level) indicates the atmospheric pressure.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Humidity Measurement (Hygrometer - Wet and Dry Bulb Thermometer):</strong> This instrument consists of two identical thermometers mounted side-by-side. The bulb of one thermometer (the dry bulb) is exposed to the air and measures the actual air temperature. The bulb of the other thermometer (the wet bulb) is covered with a muslin wick that is kept moist by a reservoir of distilled water. Evaporation of water from the wick cools the wet bulb. The rate of evaporation, and thus the degree of cooling, depends on the amount of moisture already in the air (relative humidity). The drier the air, the greater the evaporation and the lower the wet-bulb temperature. The difference between the dry-bulb and wet-bulb readings (the "wet-bulb depression") is used with psychrometric tables or charts to determine the relative humidity.</li>
+                        <li><strong>Sunshine Duration Measurement (Campbell-Stokes Sunshine Recorder):</strong> This instrument consists of a solid glass sphere (about 10 cm in diameter) mounted concentrically in a section of a spherical bowl. The sphere focuses the sun's rays to a point on a specially treated card held in grooves in the bowl behind it. As the sun moves across the sky, the focused heat scorches a trace on the card. The length of the burnt trace corresponds to the duration of bright sunshine. Different cards are used for different seasons to account for changes in the sun's declination.</li>
+                        <li><strong>Evaporation Measurement (Piche Evaporimeter):</strong> The Piche evaporimeter consists of a graduated glass tube, closed at one end and open at the other, which is filled with distilled water. The open end is covered by a disc of filter paper held in place by a metal clip and spring. The tube is inverted, and water evaporates from the exposed surface of the filter paper. The amount of water evaporated over a given period is read directly from the graduations on the tube.</li>
+                    </ul>
+                    <p>The design of these traditional instruments often relies on simple, observable physical principles like thermal expansion, the cooling effect of evaporation, or the force exerted by wind. This not only makes their operation understandable but also provides a tangible way for students to connect theoretical concepts with practical measurement.</p>
+                `
+            },
+            {
+                id: 'recording_calculating_data',
+                title: '2.4 Recording & Calculating Data',
+                htmlContent: `
+                    <h3>2.4 Recording and Calculating Weather Data</h3>
+                    <p>Raw data collected from weather instruments must be processed to become meaningful information for analysis and interpretation. This involves systematic recording and various calculations, as stipulated by the KCSE syllabus.</p>
+                    <h4>Temperature Calculations:</h4>
+                    <ul>
+                        <li><strong>Mean Daily Temperature:</strong> <span class="formula">(Maximum Temperature + Minimum Temperature) / 2</span></li>
+                        <li><strong>Diurnal Temperature Range:</strong> <span class="formula">Maximum Temperature - Minimum Temperature</span></li>
+                        <li><strong>Mean Monthly Temperature:</strong> <span class="formula">Sum of Mean Daily Temperatures for the Month / Number of Days in the Month</span></li>
+                        <li><strong>Mean Annual Temperature:</strong> <span class="formula">Sum of Mean Monthly Temperatures / 12</span></li>
+                        <li><strong>Annual Temperature Range:</strong> <span class="formula">Highest Mean Monthly Temperature - Lowest Mean Monthly Temperature</span></li>
+                    </ul>
+                    <h4>Rainfall Calculations:</h4>
+                    <ul>
+                        <li><strong>Monthly Rainfall Total:</strong> <span class="formula">Sum of Daily Rainfall Amounts in the Month</span></li>
+                        <li><strong>Annual Rainfall Total:</strong> <span class="formula">Sum of Monthly Rainfall Totals for the Year</span></li>
+                        <li><strong>Mean Annual Rainfall (climatic):</strong> <span class="formula">Sum of Annual Rainfall Totals over several years / Number of Years</span></li>
+                        <li><strong>Mean Monthly Rainfall (for a specific year):</strong> <span class="formula">Total Annual Rainfall for that year / 12</span></li>
+                    </ul>
+                    <p>These calculations are fundamental for transforming raw weather observations into standardized climatic statistics. Averages (means) provide a measure of central tendency, helping to describe typical conditions, while ranges indicate the variability or extremity of conditions. Such statistical summaries are essential for comparing the climates of different places, analyzing trends over time, and understanding the overall climatic characteristics of a region, directly addressing the syllabus objective to analyze and interpret weather data.</p>
+                `
+            },
+            // Section 3.0
+            {
+                id: 'earths_atmosphere',
+                title: '3.0 Earth\'s Atmosphere',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>3.0 The Earth's Atmosphere</h2>
+                    <p>The Earth's atmosphere is a vital, dynamic system, a gaseous envelope that surrounds the planet, supporting life and driving weather and climate phenomena. The KCSE Geography syllabus requires an understanding of its structure and composition.</p>
+                `
+            },
+            {
+                id: 'structure_atmosphere',
+                title: '3.1 Structure of the Atmosphere',
+                htmlContent: `
+                    <h3>3.1 Structure of the Atmosphere</h3>
+                    <p>The atmosphere is not uniform but is stratified into several distinct layers, primarily based on variations in temperature with altitude. These layers, from the Earth's surface upwards, are the Troposphere, Stratosphere, Mesosphere, Thermosphere, and Exosphere.</p>
+                    <ul>
+                        <li><strong>Troposphere:</strong>
+                            <ul>
+                                <li><strong>Altitude:</strong> Lowest layer, surface to ~10-12 km (varies with latitude/season, up to 17 km at equator).</li>
+                                <li><strong>Characteristics:</strong> Contains ~75% of atmospheric mass, virtually all water vapour/aerosols. Most weather phenomena occur here. Temperature generally decreases with altitude (Environmental Lapse Rate ~6.5°C/1000m) as it's heated from below by terrestrial radiation. Densest layer, supports life.</li>
+                                <li><strong>Boundary:</strong> Tropopause (temperature decrease halts).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Stratosphere:</strong>
+                            <ul>
+                                <li><strong>Altitude:</strong> Tropopause to ~50 km.</li>
+                                <li><strong>Characteristics:</strong> Contains the ozone layer, which absorbs UV radiation, causing temperature to increase with altitude (from ~-60°C to ~0°C). Very stable, little vertical mixing, ideal for jet travel.</li>
+                                <li><strong>Boundary:</strong> Stratopause.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mesosphere:</strong>
+                            <ul>
+                                <li><strong>Altitude:</strong> Stratopause to ~85 km.</li>
+                                <li><strong>Characteristics:</strong> Temperature decreases with altitude, reaching coldest atmospheric temperatures (~-90°C to -100°C) at mesopause. Most meteors burn up here. Noctilucent clouds may form.</li>
+                                <li><strong>Boundary:</strong> Mesopause.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Thermosphere:</strong>
+                            <ul>
+                                <li><strong>Altitude:</strong> Mesopause to ~600-800+ km.</li>
+                                <li><strong>Characteristics:</strong> Temperature increases dramatically with altitude (can reach 500-2000°C+) due to absorption of energetic solar radiation. Air density extremely low. Aurorae occur here. International Space Station orbits here.</li>
+                                <li><strong>Boundary:</strong> Thermopause (ill-defined).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Exosphere:</strong>
+                            <ul>
+                                <li><strong>Altitude:</strong> Outermost layer, above thermosphere, fades into space.</li>
+                                <li><strong>Characteristics:</strong> Extremely thin air; gases like hydrogen and helium can escape Earth's gravity.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The <strong>Ionosphere</strong> is an electrically charged region within the upper mesosphere and thermosphere, formed by solar/cosmic radiation ionizing atmospheric gases. Important for radio communication.</p>
+                    <p>This thermal stratification significantly influences atmospheric stability, vertical air movements, and the distribution of weather phenomena.</p>
+                    ${getDiagramPlaceholder('Labelled Diagram of the Layers of the Atmosphere showing altitude and temperature profile')}
+                `
+            },
+            {
+                id: 'composition_atmosphere',
+                title: '3.2 Composition of the Atmosphere',
+                htmlContent: `
+                    <h3>3.2 Composition of the Atmosphere</h3>
+                    <p>The Earth's atmosphere is a mixture of gases, with a relatively consistent composition in its lower layers (homosphere), along with variable amounts of water vapour and particulate matter (aerosols). The main permanent gases in dry air by volume are:</p>
+                    <ul>
+                        <li><strong>Nitrogen (N<sub>2</sub>):</strong> Approximately 78.08%. Relatively inert, crucial for biological processes, acts as a diluent for oxygen.</li>
+                        <li><strong>Oxygen (O<sub>2</sub>):</strong> Approximately 20.95%. Essential for respiration and combustion, produced by photosynthesis.</li>
+                        <li><strong>Argon (Ar):</strong> Approximately 0.93%. Inert noble gas.</li>
+                        <li><strong>Carbon Dioxide (CO<sub>2</sub>):</strong> Approximately 0.04% (rising). Vital for photosynthesis, significant greenhouse gas.</li>
+                    </ul>
+                    <p>Other <strong>trace gases</strong> include Neon (Ne), Helium (He), Methane (CH<sub>4</sub>), Krypton (Kr), Hydrogen (H<sub>2</sub>), Nitrous Oxide (N<sub>2</sub>O), and Ozone (O<sub>3</sub>).</p>
+                    <p><strong>Variable Components:</strong></p>
+                    <ul>
+                        <li><strong>Water Vapour (H<sub>2</sub>O):</strong> Varies from ~0% to ~4%. Powerful greenhouse gas, fundamental to hydrological cycle, clouds, precipitation.</li>
+                        <li><strong>Aerosols:</strong> Tiny solid/liquid particles (dust, salt, ash, smoke, pollutants). Affect air quality, act as condensation nuclei, influence radiation balance.</li>
+                    </ul>
+                    <p>This mixture is critical for life. Oxygen supports respiration, CO<sub>2</sub> for photosynthesis, ozone shields UV. Greenhouse gases maintain habitable temperatures. Even trace gases can have significant impacts, highlighting the delicate balance of atmospheric composition.</p>
+                    ${getDiagramPlaceholder('Pie Chart showing Composition of the Atmosphere (Main Gases)')}
+                `
+            },
+            // Section 4.0
+            {
+                id: 'factors_influencing',
+                title: '4.0 Factors Influencing Weather & Climate',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>4.0 Factors Influencing Weather and Climate</h2>
+                    <p>The weather and climate experienced at any location on Earth are the result of a complex interplay of various influencing factors. These factors operate on different scales, from global to local, to produce the diverse array of climates observed across the planet.</p>
+                `
+            },
+            {
+                id: 'latitude_factor',
+                title: '4.1 Latitude',
+                htmlContent: `
+                    <h3>4.1 Latitude</h3>
+                    <p>Latitude, or the distance north or south of the equator, is a primary determinant of temperature and, consequently, climate.</p>
+                    <ul>
+                        <li><strong>Angle of Insolation:</strong> Near the equator (low latitudes), the sun's rays strike the Earth's surface at a high angle (close to 90°) for much of the year. This concentrates solar energy over a smaller area, leading to intense heating and higher average temperatures.</li>
+                        <li><strong>Path Length:</strong> Solar radiation travels a shorter distance through the atmosphere at the equator, meaning less energy is absorbed, scattered, or reflected before reaching the surface.</li>
+                        <li>At higher latitudes (towards the poles), the sun's rays strike at a more oblique (lower) angle, spreading energy over a larger area, resulting in less intense heating and lower temperatures. The radiation also passes through more atmosphere.</li>
+                        <li><strong>Seasonal Variation:</strong> Latitude influences seasonal variation in daylight hours and solar intensity, leading to distinct seasons at higher latitudes. Equatorial regions have consistent high temperatures and daylight. It also affects seasonal rainfall patterns.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Diagram showing Angle of Insolation at Equator vs. Higher Latitudes')}
+                `
+            },
+            {
+                id: 'altitude_factor',
+                title: '4.2 Altitude',
+                htmlContent: `
+                    <h3>4.2 Altitude</h3>
+                    <p>Altitude, or height above sea level, significantly affects temperature.</p>
+                    <ul>
+                        <li><strong>Lapse Rate:</strong> Generally, temperature decreases with increasing altitude in the troposphere (Environmental Lapse Rate, ~6.5°C per 1000 meters).</li>
+                        <li><strong>Reasoning:</strong> The atmosphere is primarily heated from below by terrestrial radiation. Higher altitudes are further from this heat source. Air at higher altitudes is less dense, containing fewer molecules to absorb and retain heat. Thus, highlands are cooler than lowlands at the same latitude. Altitude also influences precipitation (orographic rainfall).</li>
+                    </ul>
+                     ${getDiagramPlaceholder('Diagram illustrating Temperature Decrease with Altitude (Lapse Rate)')}
+                `
+            },
+            {
+                id: 'distance_sea_factor',
+                title: '4.3 Distance from the Sea (Continentality)',
+                htmlContent: `
+                    <h3>4.3 Distance from the Sea (Continentality)</h3>
+                    <p>Proximity to large water bodies (oceans, large lakes) has a moderating effect on climate (maritime influence). Locations far from water experience a continental climate.</p>
+                    <ul>
+                        <li><strong>Specific Heat Capacity:</strong> Water heats up and cools down more slowly than land.</li>
+                        <li><strong>Maritime Influence:</strong> Coastal areas have milder temperatures (cooler summers, warmer winters) due to the moderating effect of nearby water. Sea breezes can cool in hot seasons and warm in cool seasons. Coastal areas often receive more rainfall.</li>
+                        <li><strong>Continental Influence:</strong> Inland areas experience greater temperature extremes (hotter summers, colder winters) – this is continentality.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'ocean_currents_factor',
+                title: '4.4 Ocean Currents',
+                htmlContent: `
+                    <h3>4.4 Ocean Currents</h3>
+                    <p>Ocean currents transport warm water from the tropics polewards and cold water from poles towards the tropics.</p>
+                    <ul>
+                        <li><strong>Warm Currents:</strong> Warm overlying air. Onshore winds bring warmth and moisture, leading to milder, wetter conditions and increased temperatures on adjacent coasts (e.g., warm Mozambique Current).</li>
+                        <li><strong>Cold Currents:</strong> Cool overlying air, leading to lower temperatures and reduced rainfall on adjacent coasts, sometimes forming coastal deserts (e.g., Benguela Current and Namib Desert). Can cause fog.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('World Map showing Major Warm and Cold Ocean Currents and their influence on coastal climates')}
+                `
+            },
+            {
+                id: 'coastline_config_factor',
+                title: '4.5 Configuration of the Coastline',
+                htmlContent: `
+                    <h3>4.5 Configuration of the Coastline</h3>
+                    <p>The alignment, shape, or nature of a coastline in relation to prevailing winds can influence local climate, particularly rainfall.</p>
+                    <ul>
+                        <li><strong>Rainfall:</strong> Irregular coastlines, or those perpendicular to prevailing moist onshore winds, tend to receive more rainfall as winds are forced to rise. Coastlines parallel to wind direction may receive less rain.</li>
+                        <li><strong>Land/Sea Breezes:</strong> Coastline shape affects land-water contact, influencing local wind systems like land and sea breezes, modifying local temperatures.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'air_masses_factor',
+                title: '4.6 Air Masses',
+                htmlContent: `
+                    <h3>4.6 Air Masses</h3>
+                    <p>An air mass is a large body of air with relatively uniform temperature and humidity, acquired from its source region (e.g., warm ocean, cold continent).</p>
+                    <ul>
+                        <li><strong>Influence:</strong> When an air mass moves, it carries its properties, influencing the weather and climate of areas it traverses. Tropical maritime air brings warm, moist conditions; polar continental air brings cold, dry conditions. Interaction of air masses along fronts causes weather changes in mid-latitudes.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'aspect_factor',
+                title: '4.7 Aspect',
+                htmlContent: `
+                    <h3>4.7 Aspect</h3>
+                    <p>Aspect refers to the direction in which a slope faces in relation to the sun's rays.</p>
+                    <ul>
+                        <li><strong>Temperature and Moisture:</strong> In mid/high latitudes, equator-facing slopes (south-facing in N. Hemisphere, north-facing in S. Hemisphere) receive more direct sunlight, are warmer and drier than pole-facing slopes. This supports different vegetation.</li>
+                        <li><strong>Significance:</strong> More pronounced in mountainous regions and higher latitudes. Less significant in tropical regions where the sun is often overhead, though can still influence rainfall if slopes face rain-bearing winds.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Diagram showing influence of Aspect on solar radiation received by slopes')}
+                `
+            },
+            {
+                id: 'cloud_cover_factor',
+                title: '4.8 Cloud Cover',
+                htmlContent: `
+                    <h3>4.8 Cloud Cover</h3>
+                    <p>Cloud cover plays a dual role in influencing surface temperature.</p>
+                    <ul>
+                        <li><strong>Daytime Effect:</strong> Clouds reflect incoming solar radiation, leading to cooler daytime temperatures under cloudy skies.</li>
+                        <li><strong>Night-time Effect:</strong> Clouds act like a blanket, absorbing and re-radiating outgoing terrestrial radiation, resulting in warmer night-time temperatures under cloudy skies.</li>
+                    </ul>
+                    <p>Cloud cover also impacts sunshine duration and can be a precursor to precipitation.</p>
+                `
+            },
+            {
+                id: 'winds_factor',
+                title: '4.9 Winds',
+                htmlContent: `
+                    <h3>4.9 Winds</h3>
+                    <p>Winds are crucial in transferring heat and moisture across the globe.</p>
+                    <ul>
+                        <li><strong>Heat Transfer:</strong> Transport warm air to cooler regions and cool air to warmer regions, moderating temperatures.</li>
+                        <li><strong>Moisture Transfer:</strong> Onshore winds carry moisture, leading to higher humidity and potential rainfall. Offshore winds are often dry.</li>
+                        <li><strong>Prevailing Winds:</strong> Large-scale wind patterns (e.g., Trade Winds, Westerlies) are major climatic controls.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'human_activities_factor',
+                title: '4.10 Human Activities',
+                htmlContent: `
+                    <h3>4.10 Human Activities</h3>
+                    <p>Human activities increasingly influence climate locally (micro-climate) and globally (macro-climate).</p>
+                    <ul>
+                        <li><strong>Urbanization:</strong> Creates "urban heat islands" (higher temperatures in cities) due to heat absorption by concrete/asphalt, waste heat, reduced evapotranspiration, altered wind patterns. Can alter local precipitation and increase fog.</li>
+                        <li><strong>Deforestation:</strong> Affects albedo, evapotranspiration, carbon storage. Can lead to reduced rainfall, increased runoff/erosion, and contribute to global warming (releases CO<sub>2</sub>, reduces CO<sub>2</sub> absorption).</li>
+                        <li><strong>Agriculture:</strong> Irrigation can increase local humidity. Land clearing changes albedo/evapotranspiration. Livestock contribute methane.</li>
+                        <li><strong>Industrialization:</strong> Releases pollutants and greenhouse gases (CO<sub>2</sub>, methane, N<sub>2</sub>O), contributing to air pollution, acid rain, global warming.</li>
+                        <li><strong>Construction of Dams:</strong> Large reservoirs can modify local climate by increasing humidity (evaporation), potentially increasing local rainfall and moderating temperatures.</li>
+                    </ul>
+                `
+            },
+            // Section 5.0
+            {
+                id: 'climatic_regions_kenya_intro',
+                title: '5.0 Climatic Regions of Kenya',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>5.0 Climatic Regions of Kenya</h2>
+                    <p>Kenya, despite its equatorial location, exhibits a remarkable diversity of climates. This variation is primarily due to the interplay of altitude, proximity to large water bodies (the Indian Ocean and Lake Victoria), and prevailing wind systems, which modify the general tropical influence. The KCSE Geography syllabus requires learners to describe the characteristics of these climatic regions.</p>
+                     ${getDiagramPlaceholder('Map of Kenya showing its Major Climatic Regions')}
+                `
+            },
+            {
+                id: 'kenya_mod_equatorial_coast',
+                title: '5.1 Modified Equatorial (Coast)',
+                htmlContent: `
+                    <h3>5.1 Modified Equatorial Climate of the Coast</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Coastal belt (Vanga to Lamu), influenced by Indian Ocean.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> Consistently high (20°C - 27°C), small annual range.</li>
+                                <li><strong>Rainfall:</strong> Heavy (~1600 mm, or 1000-1500mm), double maxima, mostly afternoons. No truly dry month, but less than typical equatorial.</li>
+                                <li><strong>Humidity:</strong> Consistently high (70-80%+).</li>
+                                <li><strong>Winds:</strong> Influenced by monsoons and land/sea breezes.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_mod_equatorial_lake',
+                title: '5.2 Modified Equatorial (Lake Victoria Basin)',
+                htmlContent: `
+                    <h3>5.2 Modified Equatorial Climate of the Lake Victoria Basin</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Areas around Lake Victoria (Nyanza, Western Provinces), modified by lake and relief.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> High throughout the year, small annual range.</li>
+                                <li><strong>Rainfall:</strong> All year (1000-1600 mm), no distinct dry month, double maxima, predominantly convectional.</li>
+                                <li><strong>Humidity:</strong> High due to lake evaporation and rainfall.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_mod_equatorial_nw',
+                title: '5.3 Modified Equatorial (North-Western Borders)',
+                htmlContent: `
+                    <h3>5.3 Modified Equatorial Climate of the North-Western Borders</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Kara Suk areas near Ugandan border, continuation of W/N Uganda climate.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> Generally high throughout the year.</li>
+                                <li><strong>Rainfall:</strong> Lower than typical equatorial (~850 mm/year). Most months dry, convectional rain mainly June-September.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_mod_tropical_highlands',
+                title: '5.4 Modified Tropical (Highlands)',
+                htmlContent: `
+                    <h3>5.4 Modified Tropical Climate of the Highlands</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Highland areas E/W of Rift Valley (Aberdares, Mt. Kenya, Mau Escarpment). Also called highland sub-tropical, relief is key modifier.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> Cooler due to altitude (17°C - 24°C). Small mean annual range (3°C - 5°C).</li>
+                                <li><strong>Rainfall:</strong> All year (1000-1500 mm), double maxima, relief/orographic rainfall common.</li>
+                                <li><strong>Humidity:</strong> Moderate.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_tropical',
+                title: '5.5 Tropical Climate (Narok, Kwale, S. Taita)',
+                htmlContent: `
+                    <h3>5.5 Tropical Climate (e.g., Narok, Kwale, Southern Taita)</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Narok, parts of Kwale district (not immediate coast), Loita Hills, Taita Hills, Shimba Hills.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Rainfall:</strong> Two seasons: March-May & October-December (maxima April & November).</li>
+                                <li><strong>Temperature:</strong> High relief of hills (e.g., Loita) has a cooling influence, more tolerable than hotter semi-desert climates further inland in Eastern Kenya.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_tropical_semi_desert',
+                title: '5.6 Tropical Semi-Desert (Eastern Kenya)',
+                htmlContent: `
+                    <h3>5.6 Tropical Semi-Desert Climate (Eastern Kenya)</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Large parts of Eastern Kenya (Isiolo, Garissa, Tana River) & Southern Kenya (Kitui, Machakos, Kajiado), parts of Northern Kenya (Mandera, Moyale, parts of Turkana).</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> High (mean annual 22°C - 27°C). Large diurnal and annual ranges.</li>
+                                <li><strong>Rainfall:</strong> Generally dry (<500 mm annually), unreliable, erratic.</li>
+                                <li><strong>Other:</strong> Skies generally clear.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_desert',
+                title: '5.7 Desert Climate (Central Northern Area)',
+                htmlContent: `
+                    <h3>5.7 Desert Climate (Central Northern Area)</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Arid northern parts (Wajir, Lodwar).</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> High day temperatures, extremely low night temperatures (very high diurnal range, up to 20°C).</li>
+                                <li><strong>Rainfall:</strong> Very low (<250 mm annually), highly unreliable. Occasional sporadic rain can cause flash floods.</li>
+                                <li><strong>Humidity:</strong> Low.</li>
+                                <li><strong>Other:</strong> Sandstorms common. Winds often warm and dry, skies usually cloudless.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Table 2: Climatic Regions of Kenya - Summary Characteristics</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Climatic Region</th>
+                                <th>Key Locations</th>
+                                <th>Mean Annual Temp. (°C) (Approx.)</th>
+                                <th>Annual Rainfall (mm & Regime)</th>
+                                <th>Dominant Natural Vegetation Type (General)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Modified Equatorial (Coast)</strong></td>
+                                <td>Mombasa, Malindi, Lamu</td>
+                                <td>20-27</td>
+                                <td>1000-1600 (Double Maxima)</td>
+                                <td>Coastal forests, Mangroves, Bushland</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modified Equatorial (Lake Victoria Basin)</strong></td>
+                                <td>Kisumu, Kakamega, Kisii</td>
+                                <td>High (small range)</td>
+                                <td>1000-1600 (All year, Double Maxima)</td>
+                                <td>Rainforest remnants, Wooded Savanna</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modified Equatorial (North-Western Borders)</strong></td>
+                                <td>Kara Suk areas</td>
+                                <td>High</td>
+                                <td>~850 (Mainly June-Sept, Convectional)</td>
+                                <td>Savanna, Dry bushland</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modified Tropical (Highlands)</strong></td>
+                                <td>Nairobi, Eldoret, Kericho, Nyeri, Aberdares, Mt Kenya</td>
+                                <td>17-24</td>
+                                <td>1000-1500 (All year, Double Maxima, Relief)</td>
+                                <td>Montane forest, Bamboo, Heath & Moorland</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tropical (e.g., Narok, Kwale)</strong></td>
+                                <td>Narok, Taita Hills, Shimba Hills</td>
+                                <td>Moderate (cooled by relief)</td>
+                                <td>Variable (Mar-May & Oct-Dec Maxima)</td>
+                                <td>Savanna, Woodland</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tropical Semi-Desert (Eastern Kenya)</strong></td>
+                                <td>Isiolo, Garissa, Kitui, Kajiado, Turkana (parts)</td>
+                                <td>22-27 (large diurnal range)</td>
+                                <td>&lt;500 (Unreliable)</td>
+                                <td>Dry bushland, Scrub, Thorn-bush Savanna</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desert (Central Northern Area)</strong></td>
+                                <td>Wajir, Lodwar, Mandera (parts)</td>
+                                <td>High (very large diurnal range)</td>
+                                <td>&lt;250 (Very unreliable)</td>
+                                <td>Desert scrub, Sparse grasses</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 6.0
+            {
+                id: 'world_climatic_regions_intro',
+                title: '6.0 Major World Climatic Regions',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>6.0 Major Climatic Regions of the World (Miller's Classification)</h2>
+                    <p>Understanding the major climatic regions of the world provides a framework for comprehending global patterns of temperature, precipitation, and associated natural vegetation. The KCSE Geography syllabus requires learners to describe these regions, often referencing classifications like Miller's. Miller's classification broadly categorizes world climates into hot, warm temperate, cool temperate, cold (Arctic/Tundra), and mountain climates.</p>
+                    ${getDiagramPlaceholder('World Map showing Miller\'s Major Climatic Regions')}
+                `
+            },
+            {
+                id: 'world_hot_climates',
+                title: '6.1 Hot Climates',
+                htmlContent: `
+                    <h3>6.1 Hot Climates</h3>
+                    <p>Generally found approx. between 20° N and 20° S latitude.</p>
+                    <ul>
+                        <li><strong>Equatorial Climate:</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Consistently high temps (avg 24-27°C), small annual range (~3°C), low diurnal range (~6°C). Heavy rainfall (>1500mm) all year, double maxima. High humidity. Convectional rain. Thick cloud cover.</li>
+                                <li><strong>Vegetation:</strong> Tropical Rainforest.</li>
+                                <li><strong>Locations:</strong> Amazon Basin, Congo Basin, Malaysia, Indonesia.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tropical Monsoon Climate:</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Seasonal wind reversal (wet/dry seasons). Hot, wet summers (onshore monsoon); cool, dry winters (offshore winds). Temps 15°C (cool) to 32°C (hot), moderate annual range (9-18°C). High summer rainfall. Three seasons: cool-dry, hot-dry, hot-wet.</li>
+                                <li><strong>Vegetation:</strong> Monsoon Forest (deciduous).</li>
+                                <li><strong>Locations:</strong> India, Bangladesh, SE Asia, N. Australia.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tropical Desert Climate:</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Approx. 15°-35° N/S, often western margins (cold currents). Very low, unreliable rain (<250mm). Cloudless skies, intense day radiation, rapid night heat loss. High day temps (>32°C), large diurnal range (up to 20°C). Low humidity.</li>
+                                <li><strong>Vegetation:</strong> Desert scrub, succulents, ephemeral plants.</li>
+                                <li><strong>Locations:</strong> Sahara, Arabian Desert, Atacama, Great Australian Desert.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Savanna Climate (Tropical Continental/Sudan Type):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Distinct wet/dry seasons. High temps all year, slightly cooler in dry season. Moderate rain, mainly in summer (wet season); prolonged dry season. Annual rainfall less than monsoon regions.</li>
+                                <li><strong>Vegetation:</strong> Tropical grasslands with scattered trees (savanna).</li>
+                                <li><strong>Locations:</strong> Sub-Saharan Africa (Sudan, parts of Kenya, Tanzania), parts of Brazil, N. Australia.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_warm_temperate_climates',
+                title: '6.2 Warm Temperate Climates',
+                htmlContent: `
+                    <h3>6.2 Warm Temperate Climates</h3>
+                    <p>Found in mid-latitudes, poleward of hot climates.</p>
+                    <ul>
+                        <li><strong>Warm Temperate Western Margin (Mediterranean Climate):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Hot, dry summers (avg ~21°C); mild, wet winters (~10°C). Moderate rain (500-900mm), mainly winter (cyclonic storms). Offshore trades in summer = dry.</li>
+                                <li><strong>Vegetation:</strong> Mediterranean scrubland (chaparral, maquis), drought-resistant trees (olives, figs).</li>
+                                <li><strong>Locations:</strong> Mediterranean Sea coasts, Central California, Central Chile, Cape Town area, SW/S Australia.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Warm Temperate Continental (Steppe Climate):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Interior of continents, temperature extremes (continentality). Long, cool/cold winters (2°C-6°C); warm, short summers (18°C-21°C). Moderate rain (~500mm), summer maximum (convectional/depressions). High humidity.</li>
+                                <li><strong>Vegetation:</strong> Temperate grasslands (prairies, pampas, steppes, veld).</li>
+                                <li><strong>Locations:</strong> Prairies (N. America), Pampas (Argentina), Veld (S. Africa), Steppes (Eurasia).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Warm Temperate Eastern Margin (China Type / Humid Subtropical Climate):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Hot, humid summers (~26°C); mild winters (~13°C). Moderate-high rain (760-1500mm), well-distributed, often summer maximum (onshore trades, convection). Convectional rain, typhoons/hurricanes in summer. Winter offshore winds may mean less rain.</li>
+                                <li><strong>Vegetation:</strong> Broadleaf evergreen and deciduous forests.</li>
+                                <li><strong>Locations:</strong> SE USA, S. Brazil, SE China, S. Japan, E. Australia.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_cool_temperate_climates',
+                title: '6.3 Cool Temperate Climates',
+                 htmlContent: `
+                    <h3>6.3 Cool Temperate Climates</h3>
+                    <p>Located poleward of warm temperate, approx. 35°-60° latitude.</p>
+                    <ul>
+                        <li><strong>Cool Temperate Western Margin (British Type / European Type):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Mild winters (2°C-7°C), cool summers (13°C-15°C), small annual temp range (maritime influence). Moderate-high rain (760-2000mm), well-distributed (cyclonic systems). Prevailing westerlies bring moisture. High humidity, especially winter.</li>
+                                <li><strong>Vegetation:</strong> Deciduous forests (oak, beech, maple).</li>
+                                <li><strong>Locations:</strong> NW Europe (British Isles, France, Germany), Pacific NW USA, British Columbia (Canada), S. Chile, Tasmania, S. Island NZ.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cool Temperate Continental (Siberian Type / Taiga Climate):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Interior of large landmasses, higher mid-latitudes. Extreme annual temp ranges: very cold, long winters; short, warm summers (max ~19°C July). Low precipitation (400-500mm), mainly summer; winter snow. Relatively high humidity.</li>
+                                <li><strong>Vegetation:</strong> Coniferous forests (Taiga - pine, fir, spruce).</li>
+                                <li><strong>Locations:</strong> Canada, Alaska, N. Eurasia (Scandinavia, Russia/Siberia).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cool Temperate Eastern Margin (Laurentian Type / Humid Continental Warm Summer Type):</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Eastern margins. Very cold winters (-40°C to 0°C), snow; long, warm/hot summers. Large annual temp range. Precipitation all year (600-1000mm), summer maximum (convectional, onshore winds). Destructive typhoons can occur.</li>
+                                <li><strong>Vegetation:</strong> Mixed forests (coniferous & deciduous).</li>
+                                <li><strong>Locations:</strong> NE USA, SE Canada, N. China, N. Korea, E. Siberia.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_cold_climates',
+                title: '6.4 Cold Climates (Polar/Tundra & Ice Cap)',
+                htmlContent: `
+                    <h3>6.4 Cold Climates (Polar/Tundra and Ice Cap)</h3>
+                    <p>Found in high latitudes, above approx. 66.5° N/S (Arctic/Antarctic Circles).</p>
+                    <ul>
+                        <li><strong>Tundra Climate:</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Very long, cold winters (8 months, temps -58°C to 0°C); very short, cool summers (warmest month avg 0°C-10°C). Very low precipitation (<250mm), mainly summer. Polar winds, blizzards. Permafrost below shallow active layer.</li>
+                                <li><strong>Vegetation:</strong> Low-growing (mosses, lichens, sedges, dwarf shrubs). No trees.</li>
+                                <li><strong>Locations:</strong> N. coasts of N. America & Eurasia, Arctic islands, fringes of Greenland/Antarctica.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ice Cap Climate:</strong>
+                            <ul>
+                                <li><strong>Characteristics:</strong> Interiors of Greenland/Antarctica, very high mountains. Permanent ice/snow. Warmest month avg <0°C. Extremely low precipitation (snow).</li>
+                                <li><strong>Vegetation:</strong> Virtually none.</li>
+                                <li><strong>Locations:</strong> Interior Greenland, Antarctica.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_mountain_climates',
+                title: '6.5 Mountain Climates (Highland Climates)',
+                htmlContent: `
+                    <h3>6.5 Mountain Climates (Highland Climates)</h3>
+                    <ul>
+                        <li><strong>Characteristics:</strong> High mountain regions, diverse over short distances (altitude, aspect, exposure). Temp decreases with altitude. Low pressure. Precipitation often heavy (orographic), intensity depends on aspect. Vertical zonation of climate and vegetation. Some peaks permanently ice-capped.</li>
+                        <li><strong>Vegetation:</strong> Varies with altitude (forests, alpine meadows, tundra-like, bare rock/ice).</li>
+                        <li><strong>Locations:</strong> Himalayas, Andes, Rockies, Alps, East African Highlands (Mt. Kenya, Kilimanjaro).</li>
+                    </ul>
+                    <h4>Table 3: Major World Climatic Regions (Simplified Miller's Classification Approach)</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Climatic Belt</th>
+                                <th>Specific Region Type</th>
+                                <th>Key Temp. Characteristics</th>
+                                <th>Key Rainfall Characteristics</th>
+                                <th>Typical Natural Vegetation</th>
+                                <th>Example Locations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hot Climates</strong></td>
+                                <td>Equatorial</td>
+                                <td>High (24-27°C), small annual & diurnal range</td>
+                                <td>Heavy (>1500mm), all year, double maxima</td>
+                                <td>Tropical Rainforest</td>
+                                <td>Amazon Basin, Congo Basin, Indonesia</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Tropical Monsoon</td>
+                                <td>Hot summers, cool winters; seasonal wind reversal</td>
+                                <td>High summer rain, marked dry winter</td>
+                                <td>Monsoon Forest (deciduous)</td>
+                                <td>India, SE Asia</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Tropical Desert</td>
+                                <td>High day temps, large diurnal range, cool nights</td>
+                                <td>Very low (<250mm), unreliable</td>
+                                <td>Desert scrub, succulents</td>
+                                <td>Sahara, Arabian Desert, Atacama</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Warm Temperate</strong></td>
+                                <td>Mediterranean (Western Margin)</td>
+                                <td>Hot, dry summers; mild, wet winters</td>
+                                <td>Moderate (500-900mm), winter max</td>
+                                <td>Mediterranean scrub (Chaparral, Maquis)</td>
+                                <td>Mediterranean Basin, California, Cape Town</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Steppe/Continental (Interior)</td>
+                                <td>Extremes: cool/cold winters, warm/hot short summers</td>
+                                <td>Low-moderate (~500mm), summer max</td>
+                                <td>Temperate Grasslands (Steppe, Prairie)</td>
+                                <td>Interior N. America, Eurasia</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>China Type/Humid Subtropical (Eastern Margin)</td>
+                                <td>Hot, humid summers; mild winters</td>
+                                <td>Moderate-high (760-1500mm), all year/summer max</td>
+                                <td>Broadleaf evergreen/deciduous forest</td>
+                                <td>SE USA, SE China</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cool Temperate</strong></td>
+                                <td>Western Margin (British/European)</td>
+                                <td>Mild winters, cool summers; small temp range</td>
+                                <td>Moderate-high (760-2000mm), all year</td>
+                                <td>Deciduous Forest</td>
+                                <td>NW Europe, Pacific NW USA</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Continental (Siberian/Taiga)</td>
+                                <td>Very cold, long winters; short, warm summers; extreme range</td>
+                                <td>Low (400-500mm), summer max, snow in winter</td>
+                                <td>Coniferous Forest (Taiga)</td>
+                                <td>Canada, N. Eurasia (Siberia)</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Eastern Margin (Laurentian)</td>
+                                <td>Cold winters (snow); warm/hot summers; large temp range</td>
+                                <td>Moderate (600-1000mm), all year, summer max</td>
+                                <td>Mixed Forest</td>
+                                <td>NE USA, N. China</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cold Climates</strong></td>
+                                <td>Tundra</td>
+                                <td>Very cold winters; short, cool summers (warmest month 0-10°C)</td>
+                                <td>Very low (<250mm), summer max</td>
+                                <td>Mosses, lichens, dwarf shrubs (no trees)</td>
+                                <td>Arctic coasts, N. Canada, N. Eurasia</td>
+                            </tr>
+                            <tr>
+                                <td> </td>
+                                <td>Ice Cap</td>
+                                <td>All months below 0°C; permanent ice/snow</td>
+                                <td>Very low, all snow</td>
+                                <td>No vegetation</td>
+                                <td>Antarctica, Interior Greenland</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mountain</strong></td>
+                                <td>Mountain/Highland</td>
+                                <td>Decreases with altitude; complex zonation</td>
+                                <td>Variable, often orographic; varies with aspect</td>
+                                <td>Zoned by altitude (forest, alpine, etc.)</td>
+                                <td>Himalayas, Andes, Rockies, Alps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `
+            },
+             // Section 7.0
+            {
+                id: 'micro_climates_intro',
+                title: '7.0 Micro-Climates (Local Climates)',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>7.0 Micro-Climates (Local Climates)</h2>
+                    <p>While broad climatic regions describe conditions over large areas, significant variations can occur over much smaller scales. These localized atmospheric conditions, differing from the general climate of the surrounding region, are known as micro-climates or local climates.</p>
+                `
+            },
+            {
+                id: 'micro_climates_definition_causes',
+                title: '7.1 Definition and Causes',
+                htmlContent: `
+                    <h3>7.1 Definition and Causes</h3>
+                    <p>A <strong>micro-climate</strong> is defined as the climate experienced within a small or localized area that is slightly modified or different from the general climate of that region. These variations arise primarily from differences in local surface characteristics and human modifications to the landscape.</p>
+                    <p><strong>Causes of Micro-Climates:</strong></p>
+                    <ul>
+                        <li><strong>Topography (Slopes and Aspect):</strong> Slope orientation relative to sun/wind affects temperature/moisture. Valleys can trap cold air (frost hollows) or have local winds (anabatic/katabatic).</li>
+                        <li><strong>Nature of the Surface:</strong> Color, texture, material affect albedo and thermal properties. Dark surfaces hotter than light. Wet surfaces cool via evaporation.</li>
+                        <li><strong>Soil Type and Moisture:</strong> Influences heat absorption/retention, evaporation rates, affecting local air temp/humidity.</li>
+                        <li><strong>Vegetation Cover:</strong> Provides shade, reduces wind, increases humidity (transpiration). Forests cooler/more humid than open land.</li>
+                        <li><strong>Presence of Water Bodies:</strong> Small lakes/ponds/dams moderate local temps and increase humidity.</li>
+                        <li><strong>Human Activities:</strong>
+                            <ul>
+                                <li><strong>Urbanization:</strong> Creates "urban heat islands" (cities hotter than rural areas).</li>
+                                <li><strong>Construction of Dams:</strong> Large reservoirs can increase local humidity/rainfall.</li>
+                                <li><strong>Industrial Plants:</strong> Release heat/pollutants affecting local air/temp.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'micro_climates_examples',
+                title: '7.2 Examples of Micro-Climates',
+                htmlContent: `
+                    <h3>7.2 Examples of Micro-Climates</h3>
+                    <ul>
+                        <li><strong>Urban Climate (Urban Heat Island):</strong> Cities (Nairobi, New York) hotter than surrounding rural areas, especially at night, due to heat absorption by concrete, waste heat, altered winds, less evaporative cooling. Can have altered local rain/fog.</li>
+                        <li><strong>Forest Climate:</strong> Forested areas (Kakamega, Aberdares) cooler by day, higher humidity, reduced wind compared to open land. Canopy intercepts radiation/wind; transpiration adds moisture.</li>
+                        <li><strong>Valley Climate:</strong> Cold, dense air drains downslope (katabatic winds) on clear nights, accumulating in valley bottoms (frost hollows). Day: sun-facing slopes heat, air rises (anabatic winds).</li>
+                        <li><strong>Areas around Large Dams:</strong> Artificial water bodies (Lake Kariba, Masinga Dam) can increase local humidity (evaporation), potentially increasing local rainfall and moderating temperatures.</li>
+                    </ul>
+                `
+            },
+            // Section 8.0
+            {
+                id: 'aridity_desertification_intro',
+                title: '8.0 Aridity and Desertification',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>8.0 Aridity and Desertification</h2>
+                    <p>Aridity and desertification are critical environmental issues, particularly affecting dryland ecosystems which cover a significant portion of the Earth's land surface. Understanding their definitions, causes, effects, and potential solutions is essential in geography.</p>
+                `
+            },
+            {
+                id: 'aridity_desertification_definitions',
+                title: '8.1 Definitions',
+                htmlContent: `
+                    <h3>8.1 Definitions</h3>
+                    <ul>
+                        <li><strong>Aridity:</strong> A permanent condition of extreme dryness in a region, characterized by a severe deficiency in moisture leading to scanty or a complete lack of vegetation, and often infertile soils. Arid regions typically receive very low and unreliable precipitation.</li>
+                        <li><strong>Desertification:</strong> The process of land degradation in arid, semi-arid, and dry sub-humid areas (drylands) resulting from various factors, including climatic variations (like prolonged droughts) and unsustainable human activities. It involves the loss of biological or economic productivity of land, leading to the encroachment or intensification of desert-like conditions.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'aridity_desertification_causes',
+                title: '8.2 Causes of Aridity & Desertification',
+                htmlContent: `
+                    <h3>8.2 Causes of Aridity and Desertification</h3>
+                    <p><strong>Natural Causes of Aridity:</strong></p>
+                    <ul>
+                        <li><strong>Insufficient Rainfall:</strong> Persistently low rainfall (<250 mm annually).</li>
+                        <li><strong>High Temperatures:</strong> Lead to high evaporation/evapotranspiration.</li>
+                        <li><strong>Cold Ocean Currents:</strong> Cool overlying air, reduce moisture capacity (e.g., Namib Desert/Benguela Current).</li>
+                        <li><strong>Rain Shadow Effect:</strong> Dry, warm air on leeward side of mountains.</li>
+                        <li><strong>Continentality:</strong> Deep continental interiors far from oceanic moisture.</li>
+                        <li><strong>Persistent High-Pressure Systems:</strong> Subsiding air inhibits cloud formation/precipitation.</li>
+                    </ul>
+                    <p><strong>Human Causes (leading to Desertification):</strong></p>
+                    <ul>
+                        <li><strong>Poor Farming Methods:</strong>
+                            <ul>
+                                <li><strong>Overgrazing:</strong> Depletes vegetation, compacts soil, reduces water absorption.</li>
+                                <li><strong>Monoculture:</strong> Depletes specific soil nutrients, increases susceptibility.</li>
+                                <li><strong>Cultivation on Slopes:</strong> Accelerates soil erosion without conservation.</li>
+                                <li><strong>Poor Irrigation Practices:</strong> Leads to waterlogging and salinization.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Deforestation:</strong> Exposes soil to erosion, reduces soil moisture, disrupts local hydrology.</li>
+                        <li><strong>Industrialization:</strong> Emissions can contribute to climate change; local pollution degrades land.</li>
+                        <li><strong>Population Pressure:</strong> Increased pressure on land resources, conversion of marginal lands, demand for fuel/water.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'aridity_desertification_effects',
+                title: '8.3 Effects/Consequences',
+                htmlContent: `
+                    <h3>8.3 Effects/Consequences of Aridity and Desertification</h3>
+                    <ul>
+                        <li><strong>Reduced Land Productivity:</strong> Lowered soil fertility, loss of topsoil, diminished agricultural yields, reduced rangeland capacity.</li>
+                        <li><strong>Food Insecurity and Famine:</strong> Decreased food production leads to shortages, malnutrition, famine.</li>
+                        <li><strong>Water Scarcity:</strong> Destruction of catchments, reduced groundwater recharge, drying of surface water.</li>
+                        <li><strong>Increased Soil Erosion:</strong> Loss of vegetation makes soil vulnerable to wind/water erosion (gullies, dust storms).</li>
+                        <li><strong>Loss of Biodiversity:</strong> Habitat degradation leads to decline/extinction of dryland species.</li>
+                        <li><strong>Population Displacement and Migration:</strong> Unproductive land forces migration, leading to social conflicts.</li>
+                        <li><strong>Economic Losses:</strong> Reduced agricultural output, livestock loss, disaster relief/rehabilitation costs.</li>
+                        <li><strong>Climate Impacts:</strong> Can affect local/regional climates (albedo, dust, hydrology).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'aridity_desertification_solutions',
+                title: '8.4 Solutions & Management',
+                htmlContent: `
+                    <h3>8.4 Possible Solutions and Management Strategies for Desertification</h3>
+                    <ul>
+                        <li><strong>Sustainable Land Management:</strong>
+                            <ul>
+                                <li><strong>Controlled Grazing:</strong> Rotational grazing, manage livestock numbers, improve pasture.</li>
+                                <li><strong>Afforestation and Reforestation:</strong> Plant trees/shrubs (drought-resistant) to restore vegetation, stabilize soil, improve water infiltration.</li>
+                                <li><strong>Soil and Water Conservation:</strong> Terracing, contour ploughing, check dams, water harvesting.</li>
+                                <li><strong>Sustainable Farming Practices:</strong> Agroforestry, conservation agriculture, drought-resistant crops, efficient irrigation.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Alternative Livelihoods and Energy Sources:</strong> Develop alternative incomes for dryland communities. Promote alternative energy (solar, biogas) to reduce wood fuel reliance.</li>
+                        <li><strong>Policy and Institutional Support:</strong> Supportive government policies (land tenure, resource management, drought preparedness). Strengthen local institutions.</li>
+                        <li><strong>Public Education and Awareness:</strong> Raise awareness about causes/consequences of desertification, promote sustainable practices.</li>
+                        <li><strong>Integrated Land and Water Management:</strong> Holistic approaches considering interconnectedness of land, water, vegetation.</li>
+                    </ul>
+                    <h4>Table 4: Aridity and Desertification - Causes, Effects, and Solutions</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Category</th><th>Specific Points / Examples</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Natural Causes of Aridity</strong></td><td>Insufficient rainfall (<250mm), high temperatures/evaporation, cold ocean currents, rain shadow effect, continentality, high-pressure systems.</td></tr>
+                            <tr><td><strong>Human Causes of Desertification</strong></td><td>Overgrazing, monoculture, deforestation, poor irrigation (salinization), cultivation on slopes, population pressure, industrial pollution.</td></tr>
+                            <tr><td><strong>Effects/Consequences</strong></td><td>Lowered soil fertility/productivity, food insecurity/famine, water scarcity, soil erosion, loss of biodiversity, population displacement, economic losses.</td></tr>
+                            <tr><td><strong>Solutions/Management</strong></td><td>Controlled grazing, afforestation/reforestation, soil & water conservation, sustainable farming, alternative livelihoods/energy, public education.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 9.0
+            {
+                id: 'climate_change_intro',
+                title: '9.0 Climate Change',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>9.0 Climate Change</h2>
+                    <p>Climate change refers to significant and lasting changes in the statistical distribution of weather patterns over periods ranging from decades to millions of years. It may be a change in average weather conditions or in the distribution of weather around the average conditions (i.e., more or fewer extreme weather events).</p>
+                `
+            },
+            {
+                id: 'climate_change_definition',
+                title: '9.1 Definition',
+                htmlContent: `
+                    <h3>9.1 Definition</h3>
+                    <p>In the context of contemporary discussions and the KCSE syllabus, climate change is generally understood as "the establishment of a new climatic state or continuous changes in climatic state such as temperature and precipitation over time". While climate has always varied naturally, the current focus is on rapid changes attributed primarily to human activities since the mid-20th century.</p>
+                `
+            },
+            {
+                id: 'climate_change_causes',
+                title: '9.2 Causes of Climate Change',
+                htmlContent: `
+                    <h3>9.2 Causes of Climate Change</h3>
+                    <p>The causes of climate change can be broadly categorized as natural and anthropogenic (human-induced).</p>
+                    <p><strong>Natural Causes:</strong></p>
+                    <ul>
+                        <li><strong>External Causes:</strong> Variations in solar output (sun's energy) and changes in Earth's orbital parameters (Milankovitch cycles) affecting solar radiation received.</li>
+                        <li><strong>Internal Causes:</strong> Vulcanicity (volcanic eruptions) injecting gases (e.g., SO<sub>2</sub> forming cooling aerosols) and particles into the atmosphere. Natural variations in ocean currents and atmospheric circulation.</li>
+                    </ul>
+                    <p><strong>Anthropogenic Causes (Human-Induced):</strong> Dominant driver of current rapid climate change. Primary mechanism is the enhancement of the natural <strong>Greenhouse Effect</strong> due to increased concentrations of <strong>Greenhouse Gases (GHGs)</strong>.</p>
+                    <ul>
+                        <li><strong>The Greenhouse Effect:</strong> Natural process where GHGs (water vapour, CO<sub>2</sub>, methane, N<sub>2</sub>O) trap outgoing infrared radiation, keeping Earth habitable.</li>
+                        <li><strong>Enhanced Greenhouse Effect (Global Warming):</strong> Human activities increase atmospheric GHGs, trapping more heat, causing global average surface temperatures to rise.</li>
+                        <li><strong>Key Greenhouse Gases and Human Sources:</strong>
+                            <ul>
+                                <li><strong>Carbon Dioxide (CO<sub>2</sub>):</strong> Burning fossil fuels (energy, transport), deforestation (reduces CO<sub>2</sub> absorption, releases stored carbon), cement manufacturing.</li>
+                                <li><strong>Methane (CH<sub>4</sub>):</strong> Agriculture (livestock, rice cultivation), natural gas leakage, decomposition of organic waste in landfills.</li>
+                                <li><strong>Nitrous Oxide (N<sub>2</sub>O):</strong> Agricultural activities (nitrogen fertilizers), industrial processes, burning fossil fuels/biomass.</li>
+                                <li><strong>Chlorofluorocarbons (CFCs) & other fluorinated gases:</strong> Synthetic compounds (refrigerants, aerosols), potent GHGs with long atmospheric lifetimes (production now largely phased out).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Deforestation:</strong> Reduces CO<sub>2</sub> removal capacity, releases stored carbon.</li>
+                        <li><strong>Depletion of the Ozone Layer:</strong> Some ozone-depleting substances are also potent GHGs.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('The Greenhouse Effect (Natural vs. Enhanced)')}
+                `
+            },
+            {
+                id: 'climate_change_evidence',
+                title: '9.3 Evidence of Climate Change',
+                htmlContent: `
+                    <h3>9.3 Evidence of Climate Change</h3>
+                    <p>Overwhelming scientific evidence indicates Earth's climate is changing, largely due to human activities:</p>
+                    <ul>
+                        <li><strong>Rising Global Temperatures:</strong> Consistent warming trend since late 19th century, recent decades warmest on record.</li>
+                        <li><strong>Melting Ice and Snow:</strong> Widespread melting of glaciers/ice sheets (e.g., Mt. Kilimanjaro, Mt. Ruwenzori, Greenland, Antarctica), decreased Arctic sea ice.</li>
+                        <li><strong>Rising Sea Levels:</strong> Due to thermal expansion of ocean water and meltwater from land-based ice.</li>
+                        <li><strong>Changes in Precipitation Patterns:</strong> Altered amount, intensity, frequency, type. More intense rainfall/flooding in some regions, more frequent/severe droughts in others.</li>
+                        <li><strong>Increased Frequency/Intensity of Extreme Weather Events:</strong> More heatwaves, heavy precipitation, intense droughts, tropical cyclones.</li>
+                        <li><strong>Ocean Acidification:</strong> Increased atmospheric CO<sub>2</sub> absorption by oceans decreases seawater pH, harming marine organisms.</li>
+                        <li><strong>Shifts in Plant and Animal Ranges/Life Cycles:</strong> Species shifting geographic ranges and altering timing of seasonal activities (migration, flowering).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'climate_change_consequences',
+                title: '9.4 Consequences/Impacts',
+                htmlContent: `
+                    <h3>9.4 Consequences/Impacts of Climate Change</h3>
+                    <p><strong>Impacts on the Physical Environment:</strong></p>
+                    <ul>
+                        <li><strong>Increased Evaporation and Altered Rainfall:</strong> Higher temps -> increased evaporation -> heavier rainfall/flooding in some areas, exacerbated drought in others.</li>
+                        <li><strong>Water Resources:</strong> Changes in precipitation, snowmelt, glacier runoff affect freshwater availability/quality.</li>
+                        <li><strong>Coastal Erosion and Inundation:</strong> Rising sea levels -> coastal erosion, saltwater intrusion, increased flood risk in low-lying areas.</li>
+                        <li><strong>Ecosystem Disruption:</strong> Rapid change outpaces adaptation -> habitat loss, species distribution shifts, increased extinction risk (e.g., coral reefs).</li>
+                        <li><strong>More Frequent Wildfires:</strong> Hotter, drier conditions increase wildfire risk/severity.</li>
+                    </ul>
+                    <p><strong>Impacts on Human Systems:</strong></p>
+                    <ul>
+                        <li><strong>Agriculture and Food Security:</strong> Negative impacts on crop yields/livestock, threatening food security.</li>
+                        <li><strong>Human Health:</strong> Increased risk of heat stress, respiratory illnesses, vector-borne diseases (malaria, dengue), waterborne diseases.</li>
+                        <li><strong>Infrastructure:</strong> Damage from extreme weather (floods, storms, heatwaves). Sea-level rise threatens coastal infrastructure.</li>
+                        <li><strong>Pests and Diseases:</strong> Wetter/warmer conditions may increase pests/diseases affecting humans, crops, livestock.</li>
+                        <li><strong>Displacement and Migration:</strong> Sea-level rise, desertification, water scarcity can lead to climate-induced migration.</li>
+                        <li><strong>Economic Impacts:</strong> Significant losses from property/infrastructure damage, reduced agricultural productivity, tourism impacts, increased healthcare costs.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'climate_change_mitigation_adaptation',
+                title: '9.5 Mitigation & Adaptation',
+                htmlContent: `
+                    <h3>9.5 Mitigation and Adaptation Strategies</h3>
+                    <p>Addressing climate change involves two main responses:</p>
+                    <ul>
+                        <li><strong>Mitigation:</strong> Efforts to reduce or prevent greenhouse gas emissions. Includes:
+                            <ul>
+                                <li>Transitioning to renewable energy (solar, wind, geothermal).</li>
+                                <li>Improving energy efficiency (buildings, transport, industry).</li>
+                                <li>Sustainable transportation (public transport, electric vehicles).</li>
+                                <li>Afforestation and reforestation (enhance carbon sequestration).</li>
+                                <li>Sustainable agricultural and land-use practices.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Adaptation:</strong> Actions to adjust to actual or expected future climate change effects, reducing vulnerability and increasing resilience. Includes:
+                            <ul>
+                                <li>Developing drought-resistant crops, adjusting farming practices.</li>
+                                <li>Building sea walls and coastal defenses.</li>
+                                <li>Improving water management and conservation.</li>
+                                <li>Developing early warning systems for extreme weather.</li>
+                                <li>Strengthening public health infrastructure.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Table 5: Climate Change - Causes, Evidence, and Consequences</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Aspect</th><th>Detailed Points</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Causes (Anthropogenic)</strong></td><td>Burning fossil fuels (CO<sub>2</sub>), deforestation (CO<sub>2</sub>, reduced uptake), agriculture (CH<sub>4</sub>, N<sub>2</sub>O), industrial processes (GHGs, CFCs), enhanced greenhouse effect.</td></tr>
+                            <tr><td><strong>Causes (Natural)</strong></td><td>Variations in solar output, Earth's orbital changes (Milankovitch cycles), volcanic eruptions (aerosols, gases).</td></tr>
+                            <tr><td><strong>Evidence</strong></td><td>Rising global temperatures, melting ice/glaciers (e.g., Kilimanjaro), rising sea levels, changes in precipitation patterns, increased frequency/intensity of extreme weather events.</td></tr>
+                            <tr><td><strong>Consequences (Physical Environment)</strong></td><td>Increased evaporation/altered rainfall, water scarcity, coastal erosion/inundation, ecosystem disruption/extinction, more frequent wildfires, ocean acidification.</td></tr>
+                            <tr><td><strong>Consequences (Human Environment)</strong></td><td>Impacts on agriculture/food security, human health risks, infrastructure damage, increase in pests/diseases, displacement/migration, economic losses.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 10.0
+            {
+                id: 'weather_forecasting_intro',
+                title: '10.0 Weather Forecasting',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>10.0 Weather Forecasting</h2>
+                    <p>Weather forecasting is the scientific endeavor to predict the state of the atmosphere for a specific future time and location. It is a vital service with wide-ranging applications.</p>
+                `
+            },
+            {
+                id: 'weather_forecasting_definition_importance',
+                title: '10.1 Definition & Importance',
+                htmlContent: `
+                    <h3>10.1 Definition and Importance</h3>
+                    <p><strong>Definition:</strong> Weather forecasting is "the application of science and technology to predict the conditions of the atmosphere for a given location and time". This involves collecting quantitative data about the current state of the atmosphere, land, and ocean, and then using meteorological principles and models to project how the atmosphere will evolve.</p>
+                    <p><strong>Importance:</strong> Accurate and timely weather forecasts are crucial for:</p>
+                    <ul>
+                        <li><strong>Public Safety:</strong> Warnings for severe weather (storms, floods, heatwaves).</li>
+                        <li><strong>Agriculture:</strong> Decisions on planting, irrigation, harvesting.</li>
+                        <li><strong>Aviation:</strong> Flight planning, safety (wind, visibility, storms).</li>
+                        <li><strong>Marine Activities:</strong> Shipping, fishing, boating (wind, waves, storms).</li>
+                        <li><strong>Water Resource Management:</strong> Water supply, flood control, HEP.</li>
+                        <li><strong>Energy Sector:</strong> Managing heating/cooling demand, renewable energy production.</li>
+                        <li><strong>Construction and Transportation:</strong> Planning outdoor activities, road/rail safety.</li>
+                        <li><strong>Tourism and Recreation:</strong> Travel plans, outdoor activities.</li>
+                        <li><strong>Economy:</strong> Mitigating losses, optimizing operations for businesses (retail, insurance).</li>
+                        <li><strong>Wildfire Prevention and Control:</strong> Assessing fire danger, managing firefighting.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'weather_forecasting_methods',
+                title: '10.2 Methods',
+                htmlContent: `
+                    <h3>10.2 Methods of Weather Forecasting</h3>
+                    <p>Weather forecasting employs a combination of observational data, atmospheric models, and human expertise. Key methods include:</p>
+                    <ul>
+                        <li><strong>Synoptic Weather Forecasting (Traditional):</strong> Collecting simultaneous weather observations (synoptic data) from a wide network. Meteorologists analyze data to create weather maps (pressure, temp, wind, fronts) and predict future movement.</li>
+                        <li><strong>Numerical Weather Prediction (NWP):</strong> Dominant method. Uses powerful computers to solve complex mathematical equations modeling atmospheric physics/dynamics. Requires vast initial data, simulates future atmospheric state, provides forecasts for various elements.</li>
+                        <li><strong>Satellite Meteorology:</strong> Satellites provide continuous images/data on clouds, temperatures, water vapour, large-scale movements. Geostationary (continuous view) and polar-orbiting (detailed global coverage).</li>
+                        <li><strong>Radar Meteorology:</strong> Weather radar (e.g., Doppler) detects location, movement, intensity of precipitation; identifies severe weather (thunderstorms, tornadoes). Doppler measures wind speed/direction in storms.</li>
+                        <li><strong>Radiosondes (Sensors on Balloons):</strong> Instrument packages on weather balloons launched into upper atmosphere. Measure pressure, temp, humidity, wind at various altitudes for NWP models.</li>
+                        <li><strong>Analog Technique:</strong> Comparing current weather patterns with similar historical patterns (analogs) and assuming similar evolution.</li>
+                        <li><strong>Ensemble Forecasting:</strong> Multiple NWP forecasts with slightly different initial conditions/models. Spread indicates forecast uncertainty.</li>
+                        <li><strong>Weather Lore (Traditional Methods):</strong> Based on observations (clouds, wind, animal behavior). Not scientifically rigorous but historically used for short-range local forecasting.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'weather_forecasting_challenges',
+                title: '10.3 Problems/Challenges',
+                htmlContent: `
+                    <h3>10.3 Problems/Challenges in Weather Forecasting</h3>
+                    <p>Despite advancements, forecasting remains challenging due to:</p>
+                    <ul>
+                        <li><strong>Chaotic Nature of the Atmosphere:</strong> Complex, non-linear system. Small initial variations can lead to different outcomes ("butterfly effect"), limiting long-range predictability.</li>
+                        <li><strong>Incomplete Understanding of Atmospheric Processes:</strong> Aspects like cloud microphysics, land-atmosphere interactions not perfectly understood/modeled.</li>
+                        <li><strong>Data Limitations:</strong>
+                            <ul>
+                                <li><strong>Observational Gaps:</strong> Especially over oceans, remote areas, upper atmosphere. Affects NWP model initial conditions.</li>
+                                <li><strong>Data Quality:</strong> Observational errors impact accuracy.</li>
+                                <li><strong>Developing Countries:</strong> Poorer observation networks lead to less accurate local forecasts.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Computational Demands:</strong> NWP models require immense computing power. Limitations restrict model resolution/complexity.</li>
+                        <li><strong>Model Imperfections:</strong> Models are simplifications, contain approximations/parameterizations, introducing errors.</li>
+                        <li><strong>Predicting Severe Localized Weather:</strong> Exact timing/location of small-scale, short-lived events (thunderstorms, tornadoes) very challenging.</li>
+                        <li><strong>Impact of Climate Change:</strong> Altering weather patterns, making historical data less reliable, increasing extreme events, complicating prediction.</li>
+                        <li><strong>Communicating Uncertainty:</strong> All forecasts have uncertainty; effectively conveying this is difficult.</li>
+                        <li><strong>Accuracy Limits:</strong> Short-range (1-3 days) generally accurate; accuracy decreases for medium-range (3-7 days) and long-range (>7-10 days).</li>
+                    </ul>
+                `
+            },
+            // Section 11.0
+            {
+                id: 'fieldwork_intro',
+                title: '11.0 Fieldwork in Weather Studies',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>11.0 Fieldwork in Weather and Climate Studies</h2>
+                    <p>Fieldwork is an integral component of geographical education, providing students with practical experience and a deeper understanding of concepts learned in the classroom. The KCSE Geography syllabus emphasizes the application of fieldwork techniques in studying various geographical phenomena, including local weather conditions.</p>
+                `
+            },
+            {
+                id: 'fieldwork_importance',
+                title: '11.1 Importance of Fieldwork',
+                htmlContent: `
+                    <h3>11.1 Importance of Fieldwork</h3>
+                    <p>Studying weather through fieldwork offers several advantages:</p>
+                    <ul>
+                        <li><strong>Skill Development:</strong> Acquire/practice skills: observation, instrument reading, data recording, analysis, interpretation.</li>
+                        <li><strong>Conceptual Understanding:</strong> Direct interaction with instruments/conditions solidifies theoretical knowledge.</li>
+                        <li><strong>Application of Knowledge:</strong> Bridges gap between theory and real-world practice.</li>
+                        <li><strong>Understanding Local Weather:</strong> Investigate specific local weather patterns/micro-climates, making subject relevant.</li>
+                        <li><strong>Primary Data Collection:</strong> Learn to collect primary data, appreciate data quality/error sources.</li>
+                        <li><strong>Appreciation of Weather's Importance:</strong> Better understand weather's impact on daily life, agriculture, etc.</li>
+                        <li><strong>Scientific Method:</strong> Introduces aspects: formulating questions, data collection/analysis, drawing conclusions.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'fieldwork_planning',
+                title: '11.2 Planning & Preparation',
+                htmlContent: `
+                    <h3>11.2 Planning and Preparation for a Weather Field Study</h3>
+                    <p>Effective fieldwork requires careful planning:</p>
+                    <ol>
+                        <li><strong>Define Objectives:</strong> Clearly state what aspects of local weather to investigate.</li>
+                        <li><strong>Site Selection:</strong> Ideal: properly sited school weather station. Otherwise, identify suitable site per section 2.1 principles.</li>
+                        <li><strong>Reconnaissance Visit (if necessary):</strong> Assess suitability, identify hazards, plan logistics.</li>
+                        <li><strong>Obtain Permission:</strong> For site access and equipment use.</li>
+                        <li><strong>Gather Equipment:</strong> Assemble/check instruments (thermometers, rain gauge, hygrometer, wind vane, anemometer, notebooks, pens, recording sheets, camera). Ensure calibration/good working order.</li>
+                        <li><strong>Prepare Recording Sheets:</strong> Design data sheets for systematic recording.</li>
+                        <li><strong>Briefing and Safety:</strong> Brief students on objectives, procedures, safe instrument handling, safety precautions.</li>
+                    </ol>
+                `
+            },
+            {
+                id: 'fieldwork_data_collection',
+                title: '11.3 Data Collection & Instrument Usage',
+                htmlContent: `
+                    <h3>11.3 Data Collection Methods and Instrument Usage</h3>
+                    <p>Collect data systematically and accurately.</p>
+                    <p><strong>Instrument Readings:</strong></p>
+                    <ul>
+                        <li><strong>Rain Gauge:</strong> Read at consistent time daily (e.g., 0900 local). Measure collected water in mm. Empty/reset.</li>
+                        <li><strong>Maximum Thermometer:</strong> Read highest temp. Reset by swinging.</li>
+                        <li><strong>Minimum Thermometer:</strong> Read lowest temp. Reset by tilting.</li>
+                        <li><strong>Wet and Dry Bulb Thermometer (Hygrometer):</strong> Read both. Ensure wet bulb wick is moist. Use tables for relative humidity.</li>
+                        <li><strong>Aneroid Barometer:</strong> Read pressure. Tap gently before reading.</li>
+                        <li><strong>Wind Vane:</strong> Record wind direction (e.g., N, SW).</li>
+                        <li><strong>Anemometer:</strong> Record wind speed (often average over short period).</li>
+                        <li><strong>Sunshine Recorder:</strong> Change card daily. Measure scorch mark length for duration.</li>
+                    </ul>
+                    <p><strong>Observations:</strong></p>
+                    <ul>
+                        <li><strong>Cloud Cover:</strong> Estimate sky cover (oktas - eighths).</li>
+                        <li><strong>Cloud Types:</strong> Identify/record main types (cumulus, stratus, cirrus) using cloud chart if needed.</li>
+                        <li><strong>Visibility:</strong> Estimate by noting furthest visible landmark of known distance.</li>
+                        <li><strong>Present Weather:</strong> Record significant phenomena (rain, drizzle, fog, thunderstorm).</li>
+                    </ul>
+                    <p><strong>Timing and Frequency:</strong> Make readings/observations at fixed times daily (e.g., 0900, 1500 local) for consistency and calculation of daily means/ranges.</p>
+                `
+            },
+            {
+                id: 'fieldwork_data_analysis',
+                title: '11.4 Data Analysis & Presentation',
+                htmlContent: `
+                    <h3>11.4 Data Analysis and Presentation</h3>
+                    <p>Analyze and present collected data clearly:</p>
+                    <ul>
+                        <li><strong>Calculations:</strong> Perform necessary calculations (mean daily temp, diurnal range, monthly rainfall totals - see section 2.4).</li>
+                        <li><strong>Tabulation:</strong> Organize data into tables.</li>
+                        <li><strong>Graphical Representation:</strong>
+                            <ul>
+                                <li><strong>Temperature:</strong> Line graphs for daily/monthly/annual variations. Max/min on same graph.</li>
+                                <li><strong>Rainfall:</strong> Bar graphs (histograms) for daily/monthly/annual totals.</li>
+                                <li><strong>Wind Rose:</strong> Construct to show frequency/strength of winds from different directions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Interpretation:</strong> Analyze data to identify patterns, trends, relationships. Compare findings with expected conditions.</li>
+                        <li><strong>Report Writing:</strong> Prepare fieldwork report: Intro (aims, objectives, location), Methodology, Data Presentation, Analysis/Interpretation, Conclusion (findings, limitations, further investigation).</li>
+                    </ul>
+                `
+            },
+            // Section 12.0
+            {
+                id: 'conclusion_weather_climate',
+                title: '12.0 Conclusion',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>12.0 Conclusion</h2>
+                    <p>This guide has systematically explored the fundamental aspects of weather and climate, adhering strictly to the framework of the KCSE Geography syllabus. Beginning with the foundational definitions and distinctions between weather and climate, it has detailed the essential elements of weather and the methodologies for their measurement and recording, including the critical role of the school weather station and the Stevenson Screen. The structure and composition of the Earth's atmosphere were examined, providing context for understanding the factors that influence weather and climate on both local and global scales.</p>
+                    <p>A significant portion of the guide was dedicated to elucidating the diverse climatic regions of Kenya, highlighting the interplay of factors such as altitude and proximity to large water bodies in shaping the nation's varied climates. This was complemented by an overview of the major climatic regions of the world, based on Miller's classification, which underscores the global patterns dictated by latitude, continentality, and other atmospheric dynamics.</p>
+                    <p>Furthermore, the report addressed critical environmental issues directly linked to climate: micro-climates, aridity and desertification, and the overarching challenge of climate change. For each, definitions, causes, consequences, and potential solutions or management strategies were discussed, emphasizing the intricate connections between natural processes and human activities. The principles of weather forecasting, including its methods, importance, and inherent challenges, were also outlined. Finally, the significance and practical application of fieldwork in weather and climate studies were emphasized, aligning with the syllabus's focus on experiential learning.</p>
+                    <p>The comprehensive analysis indicates that weather and climate are dynamic, interconnected systems vital to the physical environment and human societies. A thorough understanding of these systems, their drivers, and their impacts is crucial not only for academic success within the KCSE framework but also for informed decision-making and responsible stewardship of the environment in the face of contemporary challenges like climate change and desertification. The systematic study of weather elements, climatic controls, and regional climatic characteristics provides learners with the tools to analyze, interpret, and appreciate the complex atmospheric processes shaping our world.</p>
+                `
+            }
+        ];
+
+        const navigation = document.getElementById('navigation');
+        const contentArea = document.getElementById('contentArea');
+        const mainGuideTitle = document.getElementById('mainGuideTitle');
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        
+        let currentSectionIndex = 0;
+
+        function showSection(index) {
+            if (index < 0 || index >= guideData.length) {
+                console.error("Section index out of bounds:", index);
+                return;
+            }
+            currentSectionIndex = index;
+            const sectionData = guideData[currentSectionIndex];
+            
+            if (sectionData) {
+                if (sectionData.isChapterTitle) {
+                    mainGuideTitle.innerHTML = ''; // Clear default welcome if it's a main chapter title section
+                    contentArea.innerHTML = sectionData.htmlContent;
+                } else {
+                    // Ensure main title is set if not already the main chapter title section
+                    if (!guideData[0].isChapterTitle || currentSectionIndex > 0) { 
+                         mainGuideTitle.textContent = "KCSE Weather and Climate Guide";
+                    }
+                    contentArea.innerHTML = sectionData.htmlContent;
+                }
+                updateNavButtons();
+                highlightActiveNavItem();
+
+                document.querySelector('.main-content').scrollTop = 0; 
+
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            }
+        }
+        
+        function highlightActiveNavItem() {
+            document.querySelectorAll('#navigation a').forEach((link, idx) => {
+                link.classList.remove('bg-gray-700', 'text-white', 'font-semibold');
+                link.classList.add('text-gray-400', 'hover:bg-gray-700', 'hover:text-white');
+                 if (guideData[idx].isChapterTitle) {
+                    link.classList.add('font-bold', 'text-blue-400', 'hover:text-blue-300');
+                    link.classList.remove('text-gray-400', 'hover:text-white');
+                }
+                if (idx === currentSectionIndex) {
+                    link.classList.add('bg-gray-700', 'text-white', 'font-semibold');
+                    link.classList.remove('text-gray-400');
+                     if (guideData[idx].isChapterTitle) {
+                        link.classList.add('text-yellow-300');
+                     }
+                }
+            });
+        }
+
+        function updateNavButtons() {
+            prevButton.disabled = currentSectionIndex === 0;
+            nextButton.disabled = currentSectionIndex === guideData.length - 1;
+        }
+        
+        function init() {
+            guideData.forEach((item, index) => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = item.title;
+                link.setAttribute('data-index', index);
+                let classList = 'block py-2.5 px-4 rounded transition duration-200 text-sm ';
+                if (item.isChapterTitle) {
+                    classList += 'font-bold text-blue-400 hover:text-blue-300';
+                } else {
+                    classList += 'text-gray-300 hover:bg-gray-700 hover:text-white';
+                    // Basic indentation for sub-topics
+                    if (item.title.match(/^\d+\.\d+\s/) || item.title.match(/^\d+\.\d+\.\d+\s/)) { 
+                        classList += ' pl-6'; 
+                    } else if (item.title.match(/^\d+\.\s/)) { 
+                        //classList += ' pl-3'; // Already handled by default padding
+                    }
+                }
+                link.className = classList;
+
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    showSection(index);
+                };
+                navigation.appendChild(link);
+            });
+            
+            if (guideData.length > 0) {
+                showSection(0); 
+            } else {
+                contentArea.innerHTML = '<p>No content available.</p>';
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+
+            mobileMenuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentSectionIndex > 0) {
+                    showSection(currentSectionIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentSectionIndex < guideData.length - 1) {
+                    showSection(currentSectionIndex + 1);
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    const isClickInsideSidebar = sidebar.contains(event.target);
+                    const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+                    if (!isClickInsideSidebar && !isClickOnMenuButton) {
+                        sidebar.classList.remove('open');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
