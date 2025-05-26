@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCSE Forests and Forestry Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-section h1 { /* Main Guide Title */
+            font-size: 1.75em; /* 28px */
+            font-weight: 700;
+            margin-bottom: 1.25rem; /* 20px */
+            color: #047857; /* emerald-700 */
+            border-bottom: 2px solid #34D399; /* emerald-400 */
+            padding-bottom: 0.75rem; /* 12px */
+        }
+        .content-section h2 { /* Section Title (e.g., 1.0 Introduction) */
+            font-size: 1.5em; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #059669; /* emerald-600 */
+        }
+        .content-section h3 { /* Subsection Title (e.g., 1.1 Defining Forests) */
+            font-size: 1.25em; /* 20px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #065F46; /* emerald-800 */
+        }
+         .content-section h4 { /* Further Subsection Title */
+            font-size: 1.125em; /* 18px */
+            font-weight: 600;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 0.5rem; /* 8px */
+            color: #10B981; /* emerald-500 */
+        }
+        .content-section p, .content-section li {
+            margin-bottom: 0.75rem; /* 12px */
+            line-height: 1.7;
+            color: #374151; /* gray-700 */
+        }
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+         .content-section ol {
+            list-style-type: decimal;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .content-section strong {
+            color: #064E3B; /* emerald-900 */
+            font-weight: 600;
+        }
+        .content-section table {
+            width: 100%;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 1.25rem; /* 20px */
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 0.9em;
+        }
+        .content-section th, .content-section td {
+            border: 1px solid #6EE7B7; /* emerald-300 for a green theme */
+            padding: 0.75rem; /* 12px */
+            text-align: left;
+        }
+        .content-section th {
+            background-color: #D1FAE5; /* emerald-100 for a light green header */
+            font-weight: 600;
+            color: #065F46; /* emerald-800 */
+        }
+        .diagram-placeholder {
+            background-color: #ECFDF5; /* emerald-50 */
+            border: 2px dashed #A7F3D0; /* emerald-200 */
+            padding: 1.5rem; /* 24px */
+            text-align: center;
+            color: #047857; /* emerald-700 */
+            font-style: italic;
+            border-radius: 0.375rem; /* 6px */
+            margin: 1.25rem auto; /* 20px */
+            display: block;
+            width: 80%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Mobile menu button */
+        .mobile-menu-button {
+            display: none; 
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 40; 
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-menu-button {
+                display: block; 
+            }
+            .content-section h1 { font-size: 1.5em; }
+            .content-section h2 { font-size: 1.25em; }
+            .content-section h3 { font-size: 1.125em; }
+            .diagram-placeholder { width: 95%; padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-emerald-50 text-gray-800">
+    <div class="flex h-screen overflow-hidden">
+        <aside id="sidebar" class="sidebar w-72 bg-emerald-700 text-white p-5 space-y-3 overflow-y-auto md:block shadow-lg">
+            <h1 class="text-xl font-bold mb-5 text-center border-b border-emerald-600 pb-3">Forestry Guide</h1>
+            <nav id="navigation" class="space-y-1">
+                </nav>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto main-content">
+            <button id="mobileMenuButton" class="mobile-menu-button md:hidden fixed top-3 left-3 z-50 p-2 bg-emerald-700 text-white rounded-md shadow-md hover:bg-emerald-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            
+            <div id="contentAreaContainer" class="bg-white p-5 md:p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                <div id="contentArea" class="content-section">
+                    <h1 id="mainGuideTitle" class="text-2xl font-bold mb-6 text-emerald-700">Welcome!</h1>
+                    <p class="text-lg">Select a topic from the sidebar or use the navigation buttons below to begin your comprehensive study of Forests and Forestry for KCSE Geography.</p>
+                </div>
+                 <div id="navButtons" class="mt-10 flex justify-between border-t border-gray-300 pt-6">
+                    <button id="prevButton" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Previous</button>
+                    <button id="nextButton" class="px-6 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Function to create diagram placeholders
+        function getDiagramPlaceholder(description) {
+            return `<div class="diagram-placeholder">Diagram Placeholder: ${description}</div>`;
+        }
+
+        const guideData = [
+            // Section 1.0: Introduction to Forests and Forestry
+            {
+                id: 'intro_forests_forestry',
+                title: '1.0 Introduction to Forests and Forestry',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h1>Forests: A Geographical Perspective for KCSE</h1>
+                    <h2>1.0 Introduction to Forests and Forestry</h2>
+                `
+            },
+            {
+                id: 'defining_forests_scope_forestry',
+                title: '1.1 Defining Forests & Scope of Forestry',
+                htmlContent: `
+                    <h3>1.1 Defining Forests and the Scope of Forestry</h3>
+                    <ul>
+                        <li>A <strong>forest</strong>, in its most fundamental sense, is a large expanse of land characterized by a dense growth of trees.</li>
+                        <li><strong>Forestry</strong> is the science, art, and practice of managing these vital ecosystems. It encompasses a wide array of activities, including:
+                            <ul>
+                                <li>The initial planting of new trees.</li>
+                                <li>The subsequent care and tending of these trees.</li>
+                                <li>The sustainable harvesting and utilization of wood and other valuable products that forests provide.</li>
+                            </ul>
+                        </li>
+                        <li>This active management distinguishes forestry from merely observing forests; it implies a human role in stewarding these resources for various benefits.</li>
+                        <li>The KCSE Geography syllabus (section 13.2.1) requires a clear understanding of forestry and the ability to distinguish between different types of forests (e.g., indigenous and exotic).</li>
+                        <li>The definition of forestry, emphasizing management for resource use, inherently suggests a human-centered perspective. While utilizing forest products like timber is key, forests also possess intrinsic ecological values (wildlife habitats, air purification).</li>
+                        <li>The act of "managing for use" can conflict with "managing for conservation." This tension is a central theme in forestry.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'distinction_natural_planted_forests',
+                title: '1.2 Distinction between Natural and Planted Forests',
+                htmlContent: `
+                    <h3>1.2 Distinction between Natural and Planted Forests</h3>
+                    <p>Forests can be broadly categorized into natural and planted (or cultivated) types:</p>
+                    <ul>
+                        <li><strong>Natural Forests:</strong>
+                            <ul>
+                                <li>Ecosystems that have developed spontaneously through natural processes of seed dispersal and regeneration.</li>
+                                <li>Established without direct human intervention.</li>
+                                <li>Often exhibit high biodiversity with a complex interplay of various plant and animal species.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Planted Forests (Cultivated Forests / Plantations):</strong>
+                            <ul>
+                                <li>Established through deliberate human efforts of planting trees.</li>
+                                <li>Often characterized by stands of a single tree species (monoculture) or a limited number of species.</li>
+                                <li>Frequently planted in uniform rows for ease of management and harvesting.</li>
+                                <li>Typically managed intensively for specific economic outputs (timber, pulpwood).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Important Note:</strong></p>
+                    <ul>
+                        <li>The distinction is not always absolute. Many "natural" forests may have been influenced or modified by human activities over time, leading to "semi-natural" or "derived" vegetation.</li>
+                        <li>Very few forest ecosystems globally are entirely free from some form of human influence.</li>
+                        <li>Conservation and management efforts must often contend with already altered landscapes.</li>
+                        <li>Planted forests (often monocultures) might be more susceptible to pests, diseases, or climate change impacts compared to diverse natural forests.</li>
+                    </ul>
+                `
+            },
+            // Section 2.0: Factors Influencing the Distribution of Forests
+            {
+                id: 'factors_influencing_distribution_intro',
+                title: '2.0 Factors Influencing Forest Distribution',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>2.0 Factors Influencing the Distribution of Forests</h2>
+                    <p>The geographical distribution of forests is governed by a complex interplay of environmental factors. Understanding these is essential for explaining why certain forest types thrive in particular regions. (KCSE Syllabus Objective 13.1.0 (a)).</p>
+                `
+            },
+            {
+                id: 'climatic_factors_forests',
+                title: '2.1 Climatic Factors',
+                htmlContent: `
+                    <h3>2.1 Climatic Factors</h3>
+                    <p>Climate is a primary determinant of forest types. Key elements include:</p>
+                    <ul>
+                        <li><strong>Rainfall:</strong>
+                            <ul>
+                                <li>Forests depend on adequate moisture.</li>
+                                <li>Amount, seasonal distribution, and reliability are critical.</li>
+                                <li>Equatorial rainforests: >1500mm annually, distributed year-round.</li>
+                                <li>Coastal regions generally receive more rainfall than continental interiors (moisture-laden onshore winds).</li>
+                                <li>Irregular coastlines can enhance local rainfall.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Temperature:</strong>
+                            <ul>
+                                <li>Determines types of forests.</li>
+                                <li>Tropical forests: Consistently high temperatures ($24^{\circ}C - 27^{\circ}C$ for equatorial).</li>
+                                <li>Coniferous forests: Adapted to cold conditions.</li>
+                                <li>Temperate deciduous forests: Warm summers, cold winters.</li>
+                                <li>Temperature decreases with altitude and varies with latitude, impacting forest zonation.</li>
+                                <li>Plant classifications by temperature: Megatherms (high temps), Mesotherms (moderate), Microtherms (low), Hekisotherms (very low).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sunlight:</strong>
+                            <ul>
+                                <li>Indispensable for photosynthesis.</li>
+                                <li>Intensity, duration, and quality affect species.</li>
+                                <li>Photoperiodism (response to day/night length) influences flowering, seed production, leaf fall (especially in temperate deciduous forests).</li>
+                                <li>Competition for sunlight shapes forest structure.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Wind:</strong>
+                            <ul>
+                                <li>Can limit tree height (increases transpiration, physical damage).</li>
+                                <li>Leads to stunted growth or wind-swept forms in exposed locations.</li>
+                                <li>Beneficial role in pollen and seed dispersal.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>These climatic factors interact to create specific regimes conducive to particular forest types. Changes in one factor (e.g., reduced rainfall due to climate change) can profoundly impact forest suitability.</p>
+                     ${getDiagramPlaceholder('Illustration of how Rainfall and Temperature gradients influence major forest biomes (e.g., Tropical Rainforest vs. Boreal Forest)')}
+                `
+            },
+            {
+                id: 'edaphic_factors_forests',
+                title: '2.2 Edaphic Factors (Soils)',
+                htmlContent: `
+                    <h3>2.2 Edaphic Factors (Soils)</h3>
+                    <p>Soil nature and properties are fundamental for forest establishment and growth:</p>
+                    <ul>
+                        <li><strong>Soil Depth and Fertility:</strong>
+                            <ul>
+                                <li>Forests generally prefer deep, fertile soils.</li>
+                                <li>Provide adequate anchorage, sustained supply of nutrients and water.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Texture (Proportion of sand, silt, clay):</strong>
+                            <ul>
+                                <li>Influences root penetration.</li>
+                                <li>Affects water-holding capacity, aeration, and nutrient availability.</li>
+                                <li>Sandy soils may drain too quickly; heavy clay soils may be poorly aerated.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Acidity (pH):</strong>
+                            <ul>
+                                <li>Affects availability of essential mineral nutrients.</li>
+                                <li>Some tree species have specific pH preferences.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Interrelationship:</strong></p>
+                    <ul>
+                        <li>Soil conditions influence initial forest establishment.</li>
+                        <li>Established forests modify and improve soil over time (humus from litter decomposition enhances structure, water retention, fertility).</li>
+                        <li>Tree roots contribute to soil structure and aeration.</li>
+                        <li>Deforestation disrupts these soil-enriching processes, leading to degradation and erosion.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'physiographic_factors_forests',
+                title: '2.3 Physiographic Factors (Relief/Terrain)',
+                htmlContent: `
+                    <h3>2.3 Physiographic Factors (Relief/Terrain)</h3>
+                    <p>Physical land features exert significant control over forest distribution:</p>
+                    <ul>
+                        <li><strong>Altitude (Height):</strong>
+                            <ul>
+                                <li>Strongly influences temperature (cooler at higher elevations) and often rainfall patterns.</li>
+                                <li>Leads to distinct vertical zonation of forest types on mountain slopes (e.g., tropical lowland -> montane -> bamboo -> alpine).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Terrain and Drainage:</strong>
+                            <ul>
+                                <li><strong>Steepness/Ruggedness:</strong>
+                                    <ul>
+                                        <li>Gentle slopes: Favor deeper, more stable soils, better for forest establishment.</li>
+                                        <li>Steep/rocky slopes: Prone to erosion, thinner soils.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Drainage:</strong>
+                                    <ul>
+                                        <li>Poorly drained/waterlogged areas (swamps, floodplains): Support specialized forests (mangroves, swamp forests).</li>
+                                        <li>Well-drained sites: Support different forest communities.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Aspect (Direction of Slope):</strong>
+                            <ul>
+                                <li>Influences amount of solar radiation received and exposure to prevailing winds.</li>
+                                <li>In Northern Hemisphere, south-facing slopes are warmer/drier than north-facing slopes.</li>
+                                <li>Creates microclimatic variations leading to differences in forest composition.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Physiographic factors often interact, creating complex local conditions that modify broader climatic influences.</p>
+                     ${getDiagramPlaceholder('Illustration of Vertical Zonation of Forest Types on a Mountain Slope')}
+                `
+            },
+            {
+                id: 'biotic_factors_forests',
+                title: '2.4 Biotic Factors (Living Things)',
+                htmlContent: `
+                    <h3>2.4 Biotic Factors (Living Things)</h3>
+                    <p>Influences of all living organisms shape forest ecosystems:</p>
+                    <ul>
+                        <li><strong>Competition:</strong>
+                            <ul>
+                                <li>Plants compete for sunlight, water, and soil nutrients.</li>
+                                <li>Influences which species survive and dominate, affecting forest structure and succession.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Animals:</strong>
+                            <ul>
+                                <li><strong>Beneficial roles:</strong> Pollinators for tree flowers, agents of seed dispersal (aiding regeneration and expansion).</li>
+                                <li><strong>Detrimental roles:</strong> Herbivores can damage or consume plants, influencing species composition and density.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Human Influence (as a biotic factor):</strong>
+                            <ul>
+                                <li>Humans are powerful biotic agents.</li>
+                                <li>Activities: Clearing land (agriculture, settlement), selective logging, introducing non-native species, managing pests/diseases significantly alter forest ecosystems.</li>
+                                <li>Introduction of invasive alien species can devastate native flora by outcompeting them.</li>
+                                <li>New forest pests/diseases can cause widespread mortality in native trees.</li>
+                                <li>Removal of keystone species (e.g., predators) can lead to imbalances like overgrazing, hindering forest recovery.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'human_activities_policy_forests',
+                title: '2.5 Human Activities and Government Policy',
+                htmlContent: `
+                    <h3>2.5 Human Activities and Government Policy</h3>
+                    <ul>
+                        <li>Human activities are dominant factors influencing forest distribution and condition, often overriding natural processes.
+                            <ul>
+                                <li>Direct deforestation for agriculture, settlement, infrastructure.</li>
+                                <li>Establishment of planted forests.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Government Policies:</strong>
+                            <ul>
+                                <li>Play a critical role in shaping the fate of forests.</li>
+                                <li>Effective policies can promote sustainable forest management, protect critical areas (reserves), and regulate logging. (e.g., Forest Bill 2000 in Kenya aimed to involve private companies in conservation).</li>
+                                <li>Weak governance, conflicting policies, or lack of enforcement can exacerbate deforestation.</li>
+                                <li>Forest excisions for other uses can conflict with conservation objectives (e.g., decisions to excise forest land can override legal protections).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Effective Forest Management Requires:</strong>
+                            <ul>
+                                <li>Sound ecological understanding.</li>
+                                <li>Supportive socio-economic conditions.</li>
+                                <li>Strong, transparent governance.</li>
+                                <li>Community involvement (e.g., "shamba system" / PELIS in Kenya) for sustainable forestry, but success depends on management, benefit sharing, and enforcement.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Economic Challenges:</strong>
+                            <ul>
+                                <li>Slow growth rate of valuable trees (hardwoods: 50-70+ years to mature) makes long-term sustainable management economically challenging for private entities (delayed returns).</li>
+                                <li>Incentive for rapid exploitation or conversion to more profitable land uses if tenure is insecure or oversight is weak.</li>
+                                <li>Need for policies and economic instruments (subsidies, carbon credits, payments for ecosystem services) to support long-term sustainable forestry.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Table 1: Factors Influencing Forest Distribution</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Factor Category</th><th>Specific Element</th><th>Detailed Influence on Forest Growth and Type</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Climatic</strong></td><td>Rainfall</td><td>Amount, seasonality, and reliability determine moisture availability, crucial for tree survival and growth; different forest types have specific rainfall requirements (e.g., >1500mm for rainforests).</td></tr>
+                            <tr><td> </td><td>Temperature</td><td>Affects rates of photosynthesis, respiration, decomposition; determines species suitability (e.g., tropical vs. coniferous forests); varies with altitude and latitude.</td></tr>
+                            <tr><td> </td><td>Sunlight</td><td>Essential for photosynthesis; intensity and duration (photoperiodism) affect growth, flowering, and leaf fall; competition for light shapes forest structure.</td></tr>
+                            <tr><td> </td><td>Wind</td><td>Can limit tree height through desiccation and physical damage in exposed areas; aids in pollination and seed dispersal.</td></tr>
+                            <tr><td><strong>Edaphic</strong></td><td>Soil Depth & Fertility</td><td>Deep, fertile soils provide anchorage, nutrients, and water, supporting more vigorous forest growth.</td></tr>
+                            <tr><td> </td><td>Soil Texture (Sand, Silt, Clay)</td><td>Influences root penetration, water retention, aeration, and nutrient availability.</td></tr>
+                            <tr><td> </td><td>Soil Acidity (pH)</td><td>Affects nutrient availability; some tree species have specific pH preferences.</td></tr>
+                            <tr><td><strong>Physiographic</strong></td><td>Altitude</td><td>Influences temperature and rainfall, leading to vertical zonation of forest types on mountains.</td></tr>
+                            <tr><td> </td><td>Terrain (Slope Steepness)</td><td>Gentle slopes favor stable soil and better water infiltration for forest growth; steep slopes are prone to erosion.</td></tr>
+                            <tr><td> </td><td>Drainage</td><td>Well-drained soils support most forest types; waterlogged areas support specialized forests (e.g., swamp forests, mangroves).</td></tr>
+                            <tr><td> </td><td>Aspect (Slope Direction)</td><td>Affects solar radiation and wind exposure, creating microclimates that influence tree types on different sides of a mountain.</td></tr>
+                            <tr><td><strong>Biotic</strong></td><td>Competition (Inter- & Intra-specific)</td><td>Plants compete for light, water, and nutrients, influencing species survival, dominance, and forest succession.</td></tr>
+                            <tr><td> </td><td>Animals</td><td>Act as pollinators, seed dispersers (beneficial); herbivores can damage or consume plants (detrimental).</td></tr>
+                            <tr><td><strong>Human/Policy</strong></td><td>Land Use Change (Deforestation for agriculture, etc.)</td><td>Reduces forest area, fragments habitats, alters local climate and hydrology.</td></tr>
+                            <tr><td> </td><td>Afforestation/Reforestation</td><td>Increases forest cover, can restore degraded lands, provides timber and other resources.</td></tr>
+                            <tr><td> </td><td>Government Policies & Management</td><td>Laws, regulations, and management practices (e.g., forest reserves, logging controls, community involvement) determine the extent of protection or sustainable use of forests.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 3.0: Types and Characteristics of Major World Forests
+            {
+                id: 'world_forests_intro',
+                title: '3.0 Types & Characteristics of Major World Forests',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>3.0 Types and Characteristics of Major World Forests</h2>
+                    <p>The world's forests are diverse, reflecting varied climatic and environmental conditions. (KCSE Syllabus Objective 13.1.0 (b), 13.2.3).</p>
+                `
+            },
+            {
+                id: 'equatorial_rainforests',
+                title: '3.1 Equatorial Forests / Tropical Rainforests',
+                htmlContent: `
+                    <h3>3.1 Equatorial Forests / Tropical Rainforests</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Regions of consistently high temperatures ($24-27^{\circ}C$) and heavy, well-distributed rainfall (>1500mm annually), near the Equator (approx. 4-5° N/S).</li>
+                        <li><strong>Structure:</strong>
+                            <ul>
+                                <li>Evergreen trees growing very close together.</li>
+                                <li>Multi-layered canopy: Emergent layer (~40m), continuous main canopy (~30m), lower canopy (5-15m).</li>
+                                <li>Dense canopy results in a dark forest floor.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tree Characteristics:</strong>
+                            <ul>
+                                <li>Tall, straight trunks with smooth bark (may deter climbers/epiphytes).</li>
+                                <li>Valuable for timber.</li>
+                                <li>Buttress roots (large, radiating roots at base) for support in shallow tropical soils.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Biodiversity:</strong> Extremely high species diversity (up to 1,500 species/km²). Heterogeneity makes commercial extraction of specific timber challenging and potentially damaging.</li>
+                        <li><strong>Leaf Characteristics:</strong> Typically broad (maximum light absorption), often with "drip-tip" shape (sheds excess water, possibly discouraging epiphytes/fungi).</li>
+                        <li><strong>Associated Flora:</strong>
+                            <ul>
+                                <li>Vines (lianas) abundant.</li>
+                                <li>Numerous epiphytes (orchids, ferns) grow on other plants for support. Strangler figs can overwhelm host trees.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Examples of Trees:</strong> Mahogany, ebony, iroko, sapele, okoume, samba, teak, greenheart. In Kenya: camphor, mvule, Elgon teak, plateau bamboo.</li>
+                        <li><strong>Global Locations:</strong> Amazon Basin, Congo Basin, parts of West Africa, New Guinea, SE Asia (Burma, Vietnam, Malaysia).</li>
+                        <li><strong>Regeneration:</strong> If cleared, a less robust "secondary" forest typically grows back.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Layered Structure of a Tropical Rainforest')}
+                `
+            },
+            {
+                id: 'tropical_monsoon_forests',
+                title: '3.2 Tropical Monsoon Forests',
+                htmlContent: `
+                    <h3>3.2 Tropical Monsoon Forests</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Tropical regions with distinct wet and dry seasons (often east-facing slopes in Asia, E. Africa, W. Africa).</li>
+                        <li><strong>Deciduous Nature:</strong> Most trees shed leaves during the prolonged dry season to conserve moisture.</li>
+                        <li><strong>Density and Structure:</strong> Generally less dense than tropical rainforests. Trees up to 30m, typically do not form a continuous, closed canopy.</li>
+                        <li><strong>Species Composition:</strong> Often one or a few tree species are more common (e.g., teak in Burma, eucalyptus in Queensland). This can make them commercially attractive but vulnerable to over-exploitation.</li>
+                        <li><strong>Growth Rate:</strong> Trees tend to grow rapidly during the wet season.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'coniferous_boreal_forests',
+                title: '3.3 Coniferous Forests / Boreal Forests (Taiga)',
+                htmlContent: `
+                    <h3>3.3 Coniferous Forests / Boreal Forests (Taiga)</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Cold climates, high latitudes (45-75° N/S), e.g., Canada, Russia. Also on high mountains in warmer regions.</li>
+                        <li><strong>Tree Type:</strong> Mainly softwood, evergreen trees.</li>
+                        <li><strong>Adaptations to Cold:</strong>
+                            <ul>
+                                <li><strong>Needle-like Leaves:</strong> Reduce water loss (transpiration), especially when ground is frozen.</li>
+                                <li><strong>Conical Shape (Pyramidal):</strong> Helps shed snow, preventing branch breakage.</li>
+                                <li><strong>Thick Bark and Resin:</strong> May offer protection against cold and pests.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Species Composition:</strong> Often large stands of the same species (pure stands) - pine, spruce, fir, larch.</li>
+                        <li><strong>Undergrowth:</strong> Typically little due to dense canopy, acidic needle litter, and cold temperatures inhibiting decomposition.</li>
+                        <li><strong>Root System:</strong> Often shallow (permafrost or summer waterlogging).</li>
+                        <li><strong>Growth Rate:</strong> Slow (e.g., 50-70 years for some softwoods to mature). Recovery from logging/fire is lengthy. Sustainable management and fire prevention are critical.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Typical Conical Shape of Coniferous Trees')}
+                `
+            },
+            {
+                id: 'temperate_deciduous_forests',
+                title: '3.4 Temperate Deciduous Forests',
+                htmlContent: `
+                    <h3>3.4 Temperate Deciduous Forests</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Mid-latitude regions (40-60° N/S) with distinct seasons (warm summers, cold winters). E.g., Europe, North America, Asia.</li>
+                        <li><strong>Leaf Type and Seasonality:</strong> Broad-leaved deciduous trees – shed leaves in autumn, bare in winter (conserve water, resist cold), new leaves in spring.</li>
+                        <li><strong>Canopy:</strong> Dense in summer, reducing light to forest floor.</li>
+                        <li><strong>Understory:</strong> Can have smaller trees and shrubs.</li>
+                        <li><strong>Tree Type:</strong> Mostly hardwoods (oak, beech, maple, birch, ash).</li>
+                        <li><strong>Species Composition:</strong> Trees often grow in groups of the same type or mixed stands.</li>
+                        <li><strong>Soil:</strong> Seasonal leaf fall contributes to rich, fertile soils. Historically, these areas were widely cleared for agriculture, so less of this forest type remains undisturbed.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'mixed_forests',
+                title: '3.5 Mixed Forests',
+                htmlContent: `
+                    <h3>3.5 Mixed Forests</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Transitional zones where coniferous and temperate deciduous forests meet/intermingle.</li>
+                        <li><strong>Composition:</strong> Mixture of evergreen coniferous trees (pine, fir, spruce) and broad-leaved deciduous trees (oak, maple, birch).</li>
+                        <li><strong>Characteristics:</strong> Vary, sometimes resembling coniferous, other times deciduous, depending on local species dominance and conditions.</li>
+                        <li><strong>Ecological Significance:</strong> As ecotones (transition zones), often exhibit high biodiversity (species from both adjoining types). May be sensitive indicators of environmental/climate change.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'mediterranean_forest_communities',
+                title: '3.6 Mediterranean Forest Communities',
+                htmlContent: `
+                    <h3>3.6 Mediterranean Forest Communities</h3>
+                    <ul>
+                        <li><strong>Location:</strong> Regions with Mediterranean climate (hot, dry summers; mild, wet winters). E.g., around Mediterranean Sea, California, Chile, South Africa, Australia.</li>
+                        <li><strong>Composition:</strong> Mix of coniferous and broad-leaved trees, often tough, spiny shrubs with small, leathery leaves (sclerophyllous vegetation).</li>
+                        <li><strong>Adaptations:</strong>
+                            <ul>
+                                <li>Adapted to survive prolonged summer drought.</li>
+                                <li>Deep root systems.</li>
+                                <li>Small or waxy leaves to reduce water loss.</li>
+                                <li>Often able to resprout after fires (common in these environments).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fire Adaptation:</strong> Many species have thick bark, regenerate from root crowns/lignotubers, or have seeds requiring fire to germinate. Increased fire frequency/intensity (due to climate change/human ignitions) can degrade these forests or convert them to shrublands (maquis, chaparral, fynbos).</li>
+                    </ul>
+                    <h4>Table 2: Characteristics of Major World Forest Types</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Forest Type</th><th>Typical Climatic Conditions (Temp. & Rainfall)</th><th>Key Tree Characteristics (Leaf type, Shape, Roots)</th><th>Dominant Species Examples</th><th>Major Global Locations</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Equatorial/ Tropical Rainforest</strong></td><td>Hot ($24-27^{\circ}C$), very wet (>1500mm annually), humid year-round</td><td>Evergreen, broad leaves (often drip-tipped), tall straight trunks, buttress roots, multi-layered canopy.</td><td>Mahogany, ebony, iroko, teak, greenheart, camphor</td><td>Amazon Basin, Congo Basin, SE Asia, West Africa.</td></tr>
+                            <tr><td><strong>Tropical Monsoon Forest</strong></td><td>Hot, distinct wet and long dry seasons</td><td>Mostly deciduous, broad leaves, less dense canopy than rainforests, trees up to 30m.</td><td>Teak, sal, bamboo, eucalyptus</td><td>India, SE Asia, N. Australia, parts of Africa & S. America.</td></tr>
+                            <tr><td><strong>Coniferous/ Boreal Forest (Taiga)</strong></td><td>Cold winters, short cool summers; moderate precipitation (often as snow)</td><td>Evergreen, needle-like leaves, conical shape, often pure stands, shallow roots, thick bark.</td><td>Pine, spruce, fir, larch</td><td>High latitudes of N. America & Eurasia (Canada, Russia, Scandinavia).</td></tr>
+                            <tr><td><strong>Temperate Deciduous Forest</strong></td><td>Moderate climate with distinct seasons (warm summer, cold winter); ample rainfall</td><td>Deciduous, broad leaves, dense summer canopy, understory of smaller trees/bushes.</td><td>Oak, beech, maple, birch, ash</td><td>E. North America, Europe, E. Asia.</td></tr>
+                            <tr><td><strong>Mixed Forest</strong></td><td>Transitional zone between coniferous and deciduous forest climates</td><td>Mix of evergreen coniferous and broad-leaved deciduous trees.</td><td>Pine/oak, spruce/birch</td><td>Areas where boreal and temperate deciduous zones meet.</td></tr>
+                            <tr><td><strong>Mediterranean Forest</strong></td><td>Hot, dry summers; mild, wet winters</td><td>Evergreen or drought-deciduous trees/shrubs, often leathery/spiny leaves adapted to drought.</td><td>Olive, cork oak, pines, chaparral shrubs</td><td>Around Mediterranean Sea, California, Chile, SW Australia, Cape region (SA).</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 4.0: Forests in Kenya
+            {
+                id: 'kenya_forests_intro',
+                title: '4.0 Forests in Kenya: Distribution & Characteristics',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>4.0 Forests in Kenya: Distribution and Characteristics</h2>
+                    <p>Kenya's forest resources, though covering a relatively small percentage of its total land area, are diverse and of critical importance. (KCSE Syllabus Objectives 13.1.0 (b), 13.2.3).</p>
+                `
+            },
+            {
+                id: 'kenya_forest_overview',
+                title: '4.1 Overview of Forest Cover',
+                htmlContent: `
+                    <h3>4.1 Overview of Forest Cover in Kenya</h3>
+                    <ul>
+                        <li>Kenya possesses both <strong>indigenous (native) forests</strong> (remnants of natural vegetation) and <strong>exotic (introduced) plantations</strong> (primarily fast-growing softwoods/hardwoods).</li>
+                        <li>Natural forests are largely concentrated in cooler, wetter highland areas, serving as primary <strong>water towers</strong>.</li>
+                        <li>A significant portion of current vegetation, including some forested areas, is <strong>secondary or derived</strong> (modified by past human activities like clearing for agriculture, grazing, settlement).</li>
+                        <li>Concentration of significant natural forests in highlands (Aberdares, Mt. Kenya, Mau Complex, Cherangani Hills, Mt. Elgon) underscores their critical role in national hydrology.
+                            <ul>
+                                <li>Receive higher rainfall (orographic effects).</li>
+                                <li>Sources of most major rivers flowing to drier lowlands (supporting agriculture, livestock, wildlife, urban populations).</li>
+                                <li>Deforestation/degradation of these "water towers" has far-reaching negative impacts on water availability/quality downstream.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_major_forest_types',
+                title: '4.2 Major Forest Types & Locations',
+                htmlContent: `
+                    <h3>4.2 Major Forest Types and Their Locations in Kenya</h3>
+                    <p>Classified based on ecological zone, dominant species, and origin:</p>
+                    <ul>
+                        <li><strong>Mountain/Highland Forests (Closed Forests):</strong>
+                            <ul>
+                                <li>Predominantly indigenous, on highlands >1,800m.</li>
+                                <li>Closed canopy.</li>
+                                <li>Commercially important species: Podo (*Podocarpus spp.*), Cedar (*Juniperus procera*), Camphor (*Ocotea usambarensis*).</li>
+                                <li>Transition above 3,000m: Dense mountain bamboo (*Arundinaria alpina*), then heath/moorland.</li>
+                                <li>Major blocks: Aberdare Range, Mt. Kenya, Mau Complex, Cherangani Hills, Mt. Elgon.</li>
+                                <li>Vital for biodiversity and water catchment.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Plateau/Lowland Forests:</strong>
+                            <ul>
+                                <li>Remnants in Lake Victoria basin, coastal hinterlands (Arabuko-Sokoke Forest, Shimba Hills), along river systems (Tana River, River Sabaki).</li>
+                                <li>Often face intense pressure from agricultural expansion and settlement.</li>
+                                <li>Arabuko-Sokoke: Notable coastal lowland forest with unique biodiversity.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mangrove Forests:</strong>
+                            <ul>
+                                <li>Specialized, in tidal estuaries and sheltered coastlines (Lamu, Kwale, Kilifi counties).</li>
+                                <li>Adapted to saline, waterlogged conditions.</li>
+                                <li>Crucial for coastal protection, fish breeding grounds, poles/fuelwood.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bamboo Forests:</strong>
+                            <ul>
+                                <li>Mountain bamboo: Significant in highland ecosystems.</li>
+                                <li>Plateau bamboo: Mentioned as component of some Kenyan equatorial forests.</li>
+                                <li>Important resource for local communities, potential for commercial applications.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Planted Forests (Exotic Softwoods and Hardwoods):</strong>
+                            <ul>
+                                <li>Substantial portion of Kenya's industrial wood requirements.</li>
+                                <li>Mainly exotic fast-growing softwoods: Pine (*Pinus spp.*), Cypress (*Cupressus lusitanica*).</li>
+                                <li>Some hardwoods: *Eucalyptus spp.*</li>
+                                <li>Primarily in highland areas.</li>
+                                <li>Often established via "shamba system" (now PELIS - Plantation Establishment and Livelihood Improvement Scheme).</li>
+                                <li>Crucial for timber, pulp/paper, reducing pressure on indigenous forests.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>The diverse forest types reflect Kenya's varied climatic regimes and complex physiography, creating unique ecological niches requiring tailored conservation strategies.</p>
+                    ${getDiagramPlaceholder('Map of Kenya showing key indigenous forest blocks and major plantation areas')}
+                `
+            },
+             // Section 5.0: The Multifaceted Importance of Forests
+            {
+                id: 'importance_forests_intro',
+                title: '5.0 The Multifaceted Importance of Forests',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>5.0 The Multifaceted Importance of Forests</h2>
+                    <p>Forests provide essential goods and services vital for human well-being and environmental health. (KCSE Syllabus Objective 13.1.0 (c)).</p>
+                `
+            },
+            {
+                id: 'ecological_significance_forests',
+                title: '5.1 Ecological Significance',
+                htmlContent: `
+                    <h3>5.1 Ecological Significance</h3>
+                    <ul>
+                        <li><strong>Climate Regulation:</strong>
+                            <ul>
+                                <li>Influence local, regional, and global climates.</li>
+                                <li>Transpiration (evapotranspiration) releases moisture, affecting temperature and rainfall.</li>
+                                <li>Critical carbon sinks: Absorb atmospheric CO2 (photosynthesis), store carbon in biomass/soils, mitigating climate change.</li>
+                                <li>Release oxygen essential for respiration.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Water Catchment Protection:</strong>
+                            <ul>
+                                <li>Integral to hydrological cycle.</li>
+                                <li>Canopies intercept rainfall, reducing impact.</li>
+                                <li>Root systems and porous forest floor enhance water infiltration and groundwater recharge.</li>
+                                <li>Regulate streamflow, ensuring consistent clean water supply, especially in dry seasons.</li>
+                                <li>Prevent excessive runoff and siltation, aiding flood control.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Conservation and Improvement:</strong>
+                            <ul>
+                                <li>Protective canopy reduces erosive force of raindrops.</li>
+                                <li>Root networks bind soil particles, preventing erosion by water/wind.</li>
+                                <li>Decomposition of organic matter (litter) adds humus, improving soil structure, fertility, and water-holding capacity.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Biodiversity and Wildlife Habitat:</strong>
+                            <ul>
+                                <li>Among the most biodiverse ecosystems.</li>
+                                <li>Provide habitats for a vast array of plant, animal, and microorganism species.</li>
+                                <li>Crucial for preserving wild and indigenous genetic resources (potential value for medicine, agriculture, research).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Air Purification:</strong>
+                            <ul>
+                                <li>Photosynthesis absorbs CO2 and other atmospheric pollutants.</li>
+                                <li>Release oxygen, contributing to cleaner air.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'economic_significance_forests',
+                title: '5.2 Economic Significance',
+                htmlContent: `
+                    <h3>5.2 Economic Significance</h3>
+                    <ul>
+                        <li><strong>Timber and Building Materials:</strong> Primary source for construction, furniture.</li>
+                        <li><strong>Raw Materials for Industries:</strong>
+                            <ul>
+                                <li>Wood for pulp and paper industry.</li>
+                                <li>Non-timber forest products (NTFPs): rubber, gums, resins, cork, waxes, tannins.</li>
+                                <li>Fibres for items like stiff brushes.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fuelwood and Charcoal:</strong> Primary energy source for cooking/heating for many, especially in developing countries like Kenya.</li>
+                        <li><strong>Food Products:</strong> Fruits, nuts, seeds, mushrooms, honey, edible insects. Fodder for domestic livestock.</li>
+                        <li><strong>Medicinal Products:</strong> Many traditional and modern medicines derived from forest plants (e.g., quinine from Cinchona tree).</li>
+                        <li><strong>Tourism and Recreation:</strong> Aesthetic beauty, tranquility, unique wildlife attract tourists (eco-tourism, recreational activities).</li>
+                        <li><strong>Employment:</strong> Forestry sector (logging, wood processing, management, trade) provides jobs.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'social_cultural_significance_forests',
+                title: '5.3 Social and Cultural Significance',
+                htmlContent: `
+                    <h3>5.3 Social and Cultural Significance</h3>
+                    <ul>
+                        <li><strong>Cultural Heritage:</strong>
+                            <ul>
+                                <li>Deep cultural, spiritual, historical significance for many indigenous/local communities.</li>
+                                <li>May contain sacred groves, ancestral lands, sites for traditional rituals (e.g., Kaya forests of coastal Kenya).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Aesthetic and Recreational Value:</strong> Opportunities for recreation, relaxation, connecting with nature, contributing to human well-being.</li>
+                    </ul>
+                    <p><strong>Interconnectedness:</strong> Ecological health underpins sustained economic and social value. Degrading ecological functions undermines long-term benefits, highlighting need for integrated, sustainable management.</p>
+                    <h4>Table 3: Importance of Forests in Kenya</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Category of Importance</th><th>Specific Benefits/Products derived in/for Kenya</th><th>Examples/Locations where applicable</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Ecological</strong></td><td>Climate moderation, carbon sequestration, oxygen production.</td><td>All forest ecosystems, esp. Mau Complex, Aberdares, Mt. Kenya.</td></tr>
+                            <tr><td> </td><td>Water catchment for major rivers, groundwater recharge, flood mitigation.</td><td>Highland forests ("water towers").</td></tr>
+                            <tr><td> </td><td>Soil erosion control, soil fertility improvement.</td><td>Steep slopes, agricultural landscapes adjacent to forests.</td></tr>
+                            <tr><td> </td><td>Biodiversity conservation, habitat for endemic/endangered species.</td><td>Kakamega Forest, Taita Hills forests, Arabuko-Sokoke.</td></tr>
+                            <tr><td> </td><td>Air purification.</td><td>All forests, esp. near urban/industrial areas.</td></tr>
+                            <tr><td><strong>Economic</strong></td><td>Timber for construction/furniture, poles.</td><td>Planted forests (pine, cypress, eucalyptus), some licensed indigenous harvesting.</td></tr>
+                            <tr><td> </td><td>Raw materials for pulp/paper, gums, resins.</td><td>Planted forests, Acacia species for gums.</td></tr>
+                            <tr><td> </td><td>Fuelwood and charcoal.</td><td>Widespread, esp. rural areas; often unsustainable.</td></tr>
+                            <tr><td> </td><td>Food products (fruits, nuts, honey), fodder.</td><td>Indigenous forests, community woodlots. Beekeeping common.</td></tr>
+                            <tr><td> </td><td>Medicinal plants.</td><td>Many indigenous forests (e.g., *Prunus africana*).</td></tr>
+                            <tr><td> </td><td>Tourism (eco-tourism, bird watching, hiking), recreation.</td><td>Aberdare NP, Mt. Kenya NP, Kakamega Forest, Karura Forest.</td></tr>
+                            <tr><td> </td><td>Employment (forestry, sawmilling, tourism, conservation).</td><td>Areas with significant forest resources.</td></tr>
+                            <tr><td><strong>Social/Cultural</strong></td><td>Sacred sites, traditional rituals, cultural identity.</td><td>Kaya forests (coast), other revered sites.</td></tr>
+                            <tr><td> </td><td>Aesthetic beauty, recreational spaces, educational/research sites.</td><td>National Parks, Forest Reserves, arboretums.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 6.0: Challenges Facing Forestry
+            {
+                id: 'challenges_forestry_intro',
+                title: '6.0 Challenges Facing Forestry (Kenya Focus)',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>6.0 Challenges Facing Forestry (with a focus on Kenya)</h2>
+                    <p>Forests in Kenya face multitude of threats undermining their integrity and capacity to provide essential services. (KCSE Syllabus Objectives 13.1.0 (d), 13.2.4).</p>
+                `
+            },
+            {
+                id: 'deforestation_land_degradation',
+                title: '6.1 Deforestation and Land Degradation',
+                htmlContent: `
+                    <h3>6.1 Deforestation and Land Degradation</h3>
+                    <p>This is a significant challenge, driven by:</p>
+                    <ul>
+                        <li><strong>Agricultural Expansion:</strong> Clearing forest land for crop cultivation and livestock grazing due to increasing food demand.</li>
+                        <li><strong>Settlement and Infrastructure:</strong> Population growth necessitates more land for housing and development (roads, urban centers).</li>
+                        <li><strong>Over-exploitation and Unsustainable Logging:</strong>
+                            <ul>
+                                <li>Cutting too many trees, especially valuable slow-regenerating hardwoods.</li>
+                                <li>Poorly managed selective logging damages surrounding vegetation and opens forests to encroachment.</li>
+                                <li>Illegal logging exacerbates the problem.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fuelwood and Charcoal Production:</strong> High reliance on wood fuel in Kenya leads to unsustainable harvesting, especially in woodlands and dry forests.</li>
+                        <li><strong>Forest Excisions:</strong> Official de-gazettement or allocation of forest land for other uses (agriculture, settlement, public utilities).
+                            <ul>
+                                <li>Reduces overall forest estate.</li>
+                                <li>Can undermine conservation if not carefully planned/compensated.</li>
+                                <li>Highlights conflict between conservation and socio-economic/political interests.</li>
+                                <li>Governance challenge in balancing development and conservation.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'forest_fires_challenge',
+                title: '6.2 Forest Fires',
+                htmlContent: `
+                    <h3>6.2 Forest Fires</h3>
+                    <ul>
+                        <li>Significant threat, especially during dry seasons.</li>
+                        <li>Caused naturally (lightning) or by humans (accidental/intentional).</li>
+                        <li>Certain forest types (bamboo, coniferous plantations) are particularly flammable.</li>
+                        <li><strong>Impacts:</strong> Loss of timber, habitat destruction, soil degradation, impact on water quality.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'pests_diseases_challenge',
+                title: '6.3 Pests and Diseases',
+                htmlContent: `
+                    <h3>6.3 Pests and Diseases</h3>
+                    <ul>
+                        <li>Forests susceptible to outbreaks damaging/killing large numbers of trees.</li>
+                        <li>Monoculture plantations can be especially vulnerable (e.g., aphid outbreak on cypress in Kenya in 1990s).</li>
+                        <li>Climate change may exacerbate pest/disease problems.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'climate_change_impacts_forests',
+                title: '6.4 Climate Change Impacts',
+                htmlContent: `
+                    <h3>6.4 Climate Change Impacts</h3>
+                    <ul>
+                        <li>Emerging and increasingly significant threat.</li>
+                        <li>Changes in temperature/rainfall patterns stress forest ecosystems.</li>
+                        <li>Makes forests more vulnerable to fires, pests, diseases.</li>
+                        <li>Can lead to shifts in geographical distribution of tree species/forest types (local extinctions, invasion of new species).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'challenges_rainforest_exploitation',
+                title: '6.5 Challenges in Tropical Rainforest Exploitation',
+                htmlContent: `
+                    <h3>6.5 Challenges in Tropical Rainforest Exploitation</h3>
+                    <p>While Kenya's primary forests are montane, some challenges are relevant:</p>
+                    <ul>
+                        <li><strong>Species Diversity:</strong> High diversity with valuable timber trees often scattered makes targeted logging difficult/expensive.</li>
+                        <li><strong>Accessibility:</strong> Remote areas with poor transport infrastructure make log extraction challenging.</li>
+                        <li><strong>Buttress Roots:</strong> Large buttress roots can complicate felling.</li>
+                        <li><strong>Harsh Working Conditions:</strong> Hot, humid climates, dangerous wildlife, biting insects.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'policy_management_socioeconomic_issues',
+                title: '6.6 Policy, Management, and Socio-economic Issues',
+                htmlContent: `
+                    <h3>6.6 Policy, Management, and Socio-economic Issues</h3>
+                    <ul>
+                        <li><strong>Slow Growth of Trees:</strong>
+                            <ul>
+                                <li>Many valuable indigenous hardwoods (and some softwoods in cooler climates) grow slowly (50-70+ years to mature).</li>
+                                <li>Long rotation period makes sustainable management economically challenging (delayed returns on investment).</li>
+                                <li>Disincentive for long-term private investment without robust regulations, secure tenure, or financial incentives.</li>
+                                <li>Pressure for quicker returns can lead to premature harvesting or land conversion.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Lack of Funds and Technology:</strong> Insufficient financial resources and limited access to modern forestry technologies hamper effective management, monitoring, and conservation.</li>
+                        <li><strong>Poor Management Practices:</strong> Issues like delays in replanting, harvesting immature trees, inadequate enforcement contribute to degradation.</li>
+                        <li><strong>Game Damage:</strong> Wildlife (e.g., elephants) can damage young trees. Overgrazing by domestic livestock impedes regeneration. Highlights challenge of managing human-wildlife-livestock interfaces.</li>
+                    </ul>
+                `
+            },
+            // Section 7.0: Forest Management and Conservation Strategies
+            {
+                id: 'forest_management_conservation_intro',
+                title: '7.0 Forest Management & Conservation (Kenya Focus)',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>7.0 Forest Management and Conservation Strategies (with a focus on Kenya)</h2>
+                    <p>Addressing challenges requires a multi-pronged approach. (KCSE Syllabus Objectives 13.1.0 (e), 13.2.5).</p>
+                `
+            },
+            {
+                id: 'afforestation_reforestation',
+                title: '7.1 Afforestation and Reforestation',
+                htmlContent: `
+                    <h3>7.1 Afforestation and Reforestation</h3>
+                    <p>Fundamental strategies to increase forest cover and restore degraded lands:</p>
+                    <ul>
+                        <li><strong>Afforestation:</strong> Planting trees in areas with no previous forest cover.</li>
+                        <li><strong>Reforestation:</strong> Planting new trees where forests have been cleared/degraded.</li>
+                    </ul>
+                    <p><strong>Encouraged in Kenya for multiple reasons:</strong></p>
+                    <ul>
+                        <li>Ensuring sustainable supply of wood fuel, timber, raw materials (pulp/paper).</li>
+                        <li>Reducing reliance on imported forest products (saving foreign exchange).</li>
+                        <li>Expanding wildlife habitat.</li>
+                        <li>Protecting vital water catchment areas.</li>
+                        <li>Creating favorable micro-climates.</li>
+                        <li>Preventing soil erosion.</li>
+                        <li>Generating employment.</li>
+                    </ul>
+                    <p>Notable reforestation efforts in Kenya: Aberdares, Ngong Hills, Kabarnet, Mt. Kenya.</p>
+                `
+            },
+            {
+                id: 'forest_reserves_protected_areas',
+                title: '7.2 Establishment of Forest Reserves & Protected Areas',
+                htmlContent: `
+                    <h3>7.2 Establishment of Forest Reserves and Protected Areas</h3>
+                    <ul>
+                        <li>Key legal/administrative tool for safeguarding critical forest ecosystems.</li>
+                        <li>Designation of specific forest areas as reserves/protected areas under government mandate.</li>
+                        <li>Provides legal basis for controlling access, regulating activities, implementing conservation programs.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'legislation_policy_frameworks',
+                title: '7.3 Legislation and Policy Frameworks',
+                htmlContent: `
+                    <h3>7.3 Legislation and Policy Frameworks</h3>
+                    <ul>
+                        <li>Effective management depends on strong legal/policy environment.</li>
+                        <li>Governments enact laws/regulations to:
+                            <ul>
+                                <li>Control logging.</li>
+                                <li>Protect endangered tree species.</li>
+                                <li>Prevent encroachment.</li>
+                                <li>Promote sustainable forest use (e.g., Kenya's Forest Act).</li>
+                            </ul>
+                        </li>
+                        <li>Legislation often includes provisions for community participation, benefit sharing, penalties for illegal activities.</li>
+                        <li>Effectiveness depends on robust enforcement, adequate resources, political will (e.g., Forest Bill 2000 aimed to involve private companies).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'community_forestry_participatory_management',
+                title: '7.4 Community Forestry and Participatory Management',
+                htmlContent: `
+                    <h3>7.4 Community Forestry and Participatory Management</h3>
+                    <p>Recognizes local communities as primary users/guardians of forest resources.</p>
+                    <ul>
+                        <li><strong>Involving Local Communities:</strong> Engaging people near forests in protection and sustainable management.
+                            <ul>
+                                <li>Can involve respecting/integrating traditional ecological knowledge (e.g., protection of sacred groves).</li>
+                            </ul>
+                        </li>
+                        <li><strong>The "Shamba System" (PELIS - Plantation Establishment and Livelihood Improvement Scheme) in Kenya:</strong>
+                            <ul>
+                                <li>Allows landless/land-poor communities to cultivate crops alongside newly planted tree seedlings in designated forest areas.</li>
+                                <li>Farmers tend young trees while benefiting from food production.</li>
+                                <li>Complex history: if poorly managed or cultivation periods prolonged, can delay forest canopy closure or convert forest to agriculture.</li>
+                                <li>Success hinges on strict regulations, clear benefit-sharing, well-defined exit strategies.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Nyayo Tea Zones (Kenya, 1990s):</strong>
+                            <ul>
+                                <li>Planting tea belts around peripheries of some indigenous forests.</li>
+                                <li>Aims: Create protective buffer zone (discourage illegal entry/encroachment), provide employment/income (tea cultivation).</li>
+                                <li>Alternative strategy to address some shamba system challenges by creating a permanent, economically viable buffer.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Success of community models requires careful planning, transparent governance, equitable benefit sharing, continuous monitoring, adaptive management.</p>
+                `
+            },
+            {
+                id: 'agroforestry_practices',
+                title: '7.5 Agroforestry Practices',
+                htmlContent: `
+                    <h3>7.5 Agroforestry Practices</h3>
+                    <ul>
+                        <li>Deliberate integration of trees/shrubs into farming systems (with crops and/or animals) on the same land unit.</li>
+                        <li><strong>Benefits:</strong>
+                            <ul>
+                                <li>Provides timber, fuelwood, fruits, fodder, other tree products directly on farms.</li>
+                                <li>Improves soil fertility (nitrogen fixation by some trees, organic matter addition).</li>
+                                <li>Enhances local micro-climates.</li>
+                                <li>Protects soil and water resources.</li>
+                                <li>Contributes to biodiversity conservation (more diverse agricultural landscapes).</li>
+                                <li>Reduces pressure on natural forests by providing on-farm tree resources.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'research_education_public_awareness',
+                title: '7.6 Research, Education, and Public Awareness',
+                htmlContent: `
+                    <h3>7.6 Research, Education, and Public Awareness</h3>
+                    <ul>
+                        <li><strong>Research and Training:</strong>
+                            <ul>
+                                <li>Continuous research into tree species, forest ecology, sustainable management, efficient wood utilization is essential.</li>
+                                <li>Training forestry professionals and local communities builds capacity.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Public Education:</strong>
+                            <ul>
+                                <li>Raising public awareness about forest importance, threats, and individual/community roles in conservation.</li>
+                                <li>Crucial for fostering broader conservation ethic and support for sustainable practices.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'sustainable_forest_utilization_alternatives',
+                title: '7.7 Sustainable Forest Utilization and Alternative Resources',
+                htmlContent: `
+                    <h3>7.7 Sustainable Forest Utilization and Alternative Resources</h3>
+                    <ul>
+                        <li><strong>Using Faster-Growing Trees:</strong> Planting fast-growing species (especially in plantations) can meet wood demand more quickly, reducing pressure on slow-growing indigenous species.</li>
+                        <li><strong>Reducing Waste and Promoting Recycling:</strong> Efficient wood use and recycling wood products (e.g., paper) reduces demand for virgin timber.</li>
+                        <li><strong>Using Alternative Fuels and Technologies:</strong>
+                            <ul>
+                                <li>Promoting/providing access to alternative energy (LPG, electricity, biogas, solar cookers) reduces reliance on firewood/charcoal.</li>
+                                <li>Encouraging energy-efficient cooking stoves reduces wood fuel consumption.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Table 4: Challenges Facing Forestry in Kenya and Corresponding Management Strategies</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Challenge</th><th>Specific Manifestation in Kenya</th><th>Implemented/Proposed Management/Conservation Strategy in Kenya</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Deforestation for Agriculture & Settlement</strong></td><td>Clearance of indigenous forests in highlands (e.g., Mau Complex, Aberdares) and woodlands for farming and housing.</td><td>Promotion of agroforestry, land use planning, enforcement of laws against encroachment, establishment of forest reserves, community forestry programs (PELIS), Nyayo Tea Zones as buffers.</td></tr>
+                            <tr><td><strong>Unsustainable Fuelwood & Charcoal Production</strong></td><td>Widespread cutting of trees, especially in drylands and around urban centers, for household energy.</td><td>Promotion of alternative energy sources (LPG, solar, biogas), development of woodlots and fast-growing tree plantations for fuel, introduction of energy-efficient cookstoves, licensing and regulation of charcoal production.</td></tr>
+                            <tr><td><strong>Illegal Logging & Over-exploitation</strong></td><td>Uncontrolled harvesting of valuable timber species, often exceeding sustainable limits.</td><td>Strengthening forest law enforcement (e.g., Forest Act), improved monitoring and surveillance, community policing, promoting sustainable forest certification, gazettement of forest reserves.</td></tr>
+                            <tr><td><strong>Forest Fires</strong></td><td>Frequent fires in dry seasons, especially in plantations (cypress, pine) and bamboo zones.</td><td>Establishment of firebreaks, public awareness campaigns on fire prevention, equipping forest stations with firefighting equipment, community fire-fighting teams, controlled burning where appropriate.</td></tr>
+                            <tr><td><strong>Pests and Diseases</strong></td><td>Outbreaks affecting specific tree species (e.g., cypress aphid).</td><td>Research into pest and disease resistant tree varieties, integrated pest management strategies, promoting species diversity in plantations to reduce vulnerability.</td></tr>
+                            <tr><td><strong>Forest Excisions/Policy Conflicts</strong></td><td>De-gazettement of forest land for other uses, undermining conservation efforts.</td><td>Strengthening legal protection of forests, transparent decision-making processes for land use change, public participation in forest governance, advocacy by civil society organizations.</td></tr>
+                            <tr><td><strong>Inadequate Management Resources & Capacity</strong></td><td>Lack of sufficient funds, personnel, and technology for effective forest management and conservation.</td><td>Increased budgetary allocation to forestry sector, capacity building for forestry staff and communities, public-private partnerships, seeking international support and funding for conservation initiatives.</td></tr>
+                            <tr><td><strong>Climate Change Impacts</strong></td><td>Increased stress on forests, potential shifts in species distribution, increased fire/pest risk.</td><td>Promoting climate-resilient tree species, ecosystem-based adaptation strategies, REDD+ initiatives, integrating climate change into forest management plans.</td></tr>
+                            <tr><td><strong>Game Damage/Human-Wildlife Conflict</strong></td><td>Damage to young trees by wildlife (e.g., elephants), livestock grazing in forests.</td><td>Fencing of sensitive plantation areas, establishing wildlife corridors, community-based conflict resolution mechanisms, promoting compatible land uses in buffer zones.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 8.0: Comparative Study: Softwood Forestry in Kenya and Canada
+            {
+                id: 'comparative_study_intro',
+                title: '8.0 Comparative Study: Kenya vs. Canada Softwood Forestry',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>8.0 Comparative Study: Softwood Forestry in Kenya and Canada</h2>
+                    <p>A comparative study reveals significant differences and some similarities shaped by distinct geographical, ecological, and socio-economic contexts. (KCSE Syllabus Objectives 13.1.0 (f), 13.2.6).</p>
+                `
+            },
+            {
+                id: 'kenya_canada_forest_types_species',
+                title: '8.1 Forest Types and Species',
+                htmlContent: `
+                    <h3>8.1 Forest Types and Species</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong>
+                            <ul>
+                                <li>Softwood resources predominantly from <strong>planted forests</strong>.</li>
+                                <li>Consist of <strong>exotic (introduced) species</strong>: Pine (*Pinus patula*, *Pinus radiata*), Cypress (*Cupressus lusitanica*).</li>
+                                <li>Some indigenous softwoods (Podo, Cedar) in natural montane forests, but commercial industry relies on plantations.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Canada:</strong>
+                            <ul>
+                                <li>Possesses vast expanses of <strong>natural boreal forests</strong>.</li>
+                                <li>Dominated by <strong>native softwood species</strong>: Pine, Spruce (*Picea glauca*, *Picea mariana*), Fir (*Abies balsamea*), Larch (*Larix laricina*).</li>
+                                <li>Forms one of the largest intact forest ecosystems globally.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_canada_forest_characteristics',
+                title: '8.2 Forest Characteristics (Undergrowth, Location)',
+                htmlContent: `
+                    <h3>8.2 Forest Characteristics (Undergrowth, Location)</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong>
+                            <ul>
+                                <li>Planted softwood forests often have <strong>significant undergrowth</strong> (especially in early stages or if thinning is inadequate).</li>
+                                <li>Mainly located in <strong>cooler, wetter highland areas</strong> suitable for exotic softwoods.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Canada:</strong>
+                            <ul>
+                                <li>Natural coniferous (boreal) forests typically have <strong>little undergrowth</strong> (dense canopy, acidic soils, cold climate).</li>
+                                <li>Cover vast areas across both highland and lowland terrains, northern latitudes.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_canada_exploitation_methods',
+                title: '8.3 Exploitation Methods (Cutting)',
+                htmlContent: `
+                    <h3>8.3 Exploitation Methods (Cutting)</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong>
+                            <ul>
+                                <li>Often involves "<strong>selective cutting</strong>" (specific mature trees felled) or <strong>clear-felling of small coupes</strong> (compartments), followed by replanting.</li>
+                                <li>Mechanized equipment (power saws) used.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Canada:</strong>
+                            <ul>
+                                <li>"<strong>Clear cutting</strong>" is common due to vast scale and uniform stands (most/all trees in an area felled).</li>
+                                <li>Often followed by natural regeneration or replanting.</li>
+                                <li>Large-scale machinery extensively used.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_canada_harvesting_season',
+                title: '8.4 Harvesting Season',
+                htmlContent: `
+                    <h3>8.4 Harvesting Season</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong> Tree cutting/harvesting in softwood plantations can generally occur <strong>throughout the year</strong> (highland climate usually doesn't impose severe seasonal restrictions).</li>
+                        <li><strong>Canada:</strong> Harvesting in boreal forests is often <strong>seasonal</strong>.
+                            <ul>
+                                <li>Summer is common.</li>
+                                <li>Winter harvesting can occur (frozen ground may aid access, reduce soil disturbance).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_canada_log_transportation',
+                title: '8.5 Log Transportation',
+                htmlContent: `
+                    <h3>8.5 Log Transportation</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong> Primarily by <strong>tractors and lorries</strong> from plantations to sawmills/processing facilities. Road network crucial.</li>
+                        <li><strong>Canada:</strong>
+                            <ul>
+                                <li>Trucks are a major mode.</li>
+                                <li>Historically, <strong>river transport</strong> (floating logs) was significant and may still be used in remote areas.</li>
+                                <li><strong>Rail transport</strong> for longer distances.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'kenya_canada_management_conservation',
+                title: '8.6 Management and Conservation',
+                htmlContent: `
+                    <h3>8.6 Management and Conservation</h3>
+                    <ul>
+                        <li><strong>Kenya:</strong>
+                            <ul>
+                                <li>Focus on establishment, maintenance, sustainable harvesting of exotic softwood plantations.</li>
+                                <li>Includes nursery operations, planting, weeding, thinning, pruning, protection (fire, pests, diseases).</li>
+                                <li>Systems like PELIS (shamba system) involve communities in plantation establishment.</li>
+                                <li>Increasing emphasis on afforestation/reforestation to meet wood demand and for environmental conservation.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Canada:</strong>
+                            <ul>
+                                <li>Management of vast natural coniferous forests involves complex planning for sustainable yields, biodiversity conservation, ecosystem integrity.</li>
+                                <li>Key challenges: managing large-scale forest fires, controlling pest outbreaks (spruce budworm, mountain pine beetle), balancing timber harvesting with other land uses/indigenous rights.</li>
+                                <li>Forest regeneration after harvesting is critical.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Summary of Comparison:</strong></p>
+                    <ul>
+                        <li>Differing ecological foundations (natural vs. planted, native vs. exotic, biodiversity, climate).</li>
+                        <li>Vastly different socio-economic scales (domestic demand in Kenya vs. global export industry in Canada).</li>
+                        <li>These shape forestry practices, challenges, and management/conservation approaches.</li>
+                        <li>Kenya: Focus on small-scale, intensively managed plantations for domestic needs, alleviating pressure on indigenous forests.</li>
+                        <li>Canada: Stewardship of immense natural boreal ecosystems for global market, addressing complex ecological/social sustainability.</li>
+                    </ul>
+                    <h4>Table 5: Comparative Analysis of Softwood Forestry: Kenya vs. Canada</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Aspect</th><th>Kenya</th><th>Canada</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Origin of Forests</strong></td><td>Predominantly planted exotic species (e.g., Pine, Cypress).</td><td>Predominantly vast natural boreal forests of native species.</td></tr>
+                            <tr><td><strong>Dominant Species</strong></td><td>Pine (*Pinus patula*, *P. radiata*), Cypress (*Cupressus lusitanica*), some Eucalyptus.</td><td>Spruce (*Picea spp.*), Pine (*Pinus spp.*), Fir (*Abies spp.*), Larch (*Larix spp.*).</td></tr>
+                            <tr><td><strong>Climatic Conditions</strong></td><td>Cooler, wetter highland areas (tropical montane climate).</td><td>Cold continental (boreal) climate with long, severe winters and short, cool summers.</td></tr>
+                            <tr><td><strong>Undergrowth</strong></td><td>Often significant undergrowth in plantations.</td><td>Generally little undergrowth in mature natural stands.</td></tr>
+                            <tr><td><strong>Scale of Operation</strong></td><td>Relatively small-scale plantations, primarily for domestic market.</td><td>Very large-scale operations, major global exporter of softwood products.</td></tr>
+                            <tr><td><strong>Primary Exploitation Method</strong></td><td>Often selective cutting or small coupe clear-felling.</td><td>Often clear-cutting of large tracts.</td></tr>
+                            <tr><td><strong>Harvesting Season</strong></td><td>Can occur throughout the year.</td><td>Often seasonal, with significant activity in summer; winter logging also occurs.</td></tr>
+                            <tr><td><strong>Log Transportation</strong></td><td>Primarily by tractors and lorries.</td><td>Trucks, rail, historically and sometimes currently by river.</td></tr>
+                            <tr><td><strong>Key Management Focus</strong></td><td>Plantation establishment (PELIS), protection, meeting domestic demand, reducing indigenous forest pressure.</td><td>Sustainable yield from natural forests, regeneration, fire management, pest control, biodiversity conservation, export market supply.</td></tr>
+                            <tr><td><strong>Major Challenges</strong></td><td>Pests (e.g., cypress aphid), diseases, forest fires, encroachment, funding for management.</td><td>Large-scale forest fires, pest outbreaks (e.g., mountain pine beetle), impacts of climate change, land use conflicts.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 9.0: Conclusion
+            {
+                id: 'conclusion_forests_forestry',
+                title: '9.0 Conclusion: Future of Forests & Sustainable Practices',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>9.0 Conclusion: The Future of Forests and Sustainable Forestry Practices</h2>
+                    <ul>
+                        <li>Forests are indispensable pillars of ecological stability, economic prosperity, and social well-being.</li>
+                        <li>Their roles (climate regulation, water provision, soil conservation, biodiversity havens) are fundamental to planetary health.</li>
+                        <li>Economically, they provide essential raw materials, fuel, food, and livelihoods.</li>
+                        <li>Culturally and aesthetically significant for communities worldwide.</li>
+                    </ul>
+                    <p><strong>Challenges:</strong></p>
+                    <ul>
+                        <li>Unprecedented challenges: Deforestation (agriculture, unsustainable logging, fuelwood, infrastructure) continues at alarming rates.</li>
+                        <li>Climate change exacerbates pressures (altered conditions, increased disturbances like fires/pests, threatens resilience).</li>
+                    </ul>
+                    <p><strong>Path Towards a Sustainable Future:</strong></p>
+                    <ul>
+                        <li>Requires a paradigm shift: Value the full spectrum of ecosystem services, not just timber/land.</li>
+                        <li>Adopt integrated and adaptive strategies (ecological, economic, social dimensions).</li>
+                        <li><strong>Key Elements:</strong>
+                            <ul>
+                                <li>Strong national/international policies for sustainable forest management and conservation (with enforcement).</li>
+                                <li>Meaningful community participation (stake in stewardship, equitable benefits).</li>
+                                <li>Continued investment in research, technology, capacity building.</li>
+                                <li>Promoting agroforestry and alternative livelihoods for forest-dependent communities.</li>
+                                <li>Valuing ecosystem services (Payments for Ecosystem Services - PES, carbon markets).</li>
+                                <li>International cooperation (transboundary issues, illegal logging, supporting developing countries, REDD+).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Kenyan Context:</strong></p>
+                    <ul>
+                        <li>Sustainable management of forest resources (highland water towers, indigenous forests) linked to national development and environmental security.</li>
+                        <li>Achieving national goal of increased forest cover requires concerted efforts (afforestation, reforestation, protection, sustainable land use).</li>
+                    </ul>
+                    <p>Ultimately, the future of forests hinges on balancing conservation with human needs through innovative solutions, inclusive governance, and shared commitment. Sustainable forestry is fundamental to sustainable development and a healthy planet.</p>
+                `
+            }
+        ];
+
+        const navigation = document.getElementById('navigation');
+        const contentArea = document.getElementById('contentArea');
+        const mainGuideTitle = document.getElementById('mainGuideTitle');
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        
+        let currentSectionIndex = 0;
+
+        function showSection(index) {
+            if (index < 0 || index >= guideData.length) {
+                console.error("Section index out of bounds:", index);
+                return;
+            }
+            currentSectionIndex = index;
+            const sectionData = guideData[currentSectionIndex];
+            
+            if (sectionData) {
+                if (sectionData.isChapterTitle) {
+                    mainGuideTitle.innerHTML = ''; 
+                    contentArea.innerHTML = sectionData.htmlContent;
+                } else {
+                    if (!guideData[0].isChapterTitle || currentSectionIndex > 0) { 
+                         mainGuideTitle.textContent = "KCSE Forests and Forestry Guide";
+                    }
+                    contentArea.innerHTML = sectionData.htmlContent;
+                }
+                updateNavButtons();
+                highlightActiveNavItem();
+
+                document.querySelector('.main-content').scrollTop = 0; 
+
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            }
+        }
+        
+        function highlightActiveNavItem() {
+            document.querySelectorAll('#navigation a').forEach((link, idx) => {
+                link.classList.remove('bg-emerald-600', 'text-white', 'font-semibold');
+                link.classList.add('text-emerald-100', 'hover:bg-emerald-600', 'hover:text-white');
+                 if (guideData[idx].isChapterTitle) {
+                    link.classList.add('font-bold', 'text-yellow-300', 'hover:text-yellow-200');
+                    link.classList.remove('text-emerald-100', 'hover:text-white');
+                }
+                if (idx === currentSectionIndex) {
+                    link.classList.add('bg-emerald-600', 'text-white', 'font-semibold');
+                    link.classList.remove('text-emerald-100');
+                     if (guideData[idx].isChapterTitle) {
+                        link.classList.add('text-yellow-200');
+                        link.classList.remove('text-yellow-300'); 
+                     }
+                }
+            });
+        }
+
+        function updateNavButtons() {
+            prevButton.disabled = currentSectionIndex === 0;
+            nextButton.disabled = currentSectionIndex === guideData.length - 1;
+        }
+        
+        function init() {
+            guideData.forEach((item, index) => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = item.title;
+                link.setAttribute('data-index', index);
+                let classList = 'block py-2.5 px-4 rounded transition duration-200 text-sm ';
+                if (item.isChapterTitle) {
+                    classList += 'font-bold text-yellow-300 hover:text-yellow-200';
+                } else {
+                    classList += 'text-emerald-100 hover:bg-emerald-600 hover:text-white';
+                    if (item.title.match(/^\d+\.\d+\s/) || item.title.match(/^\d+\.\d+\.\d+\s/)) { 
+                        classList += ' pl-6'; 
+                    }
+                }
+                link.className = classList;
+
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    showSection(index);
+                };
+                navigation.appendChild(link);
+            });
+            
+            if (guideData.length > 0) {
+                showSection(0); 
+            } else {
+                contentArea.innerHTML = '<p>No content available.</p>';
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+
+            mobileMenuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentSectionIndex > 0) {
+                    showSection(currentSectionIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentSectionIndex < guideData.length - 1) {
+                    showSection(currentSectionIndex + 1);
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    const isClickInsideSidebar = sidebar.contains(event.target);
+                    const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+                    if (!isClickInsideSidebar && !isClickOnMenuButton) {
+                        sidebar.classList.remove('open');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
