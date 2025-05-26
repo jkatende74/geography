@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCSE Vegetation Learning Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-section h1 { /* Main Guide Title */
+            font-size: 1.75em; /* 28px */
+            font-weight: 700;
+            margin-bottom: 1.25rem; /* 20px */
+            color: #166534; /* A deep green, e.g., green-700 */
+            border-bottom: 2px solid #10B981; /* A lighter green, e.g., emerald-500 */
+            padding-bottom: 0.75rem; /* 12px */
+        }
+        .content-section h2 { /* Section Title (e.g., 1.0 Introduction) */
+            font-size: 1.5em; /* 24px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 1rem; /* 16px */
+            color: #15803D; /* green-600 */
+        }
+        .content-section h3 { /* Subsection Title (e.g., 1.1 Defining Vegetation) */
+            font-size: 1.25em; /* 20px */
+            font-weight: 600;
+            margin-top: 1.5rem; /* 24px */
+            margin-bottom: 0.75rem; /* 12px */
+            color: #14532D; /* green-800 */
+        }
+         .content-section h4 { /* Further Subsection Title */
+            font-size: 1.125em; /* 18px */
+            font-weight: 600;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 0.5rem; /* 8px */
+            color: #16A34A; /* green-500 */
+        }
+        .content-section p, .content-section li {
+            margin-bottom: 0.75rem; /* 12px */
+            line-height: 1.7;
+            color: #374151; /* gray-700 */
+        }
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+         .content-section ol {
+            list-style-type: decimal;
+            margin-left: 1.75rem; /* 28px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .content-section strong {
+            color: #064E3B; /* A very dark green, e.g., emerald-900 */
+            font-weight: 600;
+        }
+        .content-section table {
+            width: 100%;
+            margin-top: 1.25rem; /* 20px */
+            margin-bottom: 1.25rem; /* 20px */
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 0.9em;
+        }
+        .content-section th, .content-section td {
+            border: 1px solid #A3E635; /* lime-400 for a green theme */
+            padding: 0.75rem; /* 12px */
+            text-align: left;
+        }
+        .content-section th {
+            background-color: #ECFCCB; /* lime-100 for a light green header */
+            font-weight: 600;
+            color: #3F6212; /* lime-800 */
+        }
+        .diagram-placeholder {
+            background-color: #F0FDF4; /* green-50 */
+            border: 2px dashed #86EFAC; /* green-300 */
+            padding: 1.5rem; /* 24px */
+            text-align: center;
+            color: #14532D; /* green-800 */
+            font-style: italic;
+            border-radius: 0.375rem; /* 6px */
+            margin: 1.25rem auto; /* 20px */
+            display: block;
+            width: 80%;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Mobile menu button */
+        .mobile-menu-button {
+            display: none; 
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 40; 
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-menu-button {
+                display: block; 
+            }
+            .content-section h1 { font-size: 1.5em; }
+            .content-section h2 { font-size: 1.25em; }
+            .content-section h3 { font-size: 1.125em; }
+            .diagram-placeholder { width: 95%; padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="bg-green-50 text-gray-800">
+    <div class="flex h-screen overflow-hidden">
+        <aside id="sidebar" class="sidebar w-72 bg-green-700 text-white p-5 space-y-3 overflow-y-auto md:block shadow-lg">
+            <h1 class="text-xl font-bold mb-5 text-center border-b border-green-600 pb-3">Vegetation Guide</h1>
+            <nav id="navigation" class="space-y-1">
+                </nav>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto main-content">
+            <button id="mobileMenuButton" class="mobile-menu-button md:hidden fixed top-3 left-3 z-50 p-2 bg-green-700 text-white rounded-md shadow-md hover:bg-green-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            
+            <div id="contentAreaContainer" class="bg-white p-5 md:p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+                <div id="contentArea" class="content-section">
+                    <h1 id="mainGuideTitle" class="text-2xl font-bold mb-6 text-green-700">Welcome!</h1>
+                    <p class="text-lg">Select a topic from the sidebar or use the navigation buttons below to begin your comprehensive study of Vegetation for KCSE Geography.</p>
+                </div>
+                 <div id="navButtons" class="mt-10 flex justify-between border-t border-gray-300 pt-6">
+                    <button id="prevButton" class="px-6 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Previous</button>
+                    <button id="nextButton" class="px-6 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150 shadow-sm">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Function to create diagram placeholders
+        function getDiagramPlaceholder(description) {
+            return `<div class="diagram-placeholder">Diagram Placeholder: ${description}</div>`;
+        }
+
+        const guideData = [
+            // Section 1: Introduction to Vegetation
+            {
+                id: 'intro_vegetation',
+                title: '1.0 Introduction to Vegetation',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h1>Vegetation: A Comprehensive Study for KCSE Geography</h1>
+                    <h2>Section 1: Introduction to Vegetation</h2>
+                    <p>This section lays the groundwork for understanding vegetation by defining key terms and categorizing different types of vegetation based on their origin and human influence. This aligns with the KCSE syllabus requirement to define vegetation and understand its classifications.</p>
+                `
+            },
+            {
+                id: 'defining_vegetation',
+                title: '1.1 Defining Vegetation, Plant Community, and Habitat',
+                htmlContent: `
+                    <h3>1.1 Defining Vegetation, Plant Community, and Habitat</h3>
+                    <ul>
+                        <li><strong>Vegetation:</strong> Encompasses all plants that collectively inhabit a specific area, forming a distinct community of trees, shrubs, herbs, and grasses that characterize a place. This definition underscores the collective and diverse nature of plant life within a given geographical extent.</li>
+                        <li><strong>Plant Community:</strong> Refers to an assemblage of plants growing together within a particular physical <strong>habitat</strong> or site.</li>
+                        <li><strong>Habitat:</strong> The specific physical environment—defined by its climate, soil, and relief—that supports a particular plant community.</li>
+                    </ul>
+                    <p>The interplay between these elements is fundamental. The characteristics of a habitat directly dictate the type of plant community that can flourish, and this, in turn, defines the overall vegetation of that region. For instance:</p>
+                    <ul>
+                        <li>A habitat with high annual rainfall and consistently high temperatures will naturally support a dense, multi-layered plant community, such as a tropical rainforest.</li>
+                        <li>Conversely, a habitat with scarce rainfall and extreme temperatures will foster a sparse plant community adapted to arid conditions, like desert scrub.</li>
+                    </ul>
+                    <p>The sum of these varied plant communities across different habitats constitutes the broader mosaic of vegetation types observed globally.</p>
+                    ${getDiagramPlaceholder('Relationship between Habitat, Plant Community, and Vegetation')}
+                `
+            },
+            {
+                id: 'types_of_vegetation',
+                title: '1.2 Types of Vegetation',
+                htmlContent: `
+                    <h3>1.2 Types of Vegetation</h3>
+                    <p>Vegetation can be broadly categorized based on its origin and the extent of human influence. Understanding these categories is crucial for analyzing landscapes and human-environment interactions.</p>
+                    <ul>
+                        <li><strong>Natural (Climatic Climax) Vegetation:</strong>
+                            <ul>
+                                <li>Refers to plant cover that has developed and spread through natural processes of seed dispersal, without significant interference or modification by human activities or other external influences.</li>
+                                <li>A key concept is <strong>climax vegetation</strong>: a stable state where vegetation is fully established in equilibrium with the prevailing physical environment (climate, relief, soils), without human disruption.</li>
+                                <li>Such a community is dominated by plant species most successful in competing for resources under existing physical conditions.</li>
+                                <li>Serves as a baseline or benchmark against which the impact of human activities on landscapes can be assessed.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Derived (Semi-Natural/Secondary) Vegetation:</strong>
+                            <ul>
+                                <li>Vegetation in a state of recovery from past human disturbances or with characteristics attributable to human influence, even if not directly planted.</li>
+                                <li>Examples: Secondary forests regenerating after clearing of original rainforests, savanna grasslands resulting from historical forest clearance (e.g., due to shifting cultivation).</li>
+                                <li>Widespread globally due to sustained human activities, representing an altered state from the original natural climax. Much of what was formerly considered natural vegetation is, in fact, semi-natural.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Cultivated Vegetation:</strong>
+                            <ul>
+                                <li>Includes all vegetation intentionally planted by humans.</li>
+                                <li>Examples: Managed forests (commercial tree plantations in Kenya highlands), agricultural crops (food/commercial), ornamental plants, hedges (euphorbia, cypress).</li>
+                                <li>Highlights direct human modification of the landscape for economic needs or aesthetic preferences, forming significant components of vegetation cover globally.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Global Trend:</strong></p>
+                    <ul>
+                        <li>Progressive reduction in natural (climatic climax) vegetation.</li>
+                        <li>Concurrent increase in derived and cultivated vegetation.</li>
+                        <li><strong>Primary drivers:</strong>
+                            <ul>
+                                <li>Escalating human population growth.</li>
+                                <li>Expansion of agricultural lands for food security.</li>
+                                <li>Spread of urbanization.</li>
+                            </ul>
+                        </li>
+                        <li>Demand for land for food, settlements, and resources leads to clearing/modification of natural vegetation, often resulting in derived/secondary types. This pattern is evident worldwide, including Kenya.</li>
+                    </ul>
+                    ${getDiagramPlaceholder('Comparison of Natural, Derived, and Cultivated Vegetation')}
+                `
+            },
+            // Section 2: Factors Influencing Vegetation
+            {
+                id: 'factors_influencing_vegetation_intro',
+                title: '2.0 Factors Influencing Vegetation',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 2: Factors Influencing the Distribution of Vegetation</h2>
+                    <p>The distribution of different vegetation types across the Earth's surface is not random; it is governed by a complex interplay of various environmental factors. These factors can be grouped into four main classes: physiographic (or geomorphic), climatic (or atmospheric), edaphic (or pedological), and biotic (including anthropogenic) factors. Understanding these factors is essential for comprehending the geographical patterns of vegetation and is a core component of the KCSE syllabus.</p>
+                `
+            },
+            {
+                id: 'physiographic_factors',
+                title: '2.1 Physiographic (Geomorphic) Factors',
+                htmlContent: `
+                    <h3>2.1 Physiographic (Geomorphic) Factors</h3>
+                    <p>Physiographic factors relate to the physical features of the land surface, including altitude, terrain, and aspect.</p>
+                    <ul>
+                        <li><strong>Altitude (Height above sea level):</strong>
+                            <ul>
+                                <li>Significantly influences vegetation, primarily through its effect on temperature (decreases with altitude - environmental lapse rate) and rainfall patterns.</li>
+                                <li>Creates distinct vegetation zones on mountains (e.g., coastal mangroves vs. highland bamboo forests).</li>
+                                <li>Key factor in vertical zonation of vegetation on high mountains.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Vertical Zonation of Vegetation on a Mountain')}
+                        </li>
+                        <li><strong>Terrain and Drainage:</strong>
+                            <ul>
+                                <li><strong>Terrain (Steepness/Ruggedness):</strong>
+                                    <ul>
+                                        <li>Gentle slopes: More conducive to stable vegetation, less prone to erosion, better water infiltration.</li>
+                                        <li>Steep/rugged slopes: Often thin soils, vulnerable to erosion, rapid drainage, hindering dense vegetation.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Drainage:</strong>
+                                    <ul>
+                                        <li>Flat, poorly drained/waterlogged lands: Support aquatic plants or vegetation adapted to saturated conditions (e.g., swamps).</li>
+                                        <li>Well-drained soils: Support a different array of plant species.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Aspect (Direction of Slope):</strong>
+                            <ul>
+                                <li>Refers to the direction a slope faces in relation to sun's rays and prevailing winds.</li>
+                                <li>Influences microclimate by affecting solar radiation received and wind exposure.</li>
+                                <li>Sun-facing (insolated) slopes: Warmer, drier, support different vegetation than shaded slopes (cooler, moister).</li>
+                                <li>Effect particularly pronounced in mid-latitude regions (e.g., Alpine deciduous vs. coniferous forests on different aspects).</li>
+                                <li>Crucial in creating microclimatic variations leading to diverse vegetation.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Influence of Aspect on Vegetation (Sun-facing vs. Shaded Slopes)')}
+                        </li>
+                    </ul>
+                    <p>These physiographic factors are often interlinked, creating a complex mosaic of ecological niches.</p>
+                `
+            },
+            {
+                id: 'climatic_factors',
+                title: '2.2 Climatic (Atmospheric) Factors',
+                htmlContent: `
+                    <h3>2.2 Climatic (Atmospheric) Factors</h3>
+                    <p>Climate is arguably the most significant determinant of broad-scale vegetation patterns. Key climatic elements include:</p>
+                    <ul>
+                        <li><strong>Sunlight:</strong>
+                            <ul>
+                                <li>Indispensable for photosynthesis (energy for plant growth).</li>
+                                <li>Variations in amount, quality (wavelengths), intensity, and duration affect growth.</li>
+                                <li>Plants primarily absorb blue-violet and red spectra.</li>
+                                <li><strong>Photoperiodism</strong> (plant response to day/night length) influences flowering, seed production, leaf fall, limiting latitudinal distribution of some species.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Temperature:</strong>
+                            <ul>
+                                <li>Governs physiological processes (germination, growth, photosynthesis, transpiration).</li>
+                                <li>Each species has an optimal temperature range.</li>
+                                <li>Tropical plants generally grow faster due to higher average temperatures.</li>
+                                <li>Colder climates support fewer species.</li>
+                                <li>Classifications based on temperature needs:
+                                    <ul>
+                                        <li><strong>Megatherms:</strong> Tropical/sub-tropical, need >$20^{\circ}C$ for at least 4 months.</li>
+                                        <li><strong>Mesotherms:</strong> Adapted to $10^{\circ}C - 20^{\circ}C$.</li>
+                                        <li><strong>Microtherms:</strong> Regions with 8-11 months <$10^{\circ}C$.</li>
+                                        <li><strong>Hekisotherms:</strong> Polar belts, all months <$10^{\circ}C$.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Precipitation (Rainfall):</strong>
+                            <ul>
+                                <li>Essential for germination, photosynthesis, growth, nutrient transport.</li>
+                                <li>Heavy, reliable rainfall supports luxuriant vegetation.</li>
+                                <li>Scarce, unreliable rainfall leads to poor, scanty cover.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Humidity:</strong>
+                            <ul>
+                                <li>Atmospheric water vapor content influences transpiration rates.</li>
+                                <li>Low humidity (especially with wind) increases transpiration, potentially stressing plants.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Wind:</strong>
+                            <ul>
+                                <li>Increases transpiration rates.</li>
+                                <li>Can cause physical damage (wind-shearing, retarded growth), limiting plant height in exposed areas.</li>
+                                <li>Aids in seed and pollen dispersal.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>While all environmental factors play a role, climatic factors (especially temperature and precipitation) are overarching determinants of global vegetation biomes, modified locally by physiographic factors.</p>
+                `
+            },
+            {
+                id: 'edaphic_factors',
+                title: '2.3 Edaphic (Pedological) Factors',
+                htmlContent: `
+                    <h3>2.3 Edaphic (Pedological) Factors</h3>
+                    <p>Edaphic factors are soil properties affecting plant growth. Soil anchors plants and provides water and mineral nutrients.</p>
+                    <ul>
+                        <li><strong>Soil Composition (Inorganic/Mineral Material and Organic Matter):</strong>
+                            <ul>
+                                <li>Soil fertility depends on inorganic nutrients (from weathered rock) and organic matter (humus from decomposition).</li>
+                                <li>Weathering and decomposition release nutrients in soluble forms for plant uptake.</li>
+                                <li>Nutrient deficiencies limit growth.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Texture:</strong>
+                            <ul>
+                                <li>Relative proportions of sand, silt, and clay.</li>
+                                <li>Influences root penetration, nutrient supply, water content, aeration, and temperature.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil pH (Acidity/Alkalinity):</strong>
+                            <ul>
+                                <li>Affects nutrient availability. Most minerals are available around pH 6.5.</li>
+                                <li>Extreme pH can make nutrients insoluble or inhibit absorption.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Water, Soil Air, and Soil Organisms:</strong>
+                            <ul>
+                                <li>Soil water is the medium for nutrient absorption.</li>
+                                <li>Soil air (in pore spaces) is crucial for root and organism respiration.</li>
+                                <li>Soil organisms (bacteria, fungi) decompose organic matter and cycle nutrients.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Soil acts as an intermediary, linking climate, parent rock, and vegetation. For instance, sandy soils (poor water retention, low nutrients) will support different vegetation than fertile loams in the same climatic zone.</p>
+                `
+            },
+            {
+                id: 'biotic_anthropogenic_factors',
+                title: '2.4 Biotic and Anthropogenic Factors',
+                htmlContent: `
+                    <h3>2.4 Biotic and Anthropogenic Factors</h3>
+                    <p>Biotic factors are influences from living organisms, including other plants, animals, and humans (anthropogenic factors).</p>
+                    <ul>
+                        <li><strong>Competition:</strong>
+                            <ul>
+                                <li>Plants compete for resources (space, light, water, nutrients).</li>
+                                <li>Competition is greatest among species with similar needs and determines co-existence in a habitat.</li>
+                                <li>Physical factors are permissive; competition is selective.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Influence of Animals:</strong>
+                            <ul>
+                                <li><strong>Beneficial:</strong> Seed dispersal (animals consuming fruits), pollination (especially by insects).</li>
+                                <li><strong>Antagonistic:</strong> Herbivory (animals feeding on plants).</li>
+                                <li>Plant types/numbers relate to animal types/numbers supported.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Impact of Human Activities (Anthropogenic Factors):</strong>
+                            <ul>
+                                <li>Humans are significant influencers; few areas have completely natural vegetation.</li>
+                                <li><strong>Human actions include:</strong>
+                                    <ul>
+                                        <li>Modification of physical environment (drainage, irrigation).</li>
+                                        <li>Creation of new habitats (quarrying, construction).</li>
+                                        <li>Alteration of soil/water resources (fertilizers, pollutants, water extraction).</li>
+                                        <li>Pollution (soil, air, water) making habitats unsuitable for some natives.</li>
+                                        <li>Introduction of alien/exotic species (e.g., water hyacinth, *Salvinia molesta*), which can become invasive.</li>
+                                        <li>Clearing and cultivation for agriculture, settlements, infrastructure, replacing natural communities.</li>
+                                        <li>Altering animal populations (domesticated grazers, reduction of predators) leading to overgrazing.</li>
+                                        <li>Use of Fire (accidental/deliberate) for clearing, pasture management, modifying vegetation cover.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Human activities increasingly override natural controls, leading to widespread replacement of natural vegetation with cultivated or derived communities, with significant implications for biodiversity and ecosystem services.</p>
+                    <h4>Table 1: Factors Influencing Vegetation Distribution</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Factor Category</th><th>Specific Factor</th><th>How it Influences Vegetation</th><th>Examples</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Physiographic</strong></td><td>Altitude</td><td>Affects temperature and rainfall; cooler temperatures at higher altitudes support different plant species.</td><td>Mangroves at sea level, bamboo in highlands.</td></tr>
+                            <tr><td> </td><td>Terrain (Steepness/Ruggedness)</td><td>Gentle slopes support stable vegetation; steep slopes prone to erosion, thin soils, rapid water runoff.</td><td>Lush vegetation on gentle slopes, sparse on steep, eroded hillsides.</td></tr>
+                            <tr><td> </td><td>Drainage</td><td>Well-drained soils support different plants than poorly drained/waterlogged soils.</td><td>Aquatic plants in swamps; diverse forests on well-drained soils.</td></tr>
+                            <tr><td> </td><td>Aspect</td><td>Direction of slope affects sunlight exposure and temperature; sun-facing slopes are warmer/drier.</td><td>Deciduous woods on south-facing vs. coniferous on north-facing slopes in Alps.</td></tr>
+                            <tr><td><strong>Climatic</strong></td><td>Sunlight (including Photoperiodism)</td><td>Essential for photosynthesis; duration of light affects flowering, leaf fall.</td><td>Tropical plants adapted to high intensity; temperate plants respond to changing day length for dormancy.</td></tr>
+                            <tr><td> </td><td>Temperature</td><td>Affects rates of plant processes (growth, photosynthesis); different species have different optimal ranges.</td><td>Megatherms in tropics (e.g., rainforest trees); Hekisotherms in polar regions (e.g., tundra plants).</td></tr>
+                            <tr><td> </td><td>Precipitation (Rainfall)</td><td>Essential for all plant life processes; amount and reliability determine vegetation luxuriance.</td><td>Rainforests in high rainfall areas; deserts in low rainfall areas.</td></tr>
+                            <tr><td> </td><td>Humidity</td><td>Affects transpiration rates.</td><td>High humidity reduces water loss; low humidity increases it.</td></tr>
+                            <tr><td> </td><td>Wind</td><td>Affects transpiration, can cause physical damage, aids in seed/pollen dispersal.</td><td>Stunted growth on windy coasts/mountains; pollination of grasses.</td></tr>
+                            <tr><td><strong>Edaphic (Soil)</strong></td><td>Soil Composition (Nutrients, Organic Matter)</td><td>Provides essential nutrients for growth; fertility depends on mineral and organic content.</td><td>Fertile volcanic soils support rich agriculture; nutrient-poor sandy soils support specialized heathland.</td></tr>
+                            <tr><td> </td><td>Soil Texture</td><td>Influences root penetration, water retention, aeration, nutrient supply.</td><td>Clay soils retain more water than sandy soils, affecting plant choice.</td></tr>
+                            <tr><td> </td><td>Soil pH</td><td>Affects nutrient availability.</td><td>Acid-loving plants (e.g., blueberries) vs. lime-tolerant plants; pH 6.5 often optimal.</td></tr>
+                            <tr><td><strong>Biotic/Anthropogenic</strong></td><td>Competition</td><td>Plants compete for light, water, nutrients, space.</td><td>Dominant species in a forest canopy shading out undergrowth.</td></tr>
+                            <tr><td> </td><td>Influence of Animals</td><td>Pollination, seed dispersal, grazing/browsing.</td><td>Bees pollinating flowers; birds dispersing seeds; cattle grazing grasslands.</td></tr>
+                            <tr><td> </td><td>Human Activities</td><td>Deforestation, agriculture, urbanization, pollution, introduction of species, fire.</td><td>Conversion of forest to farmland; spread of invasive species like water hyacinth; fire-maintained savannas.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 3: Major Vegetation Regions of Kenya
+            {
+                id: 'kenya_vegetation_intro',
+                title: '3.0 Major Vegetation Regions of Kenya',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 3: Major Vegetation Regions of Kenya</h2>
+                    <p>Kenya's diverse physical environment, characterized by significant variations in relief (especially altitude), rainfall, and soil types, has given rise to several distinct vegetation regions. It is important to note that, outside of a few protected areas, very little of the country's original natural vegetation cover remains intact. Much of what is observed today is secondary or derived vegetation, shaped by long periods of human activity. The KCSE syllabus requires an understanding of these regions.</p>
+                    ${getDiagramPlaceholder('Map of Kenya showing Major Vegetation Regions')}
+                `
+            },
+            {
+                id: 'kenya_forest_vegetation',
+                title: '3.1 Forest Vegetation',
+                htmlContent: `
+                    <h3>3.1 Forest Vegetation</h3>
+                    <p>In Kenya, forest vegetation comprises both evergreen and deciduous trees. Evergreen forests are typically found at higher altitudes (e.g., bamboo, olive, podo). Kenyan forests are subdivided based on location and characteristics:</p>
+                    <ul>
+                        <li><strong>Plateau and Lowland Forests:</strong>
+                            <ul>
+                                <li>Found in parts of the Lake Victoria region and along the coast (e.g., River Sabaki, Arabuko Sokoke forest).</li>
+                                <li><strong>Mangrove Forests:</strong> Specialized lowland forests along the coast in tidal areas, adapted to saline/waterlogged conditions (e.g., *Rhizophora mucronata* - Red Mangrove).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mountain or Closed Forests:</strong>
+                            <ul>
+                                <li>Found on mountains/highlands above 1,800m (e.g., podo, cedar, camphor).</li>
+                                <li>Vital water catchments.</li>
+                                <li>Around 3,000m, these often give way to dense <strong>Bamboo</strong> thickets, then heath/moorland.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Forests classified by growth habit:</p>
+                    <ul>
+                        <li><strong>Closed Forests:</strong> Dense, continuous canopy (e.g., Kakamega Forest, Aberdare forests).</li>
+                        <li><strong>Woodland:</strong> More open canopy, trees spaced further apart (e.g., Nyika woodland).</li>
+                        <li><strong>Bamboo Forests:</strong> Dominated by bamboo (e.g., Mt. Kenya, Aberdares).</li>
+                    </ul>
+                    <p>The observation that "very little of the origins natural vegetation cover of Kenya still remains" highlights a critical conservation challenge due to human pressures (agriculture, logging, charcoal). Remaining natural forests are invaluable biodiversity hotspots and water catchments, underscoring the importance of protected areas and sustainable management.</p>
+                `
+            },
+            {
+                id: 'kenya_savanna_vegetation',
+                title: '3.2 Savanna Vegetation',
+                htmlContent: `
+                    <h3>3.2 Savanna Vegetation</h3>
+                    <p>Savanna describes open grasslands interspersed with scattered woodlands or bushes. It occupies extensive areas of Kenya (Lake Victoria region, S & E of Mt. Kenya, parts of coast, S. Kenya).</p>
+                    <p>Two main sub-types:</p>
+                    <ul>
+                        <li><strong>Savanna Woodland:</strong>
+                            <ul>
+                                <li>More continuous tree cover with spreading canopies (though more open than forest).</li>
+                                <li>Common trees: thorny/drought-resistant acacia, baobab (Nyika region).</li>
+                                <li>Economically important: shea butter nut, silk cotton tree, borassus palm, locust bean tree.</li>
+                                <li>Acacia trees often umbrella-shaped, thorny, small leaves.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Savanna Grassland (Scattered Tree Grassland):</strong>
+                            <ul>
+                                <li>More open, fewer scattered trees. Dominant: grass.</li>
+                                <li>Common species: tall elephant grass (*Hyparrhenia*), *Cymbopogon afronardus*.</li>
+                                <li>Highland savanna (around Mt. Kenya): Kikuyu grass.</li>
+                                <li>Parklands (Maasai Mara, Amboseli): Red Oat Grass (*Themeda triandra*).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>While seasonal rainfall is the primary climatic determinant, fire (often human-influenced for clearing/pasture) plays a crucial role in maintaining the open, grassy nature of savannas by suppressing fire-sensitive tree seedlings and favoring fire-adapted grasses and trees (e.g., some acacias).</p>
+                    ${getDiagramPlaceholder('Typical Savanna Woodland and Savanna Grassland Scenery')}
+                `
+            },
+            {
+                id: 'kenya_arid_semi_arid_vegetation',
+                title: '3.3 Arid and Semi-Arid Vegetation',
+                htmlContent: `
+                    <h3>3.3 Arid and Semi-Arid Vegetation</h3>
+                    <p>A vast portion of Kenya consists of plains with very little rainfall (<625mm annually) and high temperatures, supporting arid/semi-arid vegetation adapted to these conditions.</p>
+                    <p>Two broad types:</p>
+                    <ul>
+                        <li><strong>Bushland and Thicket:</strong>
+                            <ul>
+                                <li>Dominant in areas with ~375-625mm rainfall annually.</li>
+                                <li>Consists of bushy, thorny, often tall acacia trees, separated by thorny shrubs.</li>
+                                <li>Continuous grass cover is unusual.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Semi-Desert and Desert Scrub Vegetation:</strong>
+                            <ul>
+                                <li>Areas with <375mm rainfall annually.</li>
+                                <li>Vegetation is sparse, short/stunted. Scrub/bush more common, separated by bare ground.</li>
+                                <li>Grass rare, except in depressions with higher water table.</li>
+                                <li>Drier northern/north-eastern Kenya: hard, short grasses, spiny shrubs, cactus, short thorny trees.</li>
+                                <li>Drought-resistant plants (baobab, euphorbia, commiphora, various acacias) are characteristic, adapted to poor soil, wind, aridity, high evapotranspiration (e.g., Makueni District).</li>
+                                <li>Unusually wet seasons can bring rich growth of quick-growing annual grasses.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Vegetation of Arid and Semi-Arid Lands (ASALs) shows resilience (deep roots, succulent stems/leaves, small/waxy leaves, short life cycles). However, these ecosystems are fragile. Low, erratic rainfall means slow recovery. Human pressures (overgrazing, fuelwood cutting, inappropriate cultivation) can easily disrupt the balance, leading to land degradation and desertification.</p>
+                `
+            },
+            {
+                id: 'kenya_heath_moorland_vegetation',
+                title: '3.4 Heath and Moorland Vegetation',
+                htmlContent: `
+                    <h3>3.4 Heath and Moorland Vegetation</h3>
+                    <p>Specialized vegetation on highest Kenyan mountains, typically >3,500m altitude. Characterized by Afro-alpine plants adapted to extreme cold, strong winds, intense solar radiation.</p>
+                    <ul>
+                        <li><strong>Heath Vegetation:</strong>
+                            <ul>
+                                <li>Scrubby type.</li>
+                                <li>Low-growing evergreen shrubs, often small, leathery leaves, characteristic small, bell-shaped pink/purple flowers.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Moorland:</strong>
+                            <ul>
+                                <li>More extensive land with heath, coarse grasses, mosses, often boggy patches.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Predominantly on upper slopes of Mt. Kenya and Aberdare Ranges. Supports unique flora (giant rosette plants like *Senecio* (groundsel), *Lobelia*).</p>
+                    <p>The altitudinal zonation on Kenyan mountains (forest -> bamboo -> heath/moorland) mirrors global latitudinal vegetation changes (equator to poles), demonstrating temperature gradients as a primary control on major vegetation patterns.</p>
+                    ${getDiagramPlaceholder('Altitudinal Zonation on a High Kenyan Mountain')}
+                    <h4>Table 2: Major Vegetation Regions of Kenya</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Vegetation Region</th><th>Climatic Conditions</th><th>Key Characteristics (Dominant Plant Forms, Density, Height)</th><th>Example Species</th><th>Major Locations in Kenya</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Forest Vegetation</strong></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>Plateau & Lowland Forests</td><td>Variable; coastal areas often warm & humid</td><td>Evergreen/deciduous trees; Mangroves in tidal, saline areas.</td><td>*Rhizophora mucronata* (Red Mangrove), various coastal forest species.</td><td>Lake Victoria region, Coast (Arabuko Sokoke, River Sabaki), coastal tidal zones.</td></tr>
+                            <tr><td>Mountain (Closed) Forests</td><td>Cool, moist highlands (>1800m)</td><td>Dense canopy, evergreen trees (podo, cedar, camphor), bamboo zone (around 3000m).</td><td>*Podocarpus spp.*, *Juniperus procera* (Cedar), *Ocotea usambarensis* (Camphor), *Arundinaria alpina* (Bamboo)</td><td>Mt. Kenya, Aberdares, Mau Forest, Cherangani Hills, Mt. Elgon.</td></tr>
+                            <tr><td><strong>Savanna Vegetation</strong></td><td>Seasonal rainfall, distinct wet and dry seasons</td><td>Open grasslands with scattered trees/bushes.</td><td></td><td>Large areas of Kenya: Lake Victoria basin, S & E of Mt. Kenya, parts of coastal region, S. Kenya.</td></tr>
+                            <tr><td>Savanna Woodland</td><td>Moderate seasonal rainfall</td><td>More continuous tree cover, spreading canopies.</td><td>*Acacia spp.* (various), *Adansonia digitata* (Baobab), Shea butter nut, Silk cotton tree.</td><td>Nyika region, parts of Rift Valley, areas bordering forests.</td></tr>
+                            <tr><td>Savanna Grassland</td><td>Lower seasonal rainfall than woodland</td><td>Open grassland, fewer scattered trees.</td><td>*Hyparrhenia spp.* (Elephant grass), *Cymbopogon afronardus*, *Themeda triandra* (Red Oat Grass), Kikuyu grass.</td><td>Maasai Mara, Amboseli, Laikipia plains, parts of Lake Victoria basin.</td></tr>
+                            <tr><td><strong>Arid & Semi-Arid Veg.</strong></td><td>Low rainfall (<625mm annually), high temperatures</td><td>Sparse, drought-resistant vegetation.</td><td></td><td>Northern Kenya, North-Eastern Kenya, parts of Eastern and Southern Kenya.</td></tr>
+                            <tr><td>Bushland & Thicket</td><td>375-625mm rainfall</td><td>Bushy, thorny trees (often tall acacia) and shrubs; grass unusual.</td><td>*Acacia spp.*, *Commiphora spp.*, various thorny shrubs.</td><td>Drier parts of Eastern Province, parts of Rift Valley.</td></tr>
+                            <tr><td>Semi-Desert & Desert Scrub</td><td><375mm rainfall</td><td>Short, stunted scrub and bush, bare ground common; grass rare except in depressions.</td><td>Dwarf *Acacia spp.*, *Euphorbia spp.*, *Sansevieria spp.*, hardy short grasses, cactus.</td><td>Turkana, Marsabit, Wajir, Mandera, parts of Isiolo.</td></tr>
+                            <tr><td><strong>Heath & Moorland Veg.</strong></td><td>High altitude (>3500m), cold, windy, intense radiation</td><td>Afro-alpine plants, low-growing evergreen shrubs, coarse grasses, mosses.</td><td>*Senecio spp.* (Giant Groundsel), *Lobelia spp.*, *Erica spp.* (Heather), various tussock grasses.</td><td>Upper slopes of Mt. Kenya, Aberdare Ranges, Mt. Elgon.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 4: Major Vegetation Regions of the World
+            {
+                id: 'world_vegetation_intro',
+                title: '4.0 Major Vegetation Regions of the World',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 4: Major Vegetation Regions of the World</h2>
+                    <p>The Earth's vegetation is diverse, forming broad regional patterns (biomes) primarily determined by climate, but also influenced by soils, relief, and human activities. This section explores these major regions as per the KCSE syllabus.</p>
+                    ${getDiagramPlaceholder('World Map showing Major Vegetation Biomes')}
+                `
+            },
+            {
+                id: 'world_forests',
+                title: '4.1 Forests',
+                htmlContent: `
+                    <h3>4.1 Forests</h3>
+                    <p>Forests are characterized by a predominance of trees and a closed or nearly closed canopy.</p>
+                    <ul>
+                        <li><strong>Equatorial (Tropical) Rainforests:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> ~4-5° N/S of equator (Amazon, Congo Basin, SE Asia).</li>
+                                <li><strong>Climate:</strong> Consistently hot ($24-27^{\circ}C$) and wet (>1500mm rain).</li>
+                                <li><strong>Key Characteristics:</strong>
+                                    <ul>
+                                        <li>Extremely rich growth.</li>
+                                        <li>3 distinct canopy layers: Emergent (~40m), Main (~30m), Lower (5-15m).</li>
+                                        <li>Dense shade at ground level.</li>
+                                        <li>Trees: Tall, smooth-barked, buttress roots.</li>
+                                        <li>Lianas (vines) and epiphytes (orchids, mosses) common.</li>
+                                        <li>Saprophytes present (nutrient decomposition).</li>
+                                        <li>Leaves: Broad, often with drip-tips.</li>
+                                        <li>Biodiversity: Exceptionally high (up to 1500 species/km²), trees not in pure stands.</li>
+                                        <li>Ground cover: Sparse due to shade, except in gaps.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Timber Species:</strong> Mahogany, ebony, iroko, teak. Kenyan remnants: camphor, mvule, Elgon teak.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Structure of an Equatorial Rainforest (Canopy Layers)')}
+                        </li>
+                        <li><strong>Tropical Monsoon Forests:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Regions with monsoonal climate (10° N/S to Tropics - India, SE Asia, E. Africa coasts).</li>
+                                <li><strong>Climate:</strong> Distinct wet/dry seasons.</li>
+                                <li><strong>Key Characteristics:</strong>
+                                    <ul>
+                                        <li>Many trees deciduous (shed leaves in dry season).</li>
+                                        <li>Less dense than rainforests.</li>
+                                        <li>Trees grow rapidly in wet season (up to 30m), canopy not continuous.</li>
+                                        <li>Species overlap with equatorial (camphor, ebony), but often areas with dominant species (teak in Burma, Sal in India, eucalyptus in Queensland).</li>
+                                        <li>Bamboo common.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Temperate Deciduous Forests (Summer Greens):</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Mid-latitudes N. Hemisphere (E. North America, W/Central Europe, E. Asia).</li>
+                                <li><strong>Climate:</strong> Four distinct seasons (warm, moist summers; cool/cold winters).</li>
+                                <li><strong>Key Characteristics:</strong>
+                                    <ul>
+                                        <li>Dominant trees broad-leaved, deciduous (shed leaves in autumn, dormant in winter).</li>
+                                        <li>Tall trees, continuous summer canopy, understory of shrubs/small trees.</li>
+                                        <li>Often grow in species stands.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Timber:</strong> Commercially valuable hardwoods (oak, birch, ash, maple, beech).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Coniferous Forests (Boreal Forests or Taiga):</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Vast belts in high-latitude continents (Canada, Alaska, Scandinavia, Siberia), 45-75°N. Less extensive in S. Hemisphere.</li>
+                                <li><strong>Climate:</strong> Long, very cold winters; short, cool summers.</li>
+                                <li><strong>Key Characteristics:</strong>
+                                    <ul>
+                                        <li>Trees typically evergreen (except larch).</li>
+                                        <li>Conical/spire-shaped (shed snow).</li>
+                                        <li>Needle-like/scale-like leaves (reduce transpiration, frost protection).</li>
+                                        <li>Thick bark.</li>
+                                        <li>Low species diversity, often dominated by one/few conifer species.</li>
+                                        <li>Forest floor: mosses, lichens, sparse undergrowth (acidic soils, low light).</li>
+                                        <li>Slow growth rate.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Species:</strong> Spruce, fir, pine, larch.</li>
+                            </ul>
+                            ${getDiagramPlaceholder('Typical Coniferous Forest (Taiga) Landscape')}
+                        </li>
+                        <li><strong>Mixed Forests:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Transitional zones where coniferous merge with temperate deciduous forests (parts of Canada, Russia, Europe, E. Asia, N. America).</li>
+                                <li><strong>Key Characteristics:</strong>
+                                    <ul>
+                                        <li>Combination of coniferous and deciduous species, often in mosaics.</li>
+                                        <li>Mediterranean type: maquis/macchia (partly coniferous/broad-leaved evergreen shrubs).</li>
+                                        <li>Important ecotones, often higher biodiversity.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Species:</strong> Birch, aspen, spruce, oak, pine, fir, beech, maple, cedar.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_grasslands',
+                title: '4.2 Grasslands',
+                htmlContent: `
+                    <h3>4.2 Grasslands</h3>
+                    <p>Ecosystems dominated by grasses and other herbaceous plants, with few or scattered trees.</p>
+                    <ul>
+                        <li><strong>Tropical Savanna:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Tropical continental areas (~10° N/S to Tropics).</li>
+                                <li><strong>Climate:</strong> Mixture of trees/grasses, density varies with rainfall. Prolonged seasonal drought (4-7 months), annual rainfall <800mm. Annual grass fires common.</li>
+                                <li><strong>Sub-types (decreasing rainfall):</strong>
+                                    <ul>
+                                        <li><strong>Tall Grass and Woodlands (e.g., 'miombo woodland'):</strong> Widely spaced trees (<20m, flat-topped), undergrowth of tall grasses/shrubs. Trees: *Combretum*. Grasses: Elephant Grass (*Hyparrhenia*), *Cymbopogon afronardus*.</li>
+                                        <li><strong>Parklands:</strong> Grass dominated, fewer isolated trees (treeless except along rivers). Red Oat Grass (*Themeda triandra*) in Kenyan parklands (Maasai Mara). Short acacias dominant.</li>
+                                        <li><strong>Thornbush and Scrub:</strong> Drier, rainshadow areas (<650mm rain, unreliable). Typical of Kenya's Nyika plateau. Dry desert scrub, stunted trees, drought-resistant plants (baobab, euphorbia, commiphora, acacia).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Temperate Grasslands (Mid-latitude Grasslands):</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Extensive natural grasslands. Regional names: Prairies (N. America), Steppes (Eurasia), Pampas (Argentina), Veld (S. Africa), Downs (Australia/NZ).</li>
+                                <li><strong>Characteristics:</strong>
+                                    <ul>
+                                        <li><strong>Prairies:</strong> Historically tall grasses (1-1.2m). True prairie (Big Blue stem), mixed prairie (shorter grasses like buffalo grass), Palouse prairies (bunch grasses).</li>
+                                        <li><strong>Steppes:</strong> Sod-forming/tussocky grasses (>1m high). Dwarf, turf-forming grasses in drier areas.</li>
+                                        <li><strong>Pampas:</strong> Feather grass, melic. Moist pampas: bunch grasses. Drier areas: xerophytic shrubs.</li>
+                                        <li><strong>Veld:</strong> Extensive grass, little tree/shrub. True grassveld: Red Oat Grass. Often degraded by fires (wire grass dominant). Taller *Andropogon* grasses in wetter areas.</li>
+                                        <li><strong>Downs:</strong> Australian tree savanna: tall grasses, isolated trees (grasses often not very nourishing). NZ Canterbury plains: tussock grasslands (now largely cultivated).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Arid Grasslands:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Limited to sandy areas, saltpans, limestone areas in mid-latitudes (low rainfall, hard crust formation - Caliche/tosca).</li>
+                                <li><strong>Characteristics:</strong> Herbaceous dwarf shrubs (ling), bog moss. Calcareous heath: wild olive, broom. Mediterranean maquis/chaparral (shrubs, leathery leaves) also fit this dry-adapted category.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Montane Grasslands:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Mountainous regions globally (Sri Lanka - Patana, E. Africa, Europe). Irregular grass patches.</li>
+                                <li><strong>Characteristics:</strong> Higher latitudes: above tree line, short vegetative period. European Alps: rich pastures (transhumance). E. African mountains: slopes up to 3,000m, thick tufts, before bamboo/forest zones.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_desert_vegetation',
+                title: '4.3 Desert Vegetation',
+                htmlContent: `
+                    <h3>4.3 Desert Vegetation</h3>
+                    <p>Adapted to extreme aridity.</p>
+                    <ul>
+                        <li><strong>Hot Desert Vegetation:</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Major tropical deserts (Sahara, Namib, Kalahari; Arabian, Thar; Atacama; Arizona).</li>
+                                <li><strong>Characteristics:</strong>
+                                    <ul>
+                                        <li>Sparse cover (short bushes to bare sand).</li>
+                                        <li>Xerophytic plants (drought-tolerant).</li>
+                                        <li>Deciduous bushes/shrubs (acacia).</li>
+                                        <li>Halophytes (salt-tolerant) in saline areas.</li>
+                                        <li>Adaptations: sunken stomata, small/spiny leaves, deep roots, succulence, rapid life cycles.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Cold Desert Vegetation (Arctic Tundra):</strong>
+                            <ul>
+                                <li><strong>Location:</strong> Polar regions (Arctic, Antarctic) and very high mountains. Aridity due to frozen water. Extensive in N. Hemisphere (Eurasia, N. America, 66.5-90°N - Arctic Tundra). S. Hemisphere: Antarctica, sub-Antarctic tundra (~70°S).</li>
+                                <li><strong>Characteristics:</strong> Low-growing: mosses, lichens, dwarf shrubs, sedges, grasses. Very short growing season.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                `
+            },
+            {
+                id: 'world_alpine_montane_vegetation',
+                title: '4.4 Alpine or Montane Vegetation',
+                htmlContent: `
+                    <h3>4.4 Alpine or Montane Vegetation</h3>
+                    <p>High mountains, varies with altitude, soil, aspect, shelter. Distinct zonation:</p>
+                    <ul>
+                        <li><strong>Altitudinal Zones:</strong>
+                            <ul>
+                                <li>Below snow line: alpine tundra.</li>
+                                <li>Below that: sub-alpine (ericaceous/flower belt) -> montane forests -> grasslands/semi-desert scrubs at base (depending on regional climate).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Snowline Variation:</strong> Higher in tropics, lower in temperate lands. E.g., E. Africa/Mexico alpine tundra ~4,500m; W. Himalayas ~3,600m; Swiss Alps ~2,100m; Alaska ~1,200m.</li>
+                        <li><strong>Characteristics:</strong>
+                            <ul>
+                                <li>Alpine tundra similar to Arctic.</li>
+                                <li>Leeward sides poorer vegetation (rain shadow).</li>
+                                <li>Tropical/mid-latitude alpine: high light, daytime warming -> luxuriant forms (tree heathers).</li>
+                            </ul>
+                        </li>
+                        <li><strong>East African Mountain Belts:</strong> Wide range of world vegetation types due to altitude. Three main belts:
+                            <ul>
+                                <li><strong>Uppermost Alpine Belt (Tundra counterpart, 3,000-4,200m):</strong> Heath/moorland. Short alpine grass (*Alchemilla*), giant *Senecio* (groundsels), *Lobelia*.</li>
+                                <li><strong>Sub-alpine Ericaceous Belt (Flower belt):</strong> Heathers (*Erica*), flowering plants, tussock grasses. Dense tree heather (up to 10m) on wetter mountains (Mt. Kenya, Aberdares, Ruwenzoris).</li>
+                                <li><strong>Forest Belt:</strong> Mountain bamboo belt (~3,000m on wetter mountains), mixes with other forest trees dominant at lower elevations. Higher montane forests: rainforest varieties (pencil cedar, dry cedar). Leeward lower slopes: savanna grades to semi-desert scrubs (e.g., Maasai steppe on Kilimanjaro slopes).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Plants in harsh, distinct regions (Arctic tundra, tropical alpine zones) often show convergent evolution: low-growing forms, hairy leaves, rapid flowering/seed production.</p>
+                    <h4>Table 3: Major Vegetation Regions of the World</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Vegetation Region</th><th>Climatic Zone / Conditions</th><th>Key Plant Types & Adaptations</th><th>Example Species</th><th>Major World Locations</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Forests</strong></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>Equatorial Rainforest</td><td>Hot, very wet (high rainfall, evenly distributed)</td><td>Tall, evergreen broadleaf trees; distinct canopy layers; buttress roots; lianas, epiphytes (orchids, ferns); high biodiversity. Drip-tip leaves.</td><td>Mahogany, ebony, teak, rubber, cacao, strangler figs, orchids.</td><td>Amazon Basin, Congo Basin, SE Asia (Indonesia, Malaysia).</td></tr>
+                            <tr><td>Tropical Monsoon Forest</td><td>Hot, seasonal rainfall (wet/dry monsoons)</td><td>Mainly deciduous broadleaf trees (shed leaves in dry season); less dense than rainforest; fast-growing trees.</td><td>Teak, sal, bamboo, sandalwood, eucalyptus (in some regions).</td><td>India, Bangladesh, Burma, Vietnam, N. Australia, E. Africa coasts.</td></tr>
+                            <tr><td>Temperate Deciduous Forest</td><td>Moderate rainfall, distinct warm summers & cool/cold winters</td><td>Broadleaf deciduous trees (shed leaves in autumn); layered structure with understory.</td><td>Oak, maple, beech, birch, hickory, ash, sycamore.</td><td>E. North America, W. Europe, E. Asia (China, Japan).</td></tr>
+                            <tr><td>Coniferous Forest (Taiga)</td><td>Cold, long winters; short, cool summers; moderate precipitation</td><td>Mainly evergreen coniferous trees; needle-like or scale-like leaves; conical shape. Thick bark, slow growth.</td><td>Pine, spruce, fir, larch, cedar.</td><td>N. North America (Canada, Alaska), N. Eurasia (Scandinavia, Siberia).</td></tr>
+                            <tr><td>Mixed Forest</td><td>Transitional between coniferous and deciduous zones</td><td>Mix of coniferous and deciduous trees.</td><td>Pine, oak, birch, maple, fir, spruce.</td><td>E. North America, Europe, E. Asia.</td></tr>
+                            <tr><td><strong>Grasslands</strong></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>Tropical Savanna</td><td>Hot, seasonal rainfall (distinct wet & dry seasons); fires common</td><td>Grasses with scattered trees/shrubs; trees often drought/fire resistant.</td><td>Acacia, baobab; Elephant grass, Red Oat grass.</td><td>Africa, S. America, Australia, India.</td></tr>
+                            <tr><td>Temperate Grassland</td><td>Semi-arid, continental climate (hot summers, cold winters)</td><td>Grasses (tall or short depending on rainfall); few trees.</td><td>Big Bluestem, buffalo grass (Prairies); Feather grass (Steppes); Red Oat grass (Veld).</td><td>Prairies (N. America), Steppes (Eurasia), Pampas (S. America), Veld (S. Africa), Downs (Australia).</td></tr>
+                            <tr><td>Arid Grassland</td><td>Low rainfall, often with saline/calcareous soils</td><td>Drought-tolerant grasses, dwarf shrubs, halophytes.</td><td>Heath, bog moss, wild olive, broom, maquis shrubs.</td><td>Mid-latitude sandy areas, saltpans, limestone areas.</td></tr>
+                            <tr><td>Montane Grassland</td><td>High altitude, cooler temperatures</td><td>Tufts of grass, often above tree line.</td><td>Various alpine grasses, sedges.</td><td>Mountain slopes worldwide (e.g., E. African mountains, European Alps, Sri Lankan Patanas).</td></tr>
+                            <tr><td><strong>Desert Vegetation</strong></td><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>Hot Desert</td><td>Very low rainfall, high temperatures, high evaporation</td><td>Xerophytic plants: succulents, thorny bushes, ephemeral annuals. Adaptations: water storage, deep roots, small/no leaves.</td><td>Cactus, acacia, creosote bush, date palm (oases), halophytes.</td><td>Sahara, Arabian, Kalahari, Atacama, Australian deserts.</td></tr>
+                            <tr><td>Cold Desert (Tundra)</td><td>Very cold, low precipitation (often as snow), permafrost</td><td>Low-growing: mosses, lichens, dwarf shrubs, sedges, grasses. Short growing season.</td><td>Arctic moss, lichens, dwarf willow, sedges.</td><td>High latitudes (Arctic, Antarctic fringes), high mountain tops.</td></tr>
+                            <tr><td><strong>Alpine/Montane Veg.</strong></td><td>Varies with altitude: decreasing temp., increasing exposure</td><td>Zonation: Forest -> Bamboo -> Heath/Moorland -> Alpine Tundra. Specialized high-altitude plants.</td><td>Giant Senecio, Lobelia, tree heather, Alchemilla, alpine grasses.</td><td>High mountains worldwide (e.g., Himalayas, Andes, Alps, E. African mountains).</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 5: Significance of Vegetation
+            {
+                id: 'significance_vegetation_intro',
+                title: '5.0 Significance of Vegetation',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 5: Significance of Vegetation</h2>
+                    <p>Vegetation plays a multifaceted and critical role in maintaining ecological balance and supporting human societies. Its significance is categorized into ecological and economic aspects, crucial for understanding human-environment interactions as per the KCSE syllabus.</p>
+                `
+            },
+            {
+                id: 'ecological_significance',
+                title: '5.1 Ecological Significance',
+                htmlContent: `
+                    <h3>5.1 Ecological Significance</h3>
+                    <ul>
+                        <li><strong>Climate Regulation:</strong>
+                            <ul>
+                                <li>Influences local/regional climates.</li>
+                                <li>Transpiration adds humidity, affecting rainfall.</li>
+                                <li>Canopy provides shade (cooler microclimates) and acts as windbreak.</li>
+                                <li>Large forests trap rain-bearing clouds.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Soil Conservation:</strong>
+                            <ul>
+                                <li>Paramount for soil health.</li>
+                                <li>Canopy reduces rain impact.</li>
+                                <li>Roots bind soil, reducing erosion.</li>
+                                <li>Slows runoff, prevents siltation, aids flood control.</li>
+                                <li>Decomposition adds humus (improves soil structure, fertility, water retention).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Biodiversity and Habitat:</strong> Provides essential habitats for diverse wild animals, plants, fungi, microorganisms, supporting ecosystem resilience.</li>
+                        <li><strong>Water Catchment Protection:</strong> Upland vegetation protects catchments, enhances water infiltration, replenishes groundwater, regulates streamflow, maintains water quality.</li>
+                        <li><strong>Air Purification:</strong> Photosynthesis absorbs CO2 (greenhouse gas) and releases O2, purifying air, mitigating climate change.</li>
+                        <li><strong>Nutrient Cycling:</strong> Key in cycling essential nutrients (carbon, nitrogen, phosphorus) within ecosystems.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'economic_significance',
+                title: '5.2 Economic Significance',
+                htmlContent: `
+                    <h3>5.2 Economic Significance</h3>
+                    <p>Vegetation provides direct and indirect economic benefits:</p>
+                    <ul>
+                        <li><strong>Source of Food:</strong>
+                            <ul>
+                                <li>Direct consumption (fruits, nuts, vegetables, tubers).</li>
+                                <li>Fodder/pasture for livestock (meat, milk).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Building and Construction Materials:</strong> Timber for construction, furniture. Bamboo, thatch for traditional building.</li>
+                        <li><strong>Fuel:</strong> Wood (biomass) for cooking/heating, especially in developing countries.</li>
+                        <li><strong>Industrial Raw Materials:</strong> Pulp (paper), rubber latex, gums, resins, waxes, cork, tannins, fibres (cotton, jute, sisal).</li>
+                        <li><strong>Medicinal Value:</strong> Many plants for traditional/modern medicine (e.g., Cinchona for quinine).</li>
+                        <li><strong>Aesthetic and Recreational Value:</strong> Natural landscapes, forests, parks support tourism, recreation, spiritual renewal.</li>
+                        <li><strong>Employment:</strong> Industries (forestry, agriculture, tourism, non-timber forest products) provide jobs.</li>
+                        <li><strong>Pumice (Domestic Use):</strong> Mentioned as a scrubbing stone (though pumice is volcanic rock, its association here might be specific local context).</li>
+                    </ul>
+                    <p>The economic importance often leads to exploitation. Sustainable management is crucial to balance economic needs with ecological integrity, ensuring resources for future generations.</p>
+                    <h4>Table 4: Significance of Vegetation</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Type of Significance</th><th>Specific Benefit</th><th>Detailed Explanation/Examples</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Ecological</strong></td><td>Climate Regulation</td><td>Influences local/regional temperature, humidity, wind patterns; contributes to rainfall formation through transpiration and cloud trapping.</td></tr>
+                            <tr><td> </td><td>Soil Conservation</td><td>Reduces soil erosion by intercepting rain, binding soil, reducing runoff; adds humus, improving soil structure and water retention.</td></tr>
+                            <tr><td> </td><td>Biodiversity and Habitat</td><td>Provides food and shelter for a wide variety of animals and other organisms, supporting complex ecosystems.</td></tr>
+                            <tr><td> </td><td>Water Catchment Protection</td><td>Enhances water infiltration, regulates streamflow, maintains water quality, ensuring sustained freshwater supply.</td></tr>
+                            <tr><td> </td><td>Air Purification</td><td>Absorbs atmospheric CO2 and releases O2 through photosynthesis, improving air quality.</td></tr>
+                            <tr><td> </td><td>Nutrient Cycling</td><td>Plays a key role in the movement and transformation of essential nutrients within ecosystems.</td></tr>
+                            <tr><td><strong>Economic</strong></td><td>Source of Food</td><td>Provides fruits, nuts, vegetables, tubers for humans; fodder and pasture for livestock.</td></tr>
+                            <tr><td> </td><td>Building and Construction Materials</td><td>Timber for housing, furniture; bamboo, thatch for traditional construction.</td></tr>
+                            <tr><td> </td><td>Fuel</td><td>Wood fuel (biomass) for cooking and heating, especially in rural communities.</td></tr>
+                            <tr><td> </td><td>Industrial Raw Materials</td><td>Pulp for paper, latex for rubber, resins, gums, waxes, cork, tannins, fibres for textiles.</td></tr>
+                            <tr><td> </td><td>Medicinal Value</td><td>Source of traditional medicines and compounds for modern pharmaceuticals (e.g., quinine from Cinchona).</td></tr>
+                            <tr><td> </td><td>Aesthetic and Recreational Value</td><td>Natural beauty of forests, parks, gardens supports tourism and recreation, enhancing human well-being.</td></tr>
+                            <tr><td> </td><td>Employment</td><td>Supports jobs in forestry, agriculture, tourism, and related industries.</td></tr>
+                        </tbody>
+                    </table>
+                `
+            },
+            // Section 6: Fieldwork on Vegetation
+            {
+                id: 'fieldwork_vegetation_intro',
+                title: '6.0 Fieldwork on Vegetation',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 6: Fieldwork on Vegetation (as per KCSE Syllabus)</h2>
+                    <p>Fieldwork is integral to geographical study, providing practical experience. The KCSE syllabus emphasizes fieldwork for vegetation studies, focusing on identifying vegetation types and explaining their local uses.</p>
+                `
+            },
+            {
+                id: 'fieldwork_objectives',
+                title: '6.1 Objectives of Vegetation Fieldwork',
+                htmlContent: `
+                    <h3>6.1 Objectives of Vegetation Fieldwork</h3>
+                    <p>Primary objectives include:</p>
+                    <ul>
+                        <li>Identify and classify different vegetation types (forest, woodland, grassland, scrub) in the local study area.</li>
+                        <li>Observe, describe, record characteristics of dominant plant species (height, density, leaf type, structure).</li>
+                        <li>Investigate and explain various uses of identified vegetation by the local community.</li>
+                        <li>Analyze relationships between vegetation types and local environmental factors (climate, soil, relief, human activities).</li>
+                        <li>Develop geographical skills (observation, data collection, recording, analysis, interpretation).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'fieldwork_preparation',
+                title: '6.2 Preparing for Vegetation Fieldwork',
+                htmlContent: `
+                    <h3>6.2 Preparing for Vegetation Fieldwork</h3>
+                    <p>Thorough preparation is crucial:</p>
+                    <ul>
+                        <li><strong>Pre-visit (Reconnaissance):</strong> Familiarize with area, assess suitability, identify hazards, seek permissions, plan logistics.</li>
+                        <li><strong>Defining Objectives and Scope:</strong> Outline specific learning objectives and scope to ensure focus.</li>
+                        <li><strong>Gathering Necessary Equipment:</strong> Notebooks, pens, cameras, plant ID guides, sample bags, plant press (if permitted), measuring tapes, quadrats, compasses, GPS.</li>
+                        <li><strong>Formulating Hypotheses or Research Questions:</strong> Develop testable statements or questions to guide investigation (e.g., "Vegetation on south-facing slope differs from north-facing due to aspect").</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'fieldwork_activities',
+                title: '6.3 Activities During Vegetation Fieldwork',
+                htmlContent: `
+                    <h3>6.3 Activities During Vegetation Fieldwork</h3>
+                    <p>Engage in various data gathering activities:</p>
+                    <ul>
+                        <li><strong>Systematic Observation:</strong> Observe plant types, spatial distribution, overall vegetation structure.</li>
+                        <li><strong>Identification of Plant Species:</strong> Identify common/dominant species using guides or local knowledge. Note abundant/characteristic species.</li>
+                        <li><strong>Describing Vegetation Characteristics:</strong> Record details: average height, density (quadrats), canopy cover, layers, leaf types, presence of flowers/fruits.</li>
+                        <li><strong>Sketching:</strong> Create field sketches of vegetation profiles, plant adaptations, distribution relative to landforms.</li>
+                        <li><strong>Photography:</strong> Document vegetation types, species, adaptations, human impact, plant uses.</li>
+                        <li><strong>Data Recording:</strong> Accurately record observations/measurements in field notebook (use recording sheets, transects, quadrats).</li>
+                        <li><strong>Interviews (if applicable):</strong> With consent, interview local community members about traditional/contemporary plant uses.</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'fieldwork_explaining_uses',
+                title: '6.4 Explaining Uses of Vegetation in the Local Environment',
+                htmlContent: `
+                    <h3>6.4 Explaining Uses of Vegetation in the Local Environment</h3>
+                    <p>A key KCSE objective. Identify and record how local communities use plants:</p>
+                    <ul>
+                        <li><strong>Food:</strong> Wild fruits, vegetables, nuts, seeds, tubers.</li>
+                        <li><strong>Medicine:</strong> Traditional herbal remedies.</li>
+                        <li><strong>Fuelwood and Charcoal:</strong> For cooking/heating.</li>
+                        <li><strong>Building Materials:</strong> Timber, poles, branches, leaves (thatch), fibres.</li>
+                        <li><strong>Fodder:</strong> For livestock.</li>
+                        <li><strong>Cultural Purposes:</strong> Ceremonies, rituals, crafting.</li>
+                        <li><strong>Commercial Purposes:</strong> Sale of plant products (fruits, herbs, timber, charcoal).</li>
+                    </ul>
+                `
+            },
+            {
+                id: 'fieldwork_data_analysis_presentation',
+                title: '6.5 Data Analysis and Presentation',
+                htmlContent: `
+                    <h3>6.5 Data Analysis and Presentation</h3>
+                    <p>Process and analyze collected data:</p>
+                    <ul>
+                        <li><strong>Organizing Field Notes:</strong> Transcribe/organize notes, sketches, photos.</li>
+                        <li><strong>Analyzing Data:</strong> Identify patterns, trends, relationships. Compare vegetation in different locations/conditions.</li>
+                        <li><strong>Presenting Findings:</strong> Communicate results effectively through:
+                            <ul>
+                                <li>Written reports (objectives, methods, findings, conclusions).</li>
+                                <li>Annotated field sketches and photographs.</li>
+                                <li>Tables and graphs (species frequency, plant heights).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Drawing Conclusions:</strong> Formulate conclusions based on data analysis, relating to objectives/hypotheses.</li>
+                    </ul>
+                    <p>Vegetation fieldwork transforms theoretical concepts into tangible realities, fostering deeper learning, analytical skills, and appreciation for the local environment and human-environment interactions.</p>
+                `
+            },
+             // Section 7: Conclusion
+            {
+                id: 'conclusion_vegetation',
+                title: '7.0 Conclusion',
+                isChapterTitle: true,
+                htmlContent: `
+                    <h2>Section 7: Conclusion</h2>
+                    <p>The study of vegetation is a cornerstone of Geography, providing critical insights into the Earth's ecosystems, the processes that shape them, and the intricate relationships between humans and the natural world. From fundamental definitions to complex global distributions and their profound significance, vegetation science offers a lens to understand environmental dynamics and sustainable development.</p>
+                    <p>The interplay of physiographic, climatic, edaphic, and biotic/anthropogenic factors creates the rich tapestry of plant life. While natural factors establish potential vegetation types, increasing human activities underscore the urgent need for responsible stewardship. Ecological services from vegetation (climate regulation, soil conservation, biodiversity, water protection) are indispensable. Economic benefits (food, fuel, timber, medicines) highlight its importance for livelihoods.</p>
+                    <p>Fieldwork connects theory with practical observation, fostering deeper understanding of vegetation patterns, processes, and human interactions within local contexts. Ultimately, a comprehensive understanding of vegetation is essential for addressing contemporary environmental challenges, promoting conservation, and working towards a sustainable future.</p>
+                `
+            }
+        ];
+
+        const navigation = document.getElementById('navigation');
+        const contentArea = document.getElementById('contentArea');
+        const mainGuideTitle = document.getElementById('mainGuideTitle');
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        
+        let currentSectionIndex = 0;
+
+        function showSection(index) {
+            if (index < 0 || index >= guideData.length) {
+                console.error("Section index out of bounds:", index);
+                return;
+            }
+            currentSectionIndex = index;
+            const sectionData = guideData[currentSectionIndex];
+            
+            if (sectionData) {
+                if (sectionData.isChapterTitle) {
+                    mainGuideTitle.innerHTML = ''; 
+                    contentArea.innerHTML = sectionData.htmlContent;
+                } else {
+                    if (!guideData[0].isChapterTitle || currentSectionIndex > 0) { 
+                         mainGuideTitle.textContent = "KCSE Vegetation Learning Guide";
+                    }
+                    contentArea.innerHTML = sectionData.htmlContent;
+                }
+                updateNavButtons();
+                highlightActiveNavItem();
+
+                document.querySelector('.main-content').scrollTop = 0; 
+
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                }
+            }
+        }
+        
+        function highlightActiveNavItem() {
+            document.querySelectorAll('#navigation a').forEach((link, idx) => {
+                link.classList.remove('bg-green-600', 'text-white', 'font-semibold');
+                link.classList.add('text-green-100', 'hover:bg-green-600', 'hover:text-white');
+                 if (guideData[idx].isChapterTitle) {
+                    link.classList.add('font-bold', 'text-yellow-300', 'hover:text-yellow-200');
+                    link.classList.remove('text-green-100', 'hover:text-white');
+                }
+                if (idx === currentSectionIndex) {
+                    link.classList.add('bg-green-600', 'text-white', 'font-semibold');
+                    link.classList.remove('text-green-100');
+                     if (guideData[idx].isChapterTitle) {
+                        link.classList.add('text-yellow-200');
+                        link.classList.remove('text-yellow-300'); 
+                     }
+                }
+            });
+        }
+
+        function updateNavButtons() {
+            prevButton.disabled = currentSectionIndex === 0;
+            nextButton.disabled = currentSectionIndex === guideData.length - 1;
+        }
+        
+        function init() {
+            guideData.forEach((item, index) => {
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = item.title;
+                link.setAttribute('data-index', index);
+                let classList = 'block py-2.5 px-4 rounded transition duration-200 text-sm ';
+                if (item.isChapterTitle) {
+                    classList += 'font-bold text-yellow-300 hover:text-yellow-200';
+                } else {
+                    classList += 'text-green-100 hover:bg-green-600 hover:text-white';
+                    if (item.title.match(/^\d+\.\d+\s/) || item.title.match(/^\d+\.\d+\.\d+\s/)) { 
+                        classList += ' pl-6'; 
+                    }
+                }
+                link.className = classList;
+
+                link.onclick = (e) => {
+                    e.preventDefault();
+                    showSection(index);
+                };
+                navigation.appendChild(link);
+            });
+            
+            if (guideData.length > 0) {
+                showSection(0); 
+            } else {
+                contentArea.innerHTML = '<p>No content available.</p>';
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+
+            mobileMenuButton.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentSectionIndex > 0) {
+                    showSection(currentSectionIndex - 1);
+                }
+            });
+
+            nextButton.addEventListener('click', () => {
+                if (currentSectionIndex < guideData.length - 1) {
+                    showSection(currentSectionIndex + 1);
+                }
+            });
+
+            document.addEventListener('click', (event) => {
+                if (window.innerWidth < 768 && sidebar.classList.contains('open')) {
+                    const isClickInsideSidebar = sidebar.contains(event.target);
+                    const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+                    if (!isClickInsideSidebar && !isClickOnMenuButton) {
+                        sidebar.classList.remove('open');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
