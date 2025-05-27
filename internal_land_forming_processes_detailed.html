@@ -133,6 +133,11 @@
         </aside>
 
         <main class="flex-1 p-4 md:p-8 overflow-y-auto main-content">
+            <div class="mb-4 text-left">
+                <a href="dashboard.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-150 ease-in-out">
+                    &larr; Home
+                </a>
+            </div>
             <button id="mobileMenuButton" class="mobile-menu-button md:hidden fixed top-3 left-3 z-50 p-2 bg-gray-800 text-white rounded-md shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -142,6 +147,10 @@
             <div id="contentAreaContainer" class="bg-white p-5 md:p-8 rounded-lg shadow-xl">
                 <div id="contentArea" class="content-section">
                     <h1 id="mainChapterTitle" class="text-3xl font-bold mb-6 text-gray-700">Welcome!</h1>
+                    <audio controls class="w-full my-4">
+                        <source src="internal_land_forming_processes.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                     <p>Select a topic from the sidebar or use the navigation buttons below to explore the fascinating world of Internal Landforming Processes.</p>
                 </div>
                  <div id="navButtons" class="mt-10 flex justify-between border-t pt-6">
@@ -166,6 +175,10 @@
                 isChapterTitle: true,
                 htmlContent: `
                     <h1>CHAPTER ONE: INTERNAL LANDFORMING PROCESSES</h1>
+                    <audio controls class="w-full my-4">
+                        <source src="internal_land_forming_processes.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                     <h2>Specific Objectives</h2>
                     <p>By the end of this comprehensive study, the learner should be able to:</p>
                     <ul>
